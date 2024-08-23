@@ -14,6 +14,22 @@
 		7F3BB90A2C7856AD00CBF06E /* UIKitTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9082C7856AD00CBF06E /* UIKitTest.xcdatamodeld */; };
 		7F3BB90C2C7856AE00CBF06E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3BB90B2C7856AE00CBF06E /* Assets.xcassets */; };
 		7F3BB90F2C7856AE00CBF06E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7F3BB90E2C7856AE00CBF06E /* Base */; };
+		7F3BB9352C78575F00CBF06E /* TextSettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9172C78575E00CBF06E /* TextSettingScreen.swift */; };
+		7F3BB9362C78575F00CBF06E /* WebViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9192C78575E00CBF06E /* WebViewScreen.swift */; };
+		7F3BB9372C78575F00CBF06E /* PageViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB91B2C78575E00CBF06E /* PageViewScreen.swift */; };
+		7F3BB9382C78575F00CBF06E /* BannerTestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB91D2C78575E00CBF06E /* BannerTestScreen.swift */; };
+		7F3BB9392C78575F00CBF06E /* LayoutConstraintScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB91F2C78575F00CBF06E /* LayoutConstraintScreen.swift */; };
+		7F3BB93A2C78575F00CBF06E /* OTPScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9212C78575F00CBF06E /* OTPScreen.swift */; };
+		7F3BB93B2C78575F00CBF06E /* DropDownScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9232C78575F00CBF06E /* DropDownScreen.swift */; };
+		7F3BB93C2C78575F00CBF06E /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9252C78575F00CBF06E /* MapScreen.swift */; };
+		7F3BB93D2C78575F00CBF06E /* FirstTestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9272C78575F00CBF06E /* FirstTestScreen.swift */; };
+		7F3BB93E2C78575F00CBF06E /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9292C78575F00CBF06E /* testVC.swift */; };
+		7F3BB93F2C78575F00CBF06E /* DownMenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB92B2C78575F00CBF06E /* DownMenuScreen.swift */; };
+		7F3BB9402C78575F00CBF06E /* SFSymbolScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB92D2C78575F00CBF06E /* SFSymbolScreen.swift */; };
+		7F3BB9412C78575F00CBF06E /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB92F2C78575F00CBF06E /* LanguageManager.swift */; };
+		7F3BB9422C78575F00CBF06E /* SwitchLanguageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9302C78575F00CBF06E /* SwitchLanguageScreen.swift */; };
+		7F3BB9432C78575F00CBF06E /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9322C78575F00CBF06E /* TableCell.swift */; };
+		7F3BB9442C78575F00CBF06E /* TableTestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB9332C78575F00CBF06E /* TableTestScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +42,22 @@
 		7F3BB90B2C7856AE00CBF06E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F3BB90E2C7856AE00CBF06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F3BB9102C7856AE00CBF06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F3BB9172C78575E00CBF06E /* TextSettingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSettingScreen.swift; sourceTree = "<group>"; };
+		7F3BB9192C78575E00CBF06E /* WebViewScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewScreen.swift; sourceTree = "<group>"; };
+		7F3BB91B2C78575E00CBF06E /* PageViewScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewScreen.swift; sourceTree = "<group>"; };
+		7F3BB91D2C78575E00CBF06E /* BannerTestScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerTestScreen.swift; sourceTree = "<group>"; };
+		7F3BB91F2C78575F00CBF06E /* LayoutConstraintScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintScreen.swift; sourceTree = "<group>"; };
+		7F3BB9212C78575F00CBF06E /* OTPScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPScreen.swift; sourceTree = "<group>"; };
+		7F3BB9232C78575F00CBF06E /* DropDownScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownScreen.swift; sourceTree = "<group>"; };
+		7F3BB9252C78575F00CBF06E /* MapScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		7F3BB9272C78575F00CBF06E /* FirstTestScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTestScreen.swift; sourceTree = "<group>"; };
+		7F3BB9292C78575F00CBF06E /* testVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
+		7F3BB92B2C78575F00CBF06E /* DownMenuScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownMenuScreen.swift; sourceTree = "<group>"; };
+		7F3BB92D2C78575F00CBF06E /* SFSymbolScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSymbolScreen.swift; sourceTree = "<group>"; };
+		7F3BB92F2C78575F00CBF06E /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		7F3BB9302C78575F00CBF06E /* SwitchLanguageScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchLanguageScreen.swift; sourceTree = "<group>"; };
+		7F3BB9322C78575F00CBF06E /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		7F3BB9332C78575F00CBF06E /* TableTestScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTestScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +93,20 @@
 				7F3BB8FF2C7856AD00CBF06E /* AppDelegate.swift */,
 				7F3BB9012C7856AD00CBF06E /* SceneDelegate.swift */,
 				7F3BB9032C7856AD00CBF06E /* ViewController.swift */,
+				7F3BB92C2C78575F00CBF06E /* 下拉式選單 */,
+				7F3BB9242C78575F00CBF06E /* 下拉式選單套件 */,
+				7F3BB9182C78575E00CBF06E /* 文字格式辨識 */,
+				7F3BB92A2C78575F00CBF06E /* 專案練習 */,
+				7F3BB9202C78575F00CBF06E /* 排版練習 */,
+				7F3BB9312C78575F00CBF06E /* 語系切換練習 */,
+				7F3BB9282C78575F00CBF06E /* 簡單練習 */,
+				7F3BB91C2C78575E00CBF06E /* Banner套件 */,
+				7F3BB91E2C78575E00CBF06E /* Banner練習 */,
+				7F3BB9262C78575F00CBF06E /* GoogleMap練習 */,
+				7F3BB9222C78575F00CBF06E /* OTP填入練習 */,
+				7F3BB92E2C78575F00CBF06E /* SFSymbol調色練習 */,
+				7F3BB9342C78575F00CBF06E /* TabelView練習 */,
+				7F3BB91A2C78575E00CBF06E /* WebView練習 */,
 				7F3BB9052C7856AD00CBF06E /* Main.storyboard */,
 				7F3BB90B2C7856AE00CBF06E /* Assets.xcassets */,
 				7F3BB90D2C7856AE00CBF06E /* LaunchScreen.storyboard */,
@@ -68,6 +114,120 @@
 				7F3BB9082C7856AD00CBF06E /* UIKitTest.xcdatamodeld */,
 			);
 			path = UIKitTest;
+			sourceTree = "<group>";
+		};
+		7F3BB9182C78575E00CBF06E /* 文字格式辨識 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB9172C78575E00CBF06E /* TextSettingScreen.swift */,
+			);
+			path = "文字格式辨識";
+			sourceTree = "<group>";
+		};
+		7F3BB91A2C78575E00CBF06E /* WebView練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB9192C78575E00CBF06E /* WebViewScreen.swift */,
+			);
+			path = "WebView練習";
+			sourceTree = "<group>";
+		};
+		7F3BB91C2C78575E00CBF06E /* Banner套件 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB91B2C78575E00CBF06E /* PageViewScreen.swift */,
+			);
+			path = "Banner套件";
+			sourceTree = "<group>";
+		};
+		7F3BB91E2C78575E00CBF06E /* Banner練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB91D2C78575E00CBF06E /* BannerTestScreen.swift */,
+			);
+			path = "Banner練習";
+			sourceTree = "<group>";
+		};
+		7F3BB9202C78575F00CBF06E /* 排版練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB91F2C78575F00CBF06E /* LayoutConstraintScreen.swift */,
+			);
+			path = "排版練習";
+			sourceTree = "<group>";
+		};
+		7F3BB9222C78575F00CBF06E /* OTP填入練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB9212C78575F00CBF06E /* OTPScreen.swift */,
+			);
+			path = "OTP填入練習";
+			sourceTree = "<group>";
+		};
+		7F3BB9242C78575F00CBF06E /* 下拉式選單套件 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB9232C78575F00CBF06E /* DropDownScreen.swift */,
+			);
+			path = "下拉式選單套件";
+			sourceTree = "<group>";
+		};
+		7F3BB9262C78575F00CBF06E /* GoogleMap練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB9252C78575F00CBF06E /* MapScreen.swift */,
+			);
+			path = "GoogleMap練習";
+			sourceTree = "<group>";
+		};
+		7F3BB9282C78575F00CBF06E /* 簡單練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB9272C78575F00CBF06E /* FirstTestScreen.swift */,
+			);
+			path = "簡單練習";
+			sourceTree = "<group>";
+		};
+		7F3BB92A2C78575F00CBF06E /* 專案練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB9292C78575F00CBF06E /* testVC.swift */,
+			);
+			path = "專案練習";
+			sourceTree = "<group>";
+		};
+		7F3BB92C2C78575F00CBF06E /* 下拉式選單 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB92B2C78575F00CBF06E /* DownMenuScreen.swift */,
+			);
+			path = "下拉式選單";
+			sourceTree = "<group>";
+		};
+		7F3BB92E2C78575F00CBF06E /* SFSymbol調色練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB92D2C78575F00CBF06E /* SFSymbolScreen.swift */,
+			);
+			path = "SFSymbol調色練習";
+			sourceTree = "<group>";
+		};
+		7F3BB9312C78575F00CBF06E /* 語系切換練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB92F2C78575F00CBF06E /* LanguageManager.swift */,
+				7F3BB9302C78575F00CBF06E /* SwitchLanguageScreen.swift */,
+			);
+			path = "語系切換練習";
+			sourceTree = "<group>";
+		};
+		7F3BB9342C78575F00CBF06E /* TabelView練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3BB9322C78575F00CBF06E /* TableCell.swift */,
+				7F3BB9332C78575F00CBF06E /* TableTestScreen.swift */,
+			);
+			path = "TabelView練習";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +301,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F3BB93E2C78575F00CBF06E /* testVC.swift in Sources */,
+				7F3BB9432C78575F00CBF06E /* TableCell.swift in Sources */,
+				7F3BB93C2C78575F00CBF06E /* MapScreen.swift in Sources */,
+				7F3BB9352C78575F00CBF06E /* TextSettingScreen.swift in Sources */,
+				7F3BB9442C78575F00CBF06E /* TableTestScreen.swift in Sources */,
+				7F3BB93B2C78575F00CBF06E /* DropDownScreen.swift in Sources */,
 				7F3BB90A2C7856AD00CBF06E /* UIKitTest.xcdatamodeld in Sources */,
 				7F3BB9042C7856AD00CBF06E /* ViewController.swift in Sources */,
+				7F3BB93A2C78575F00CBF06E /* OTPScreen.swift in Sources */,
+				7F3BB9362C78575F00CBF06E /* WebViewScreen.swift in Sources */,
+				7F3BB93D2C78575F00CBF06E /* FirstTestScreen.swift in Sources */,
 				7F3BB9002C7856AD00CBF06E /* AppDelegate.swift in Sources */,
+				7F3BB93F2C78575F00CBF06E /* DownMenuScreen.swift in Sources */,
+				7F3BB9372C78575F00CBF06E /* PageViewScreen.swift in Sources */,
+				7F3BB9392C78575F00CBF06E /* LayoutConstraintScreen.swift in Sources */,
 				7F3BB9022C7856AD00CBF06E /* SceneDelegate.swift in Sources */,
+				7F3BB9402C78575F00CBF06E /* SFSymbolScreen.swift in Sources */,
+				7F3BB9422C78575F00CBF06E /* SwitchLanguageScreen.swift in Sources */,
+				7F3BB9412C78575F00CBF06E /* LanguageManager.swift in Sources */,
+				7F3BB9382C78575F00CBF06E /* BannerTestScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
