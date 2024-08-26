@@ -42,6 +42,8 @@
 		7F54CCC82C7C121700539929 /* HintTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CCC62C7C121700539929 /* HintTextView.swift */; };
 		7F54CCC92C7C121700539929 /* HintTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F54CCC72C7C121700539929 /* HintTextView.xib */; };
 		7F54CCCB2C7C186600539929 /* XibExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CCCA2C7C186600539929 /* XibExample.swift */; };
+		7F54CCCF2C7C2FFE00539929 /* MyTitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CCCE2C7C2FFE00539929 /* MyTitleBar.swift */; };
+		7F54CCD22C7C5F5C00539929 /* TextSettingUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		7F54CCC62C7C121700539929 /* HintTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintTextView.swift; sourceTree = "<group>"; };
 		7F54CCC72C7C121700539929 /* HintTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintTextView.xib; sourceTree = "<group>"; };
 		7F54CCCA2C7C186600539929 /* XibExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibExample.swift; sourceTree = "<group>"; };
+		7F54CCCE2C7C2FFE00539929 /* MyTitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTitleBar.swift; sourceTree = "<group>"; };
+		7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSettingUI.swift; sourceTree = "<group>"; };
 		A9D66F102EC61B7AC514A4C0 /* Pods-UIKitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitTest.release.xcconfig"; path = "Target Support Files/Pods-UIKitTest/Pods-UIKitTest.release.xcconfig"; sourceTree = "<group>"; };
 		B3F88A0E8B553DA95E48ED67 /* Pods-UIKitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitTest.debug.xcconfig"; path = "Target Support Files/Pods-UIKitTest/Pods-UIKitTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +135,7 @@
 				7F3BB8FF2C7856AD00CBF06E /* AppDelegate.swift */,
 				7F3BB9012C7856AD00CBF06E /* SceneDelegate.swift */,
 				7F3BB9032C7856AD00CBF06E /* ViewController.swift */,
+				7F54CCD02C7C5EE900539929 /* UI */,
 				7F54CCBB2C7C0D3F00539929 /* XibExample */,
 				7F3BB92C2C78575F00CBF06E /* 下拉式選單 */,
 				7F3BB9242C78575F00CBF06E /* 下拉式選單套件 */,
@@ -160,6 +165,7 @@
 		7F3BB9182C78575E00CBF06E /* 文字格式辨識 */ = {
 			isa = PBXGroup;
 			children = (
+				7F54CCD32C7C5F6900539929 /* UI */,
 				7F3BB9172C78575E00CBF06E /* TextSettingScreen.swift */,
 			);
 			path = "文字格式辨識";
@@ -301,6 +307,22 @@
 				7F54CCCA2C7C186600539929 /* XibExample.swift */,
 			);
 			path = XibExample;
+			sourceTree = "<group>";
+		};
+		7F54CCD02C7C5EE900539929 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F54CCCE2C7C2FFE00539929 /* MyTitleBar.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7F54CCD32C7C5F6900539929 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		855992885BEB3DD04DA25F03 /* Frameworks */ = {
@@ -453,12 +475,14 @@
 				7F3BB9542C78596F00CBF06E /* View+.swift in Sources */,
 				7F3BB9352C78575F00CBF06E /* TextSettingScreen.swift in Sources */,
 				7F3BB9442C78575F00CBF06E /* TableTestScreen.swift in Sources */,
+				7F54CCCF2C7C2FFE00539929 /* MyTitleBar.swift in Sources */,
 				7F3BB93B2C78575F00CBF06E /* DropDownScreen.swift in Sources */,
 				7F3BB9522C78596F00CBF06E /* UIFont+.swift in Sources */,
 				7F3BB90A2C7856AD00CBF06E /* UIKitTest.xcdatamodeld in Sources */,
 				7F3BB9532C78596F00CBF06E /* UINavigation+.swift in Sources */,
 				7F3BB9042C7856AD00CBF06E /* ViewController.swift in Sources */,
 				7F3BB93A2C78575F00CBF06E /* OTPScreen.swift in Sources */,
+				7F54CCD22C7C5F5C00539929 /* TextSettingUI.swift in Sources */,
 				7F3BB9362C78575F00CBF06E /* WebViewScreen.swift in Sources */,
 				7F3BB93D2C78575F00CBF06E /* FirstTestScreen.swift in Sources */,
 				7F3BB94F2C78596F00CBF06E /* ScreenIDItem.swift in Sources */,

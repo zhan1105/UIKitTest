@@ -95,4 +95,53 @@ extension UIViewController {
         
         return newSpacerView
     }
+    
+    func TitleBar(title: String) -> UIStackView {
+        
+        let titleLabel = UILabel()
+        titleLabel.text = ""
+        titleLabel.font = UIFont.systemFont(ofSize: UIFont.title2.pointSize, weight: .bold)
+        titleLabel.textColor = .black
+        titleLabel.textAlignment = .center
+        titleLabel.backgroundColor = .groupBg2
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        let backButton = UIButton(type: .system)
+        
+        // 設置 SFSymbol 圖標
+        if let image = UIImage(systemName: SFSymbol.arrow_left.rawValue) {
+            backButton.setImage(image, for: .normal)
+            backButton.tintColor = .white  // 設置圖標顏色
+        }
+        
+        backButton.addTarget(self, action: #selector(backView2), for: .touchUpInside)
+        backButton.backgroundColor = .clear
+        
+        backButton.tintColor = .black
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        let spacer = UIView()
+        spacer.backgroundColor = .clear
+        spacer.translatesAutoresizingMaskIntoConstraints = false
+        
+        let titleBarStack = UIStackView(arrangedSubviews: [backButton, titleLabel, spacer])
+        titleBarStack.axis = .horizontal
+        titleBarStack.distribution = .fill
+        titleBarStack.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            backButton.widthAnchor.constraint(equalTo: titleBarStack.widthAnchor, multiplier: 0.15),
+            titleLabel.widthAnchor.constraint(equalTo: titleBarStack.widthAnchor, multiplier: 0.7),
+            spacer.widthAnchor.constraint(equalTo: titleBarStack.widthAnchor, multiplier: 0.15)
+        ])
+        
+        return titleBarStack
+    }
+    
+    @objc func backView2() {
+        popView()
+    }
 }
+
+

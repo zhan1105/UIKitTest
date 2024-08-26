@@ -151,7 +151,7 @@
         <!--Text Setting Screen-->
         <scene sceneID="ejL-tt-WNX">
             <objects>
-                <viewController id="bnE-Q8-Ofe" customClass="TextSettingScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TextSettingSB" id="bnE-Q8-Ofe" customClass="TextSettingScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4b7-ex-RdH">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
