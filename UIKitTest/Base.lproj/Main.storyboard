@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Inz-mj-mix">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController storyboardIdentifier="firstTestSB" id="Hqc-Pd-sSD" customClass="FirstTestScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v24-Fs-9Lc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="qvi-XZ-b2B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,7 +45,7 @@
             <objects>
                 <viewController storyboardIdentifier="LayoutSB" id="LNR-uN-TUN" customClass="LayoutConstraintScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s3C-Pa-qlv" customClass="NS">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="JNC-37-rNV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -60,7 +60,7 @@
             <objects>
                 <viewController storyboardIdentifier="SwitchSB" id="6bo-3M-AWg" customClass="SwitchLanguageScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jCW-ts-ia2">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="mkP-yi-Obb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,7 +75,7 @@
             <objects>
                 <viewController storyboardIdentifier="WebViewSB" id="nNr-iK-mqi" customClass="WebViewScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WET-yM-eFL">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="IFS-dd-eIW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,28 +86,12 @@
             </objects>
             <point key="canvasLocation" x="2865" y="5"/>
         </scene>
-        <!--TestVC-->
-        <scene sceneID="he7-gF-lQP">
-            <objects>
-                <viewController id="9b3-fj-GIX" customClass="testVC" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8PN-gF-gcv">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="xQ1-Tf-0ud"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="LHM-Rd-RTa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UTf-iB-vey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3738" y="5"/>
-        </scene>
         <!--Symbol Screen-->
         <scene sceneID="zxg-eb-JiT">
             <objects>
                 <viewController storyboardIdentifier="SFSymbolSB" id="WuU-uY-FCO" customClass="SFSymbolScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uvo-qT-4J5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Jmd-Lc-Iam"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -116,14 +100,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdT-ML-ZfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4639" y="5"/>
+            <point key="canvasLocation" x="3779" y="5"/>
         </scene>
         <!--Table Test Screen-->
         <scene sceneID="ySv-XM-p8J">
             <objects>
                 <viewController storyboardIdentifier="TableTestSB" id="Ajz-DU-R6e" customClass="TableTestScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccO-gz-3cK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="I0k-vt-gmG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -139,7 +123,7 @@
             <objects>
                 <viewController storyboardIdentifier="GoogleMapSB" id="5Ti-7C-fPW" customClass="MapScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mcF-Fr-Ev4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bEn-HW-M0s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -153,8 +137,8 @@
         <scene sceneID="XaF-vI-bQP">
             <objects>
                 <viewController storyboardIdentifier="OTPSB" id="s2M-tN-H2X" customClass="OTPScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MQA-lE-au3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <view key="view" contentMode="scaleToFill" id="MQA-lE-au3" customClass="Text">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Yo8-FT-cjo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -164,12 +148,63 @@
             </objects>
             <point key="canvasLocation" x="2865" y="-725"/>
         </scene>
+        <!--Text Setting Screen-->
+        <scene sceneID="ejL-tt-WNX">
+            <objects>
+                <viewController id="bnE-Q8-Ofe" customClass="TextSettingScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4b7-ex-RdH">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vi5-wG-PLF"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1L-Nm-rUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3778" y="-725"/>
+        </scene>
+        <!--Xib Example-->
+        <scene sceneID="BH4-7M-WN3">
+            <objects>
+                <viewController storyboardIdentifier="XibSB" id="HcH-Hi-NyC" customClass="XibExample" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zU7-3f-Xwa">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yq6-C4-apu" customClass="HintTextView" customModule="UIKitTest" customModuleProvider="target">
+                                <rect key="frame" x="10" y="47" width="370" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Dmt-fb-5Rp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="請輸入文字"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hint" value="標題"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gdR-Rn-j1V"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yq6-C4-apu" firstAttribute="leading" secondItem="gdR-Rn-j1V" secondAttribute="leading" constant="10" id="dkl-7G-PEo"/>
+                            <constraint firstItem="Yq6-C4-apu" firstAttribute="trailing" secondItem="gdR-Rn-j1V" secondAttribute="trailing" constant="-10" id="ibf-vT-AL7"/>
+                            <constraint firstItem="Yq6-C4-apu" firstAttribute="top" secondItem="gdR-Rn-j1V" secondAttribute="top" id="kNY-1b-he3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameHintTextField" destination="Yq6-C4-apu" id="AlA-GB-Mmp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfK-mu-4ET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4659" y="-725"/>
+        </scene>
         <!--Banner Test Screen-->
         <scene sceneID="ELD-3P-2db">
             <objects>
                 <viewController storyboardIdentifier="BannerSB" id="WNY-nE-Xvk" customClass="BannerTestScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pg1-G2-J9t">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="d9p-Ls-Pmz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -178,14 +213,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed2-AL-5lz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5521" y="5"/>
+            <point key="canvasLocation" x="4660" y="5"/>
         </scene>
         <!--Page View Screen-->
         <scene sceneID="gHu-pc-BQe">
             <objects>
                 <viewController storyboardIdentifier="PagerSB" id="Moe-Uj-gJ0" customClass="PageViewScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="irq-0I-TI8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Qt3-Aj-d1P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -193,14 +228,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n47-zd-njv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6356" y="5"/>
+            <point key="canvasLocation" x="5495" y="5"/>
         </scene>
         <!--Drop Down Screen-->
         <scene sceneID="OkF-rY-lWJ">
             <objects>
                 <viewController storyboardIdentifier="DropDownSB" id="lem-Lv-223" customClass="DropDownScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UyW-5d-EPv">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="74L-Ny-ygz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -208,14 +243,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOk-T0-jVD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7225" y="5"/>
+            <point key="canvasLocation" x="6364" y="5"/>
         </scene>
         <!--Down Menu Screen-->
         <scene sceneID="GZi-mf-93U">
             <objects>
                 <viewController storyboardIdentifier="DownMenuSB" id="O6M-gc-uJG" customClass="DownMenuScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O8b-03-IWN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="WiO-Vh-1r0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -223,12 +258,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5o-DA-6Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8108" y="5"/>
+            <point key="canvasLocation" x="7248" y="5"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

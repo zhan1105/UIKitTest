@@ -21,5 +21,7 @@ struct ScreenIDItem {
                                     ("下拉式選單", "DownMenuSB"),
                                     ("DropDown套件", "DropDownSB"),
                                     ("GoogleMap練習", "GoogleMapSB"),
-                                    ("OTP自動填入", "OTPSB")]
+                                    ("OTP自動填入", "OTPSB"),
+                                    ("文字判斷", ""),
+                                    ("XibExample", "XibSB")]
 }
