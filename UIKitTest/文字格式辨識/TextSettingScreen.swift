@@ -21,20 +21,72 @@ class TextSettingScreen: UIViewController {
     
     func checkTextFormat(){
         
+        enum ErrorMessage {
+            case isEmpty
+            case firstTextField
+            case secondTextField
+            case thirdTextField
+            
+            func message(for textField: UITextField?) -> String {
+                switch self {
+                case .isEmpty:
+                    return "輸入內容不可為空"
+                case .firstTextField:
+                    return textField?.placeholder ?? "未知錯誤"
+                case .secondTextField:
+                    return textField?.placeholder ?? "未知錯誤"
+                case .thirdTextField:
+                    return textField?.placeholder ?? "未知錯誤"
+                }
+            }
+        }
+        
         if let selectedText = subScreen.firstTextField.text {
+            
             if selectedText.isEmpty {
-                let message = subScreen.firstTextField.placeholder ?? "輸入內容不可為空"
-                showMessage(title: "錯誤提醒", message: message)
+                let error = ErrorMessage.isEmpty
+                showMessage(title: "錯誤提醒", message: "第ㄧ格\(error.message(for: subScreen.firstTextField))")
+                return
             } else {
-                // 使用正則表達式進行檢查
                 let regex = "^[A-Z][A-Z0-9][0-9]{8}$"
                 let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
                 
                 if predicate.evaluate(with: selectedText) {
-                    showMessage(title: "成功訊息", message: "")
+                    print("success")
                 } else {
-                    // selectedText 不符合正則表達式
-                    showMessage(title: "格式錯誤", message: "輸入內容的格式不正確")
+                    let error = ErrorMessage.firstTextField
+                    showMessage(title: "格式錯誤", message: error.message(for: subScreen.firstTextField))
+                    return
+                }
+            }
+        }
+        
+        if let secondSelectedText = subScreen.secondTextField.text {
+            if secondSelectedText.isEmpty {
+                let error = ErrorMessage.isEmpty
+                showMessage(title: "錯誤提醒", message: "第二格\(error.message(for: subScreen.firstTextField))")
+                return
+            } else {
+                print("success2")
+            }
+        }
+        
+        if let thirdSelectedText = subScreen.thirdTextField.text {
+            if thirdSelectedText.isEmpty {
+                let error = ErrorMessage.isEmpty
+                showMessage(title: "錯誤提醒", message: "第三格\(error.message(for: subScreen.firstTextField))")
+                return
+            } else {
+                
+                let regex = "^[A-Z][0-9]{9}$"
+                let predicate = NSPredicate(format: "SELF MATCHS %@", regex)
+                
+                if predicate.evaluate(with: thirdSelectedText) {
+                    print("success")
+                }else {
+                    let error = ErrorMessage.thirdTextField
+                    showMessage(title: "錯誤提醒", message: error.message(for: subScreen.thirdTextField))
+                    return
                 }
             }
         }
@@ -44,13 +96,13 @@ extension TextSettingScreen {
     
     private func setupUI(){
         
-        let myTitleBar = MyTitleBar()
         myTitleBar.titleLabel.text = "文字辨識"
-        myTitleBar.backButtonAction = {
-            self.popView()
-        }
+        myTitleBar.backButtonAction = { self.popView() }
         
-        let subScreen = TextSettingUI()
+        subScreen.firstTextField.delegate = self
+        subScreen.secondTextField.delegate = self
+        subScreen.thirdTextField.delegate = self
+        subScreen.buttonAction = { self.checkTextFormat() }
         
         let appScreen = UIStackView(arrangedSubviews: [myTitleBar, subScreen])
         appScreen.axis = .vertical

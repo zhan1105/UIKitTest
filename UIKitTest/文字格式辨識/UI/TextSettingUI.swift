@@ -33,7 +33,7 @@ class TextSettingUI: UIView {
         thirdTextField = creatTextField(placeholder: "請輸入1位大寫英文+9位數字")
         
         checkButton.setTitle("檢查格式", for: .normal)
-        checkButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.title2.pointSize, weight: .bold)
+        checkButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.title1.pointSize, weight: .bold)
         checkButton.tintColor = .white
         checkButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         checkButton.backgroundColor = .blue
