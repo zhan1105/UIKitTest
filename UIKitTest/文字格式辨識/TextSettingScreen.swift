@@ -41,11 +41,16 @@ class TextSettingScreen: UIViewController {
             }
         }
         
+        clearHighlight(for: subScreen.firstTextField)
+        clearHighlight(for: subScreen.secondTextField)
+        clearHighlight(for: subScreen.thirdTextField)
+        
         if let selectedText = subScreen.firstTextField.text {
             
             if selectedText.isEmpty {
                 let error = ErrorMessage.isEmpty
-                showMessage(title: "錯誤提醒", message: "第ㄧ格\(error.message(for: subScreen.firstTextField))")
+                showMessage(title: "錯誤提醒", message: "第一格 \(error.message(for: subScreen.firstTextField))", for: subScreen.firstTextField)
+
                 return
             } else {
                 let regex = "^[A-Z][A-Z0-9][0-9]{8}$"
@@ -55,7 +60,10 @@ class TextSettingScreen: UIViewController {
                     print("success")
                 } else {
                     let error = ErrorMessage.firstTextField
-                    showMessage(title: "格式錯誤", message: error.message(for: subScreen.firstTextField))
+                    showMessage(title: "格式錯誤", message: error.message(for: subScreen.firstTextField), for: subScreen.firstTextField)
+                    
+                    subScreen.firstTextField.becomeFirstResponder()
+                    highlightTextField(subScreen.firstTextField)
                     return
                 }
             }
@@ -64,7 +72,7 @@ class TextSettingScreen: UIViewController {
         if let secondSelectedText = subScreen.secondTextField.text {
             if secondSelectedText.isEmpty {
                 let error = ErrorMessage.isEmpty
-                showMessage(title: "錯誤提醒", message: "第二格\(error.message(for: subScreen.firstTextField))")
+                showMessage(title: "錯誤提醒", message: "第二格\(error.message(for: subScreen.secondTextField))", for: subScreen.secondTextField)
                 return
             } else {
                 print("success2")
@@ -74,18 +82,18 @@ class TextSettingScreen: UIViewController {
         if let thirdSelectedText = subScreen.thirdTextField.text {
             if thirdSelectedText.isEmpty {
                 let error = ErrorMessage.isEmpty
-                showMessage(title: "錯誤提醒", message: "第三格\(error.message(for: subScreen.firstTextField))")
+                showMessage(title: "錯誤提醒", message: "第三格\(error.message(for: subScreen.secondTextField))", for: subScreen.thirdTextField)
                 return
             } else {
                 
                 let regex = "^[A-Z][0-9]{9}$"
-                let predicate = NSPredicate(format: "SELF MATCHS %@", regex)
+                let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
                 
                 if predicate.evaluate(with: thirdSelectedText) {
-                    print("success")
+                    print("success3")
                 }else {
                     let error = ErrorMessage.thirdTextField
-                    showMessage(title: "錯誤提醒", message: error.message(for: subScreen.thirdTextField))
+                    showMessage(title: "錯誤提醒", message: error.message(for: subScreen.thirdTextField), for: subScreen.thirdTextField)
                     return
                 }
             }
