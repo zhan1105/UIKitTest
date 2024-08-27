@@ -28,9 +28,9 @@ class TextSettingUI: UIView {
     
     private func setupUI() {
         
-        firstTextField = creatTextField(placeholder: "請輸入1~2位大寫英文+8~9位數字")
-        secondTextField = creatTextField(placeholder: "請輸入大寫英文")
-        thirdTextField = creatTextField(placeholder: "請輸入1位大寫英文+9位數字")
+        firstTextField = createTextField(placeholder: "請輸入1~2位大寫英文+8~9位數字")
+        secondTextField = createTextField(placeholder: "請輸入大寫英文")
+        thirdTextField = createTextField(placeholder: "請輸入1位大寫英文+9位數字")
         
         checkButton.setTitle("檢查格式", for: .normal)
         checkButton.titleLabel?.font = UIFont.systemFont(ofSize: UIFont.title1.pointSize, weight: .bold)
@@ -79,7 +79,7 @@ class TextSettingUI: UIView {
         ])
     }
     
-    func creatTextField(placeholder: String) -> UITextField {
+    func createTextField(placeholder: String) -> UITextField {
         
         let newTextField = UITextField()
         newTextField.borderStyle = .none

@@ -126,13 +126,7 @@ extension TextSettingScreen {
             appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             
             myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
-            subScreen.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9),
-            
-            myTitleBar.leadingAnchor.constraint(equalTo: appScreen.leadingAnchor),
-            myTitleBar.trailingAnchor.constraint(equalTo: appScreen.trailingAnchor),
-            
-            subScreen.leadingAnchor.constraint(equalTo: appScreen.leadingAnchor),
-            subScreen.trailingAnchor.constraint(equalTo: appScreen.trailingAnchor),
+            subScreen.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9)
         ])
     }
 }

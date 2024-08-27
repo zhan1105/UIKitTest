@@ -13,4 +13,6 @@ extension UIFont {
     static let title1 = UIFont.preferredFont(forTextStyle: .title1)
     static let title2 = UIFont.preferredFont(forTextStyle: .title2)
     static let title3 = UIFont.preferredFont(forTextStyle: .title3)
+    
+    static let boldTitle2 = UIFont.systemFont(ofSize: UIFont.title2.pointSize, weight: .bold)
 }
