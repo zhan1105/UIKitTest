@@ -22,14 +22,16 @@ class SwitchLanguageScreen: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: .languageChanged, object: nil)
     }
     
-    func switchLanguage(language: String) {
+    func switchLanguage(language: SwitchLanguage) {
         switch language {
-        case "zh-Hant":
+        case .chinese:
             LanguageManager.shared.setLanguage("zh-Hant")
-        case "en":
+        case .english:
             LanguageManager.shared.setLanguage("en")
-        default:
-            break
+        case .vietnamese:
+            LanguageManager.shared.setLanguage("vi")
+        case .indonesian:
+            LanguageManager.shared.setLanguage("id")
         }
     }
     
@@ -44,10 +46,16 @@ class SwitchLanguageScreen: UIViewController {
         }
         
         subScreen.chineseButtonAction = { [weak self] in
-            self?.switchLanguage(language: "zh-Hant")
+            self?.switchLanguage(language: .chinese)
         }
         subScreen.englishButtonAction = { [weak self] in
-            self?.switchLanguage(language: "en")
+            self?.switchLanguage(language: .english)
+        }
+        subScreen.vietnameseButtonAction = { [weak self] in
+            self?.switchLanguage(language: .vietnamese)
+        }
+        subScreen.indonesianButtonAction = { [weak self] in
+            self?.switchLanguage(language: .indonesian)
         }
         
         let appScreen = UIStackView(arrangedSubviews: [myTitleBar, subScreen])

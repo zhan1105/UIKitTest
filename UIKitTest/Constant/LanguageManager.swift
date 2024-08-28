@@ -24,13 +24,24 @@ class LanguageManager {
     }
     
     func setLanguage(_ language: String) {
-        currentLanguage = language
+        UserDefaults.standard.setValue(language, forKey: "temporaryLanguage")
+        updateLanguage()
+    }
+    
+    func resetToSystemLanguage() {
+        let systemLanguage = Locale.preferredLanguages.first ?? "en"
+        print("預設語系：\(systemLanguage)")
+        UserDefaults.standard.removeObject(forKey: "temporaryLanguage")
+        UserDefaults.standard.setValue(systemLanguage, forKey: "appLanguage")
+        updateLanguage()
     }
     
     private func updateLanguage() {
+        let languageToUse = UserDefaults.standard.string(forKey: "temporaryLanguage") ?? currentLanguage
+        UserDefaults.standard.setValue(languageToUse, forKey: "appLanguage")
         Bundle.swizzleLocalization()
         
-        // 通知應用中的所有觀察者
+        // Notify all observers in the app
         NotificationCenter.default.post(name: .languageChanged, object: nil)
     }
 }

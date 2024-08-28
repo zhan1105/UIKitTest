@@ -89,6 +89,12 @@
 		7F54CCCA2C7C186600539929 /* XibExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibExample.swift; sourceTree = "<group>"; };
 		7F54CCCE2C7C2FFE00539929 /* MyTitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTitleBar.swift; sourceTree = "<group>"; };
 		7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSettingUI.swift; sourceTree = "<group>"; };
+		7F8623F12C7EB1B7002E8839 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		7F8623F22C7EB1B7002E8839 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7F8623F32C7EB1B7002E8839 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F8623F42C7EB21E002E8839 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Main.strings; sourceTree = "<group>"; };
+		7F8623F52C7EB21E002E8839 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7F8623F62C7EB21E002E8839 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7F9C687A2C7DA72400D96974 /* SwitchLanguageUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchLanguageUI.swift; sourceTree = "<group>"; };
 		7F9C687C2C7DA84600D96974 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		7F9C687E2C7DC5E000D96974 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -402,6 +408,8 @@
 				en,
 				Base,
 				"zh-Hant",
+				vi,
+				id,
 			);
 			mainGroup = 7F3BB8F32C7856AD00CBF06E;
 			productRefGroup = 7F3BB8FD2C7856AD00CBF06E /* Products */;
@@ -538,6 +546,8 @@
 			children = (
 				7F3BB9062C7856AD00CBF06E /* Base */,
 				7F9C687E2C7DC5E000D96974 /* zh-Hant */,
+				7F8623F12C7EB1B7002E8839 /* vi */,
+				7F8623F42C7EB21E002E8839 /* id */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -547,6 +557,8 @@
 			children = (
 				7F3BB90E2C7856AE00CBF06E /* Base */,
 				7F9C687F2C7DC5E000D96974 /* zh-Hant */,
+				7F8623F22C7EB1B7002E8839 /* vi */,
+				7F8623F52C7EB21E002E8839 /* id */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -556,6 +568,8 @@
 			children = (
 				7F9C68812C7DC5FB00D96974 /* zh-Hant */,
 				7F9C68832C7DC60700D96974 /* en */,
+				7F8623F32C7EB1B7002E8839 /* vi */,
+				7F8623F62C7EB21E002E8839 /* id */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

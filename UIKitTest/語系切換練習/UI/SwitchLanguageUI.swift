@@ -12,9 +12,13 @@ class SwitchLanguageUI: UIView {
     var languageLabel = UILabel()
     var chineseButton = UIButton(type: .system)
     var englishButton = UIButton(type: .system)
+    var vietnameseButton = UIButton(type: .system)
+    var indonesianButton = UIButton(type: .system)
     
     var chineseButtonAction: (() -> Void)?
     var englishButtonAction: (() -> Void)?
+    var vietnameseButtonAction: (() -> Void)?
+    var indonesianButtonAction: (() -> Void)?
     
     init() {
         super.init(frame: .zero)
@@ -33,18 +37,17 @@ class SwitchLanguageUI: UIView {
         languageLabel.textAlignment = .center
         languageLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        chineseButton = createToggleButton(title: "中文")
-        englishButton = createToggleButton(title: "English")
-    
-        let buttonStack = UIStackView(arrangedSubviews: [chineseButton, englishButton])
-        buttonStack.axis = .horizontal
-        buttonStack.distribution = .fillEqually
-        buttonStack.spacing = 25
-        buttonStack.translatesAutoresizingMaskIntoConstraints = false
+        chineseButton = createToggleButton(title: NSLocalizedString("Chinese", comment: ""))
+        englishButton = createToggleButton(title: NSLocalizedString("English", comment: ""))
+        vietnameseButton = createToggleButton(title: NSLocalizedString("Vietnamese", comment: ""))
+        indonesianButton = createToggleButton(title: NSLocalizedString("Indonesian", comment: ""))
+        
+        let buttonStack = createButtonStack(chineseButton, englishButton)
+        let buttonStack2 = createButtonStack(vietnameseButton, indonesianButton)
         
         let spacer = mySpacer()
         
-        let subScreen = UIStackView(arrangedSubviews: [languageLabel, buttonStack, spacer])
+        let subScreen = UIStackView(arrangedSubviews: [languageLabel, buttonStack, buttonStack2, spacer])
         subScreen.axis = .vertical
         subScreen.distribution = .fill
         subScreen.spacing = 15
@@ -60,22 +63,41 @@ class SwitchLanguageUI: UIView {
             
             languageLabel.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.1),
             buttonStack.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.1),
-            spacer.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.8),
+            buttonStack2.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.1),
+            spacer.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.7),
             
             languageLabel.widthAnchor.constraint(equalTo: subScreen.widthAnchor),
             buttonStack.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor, constant: 15),
             buttonStack.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor, constant: -15),
+            buttonStack2.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor, constant: 15),
+            buttonStack2.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor, constant: -15),
         ])
     }
     
     @objc private func buttonTapped(_ sender: UIButton) {
         
-        let selectedLanguage: SwitchLanguage = (sender == chineseButton) ? .chinese : .english
+        let selectedLanguage: SwitchLanguage
+        if sender == chineseButton {
+            selectedLanguage = .chinese
+        } else if sender == englishButton {
+            selectedLanguage = .english
+        } else if sender == vietnameseButton {
+            selectedLanguage = .vietnamese
+        } else if sender == indonesianButton {
+            selectedLanguage = .indonesian
+        } else {
+            return
+        }
+        
         switch selectedLanguage {
         case .chinese:
             chineseButtonAction?()
         case .english:
             englishButtonAction?()
+        case .vietnamese:
+            vietnameseButtonAction?()
+        case .indonesian:
+            indonesianButtonAction?()
         }
     }
     
@@ -90,5 +112,15 @@ class SwitchLanguageUI: UIView {
         newButton.translatesAutoresizingMaskIntoConstraints = false
         
         return newButton
+    }
+    
+    private func createButtonStack(_ firstButton: UIButton, _ secondButton: UIButton) -> UIStackView {
+        let newStack = UIStackView(arrangedSubviews: [firstButton, secondButton])
+        newStack.axis = .horizontal
+        newStack.distribution = .fillEqually
+        newStack.spacing = 25
+        newStack.translatesAutoresizingMaskIntoConstraints = false
+        
+        return newStack
     }
 }

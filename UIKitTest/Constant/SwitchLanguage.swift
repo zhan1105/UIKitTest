@@ -11,4 +11,6 @@ enum SwitchLanguage {
     
     case chinese
     case english
+    case vietnamese
+    case indonesian
 }

@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Google API KEY
         GMSServices.provideAPIKey(AppDelegate.googleApiKey)
+
+        LanguageManager.shared.resetToSystemLanguage()
         return true
     }
     

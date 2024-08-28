@@ -7,3 +7,7 @@
 */
 "Hello" = "你好";
 "SwitchLanguage" = "語系切換";
+"Chinese" = "中文";
+"English" = "英文";
+"Vietnamese" = "越南文";
+"Indonesian" = "印尼文";
