@@ -13,7 +13,7 @@ struct ScreenIDItem {
    
     let screenItem: [ScreenItem] = [("簡單練習", "firstTestSB"), 
                                     ("排版練習", "LayoutSB"),
-                                    ("語系切換練習", "SwitchSB"),
+                                    (NSLocalizedString("SwitchLanguage", comment: ""), "SwitchSB"),
                                     ("WebView練習", "WebViewSB"), 
                                     ("SFSymbol調色", "SFSymbolSB"),
                                     ("Banner練習", "BannerSB"),

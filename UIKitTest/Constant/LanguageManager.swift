@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class LanguageManager {
     static let shared = LanguageManager()
@@ -18,7 +19,6 @@ class LanguageManager {
         }
         set {
             UserDefaults.standard.setValue(newValue, forKey: "appLanguage")
-            // No need to call synchronize here
             updateLanguage()
         }
     }
@@ -29,12 +29,14 @@ class LanguageManager {
     
     private func updateLanguage() {
         Bundle.swizzleLocalization()
+        
+        // 通知應用中的所有觀察者
+        NotificationCenter.default.post(name: .languageChanged, object: nil)
     }
 }
 
 private extension Bundle {
-    
-    private static let swizzleLocalizationImplementation: Void = {
+    static let swizzleLocalizationImplementation: Void = {
         let originalSelector = #selector(localizedString(forKey:value:table:))
         let swizzledSelector = #selector(swizzled_localizedString(forKey:value:table:))
         
@@ -65,4 +67,8 @@ private extension Bundle {
         
         return bundle.swizzled_localizedString(forKey: key, value: value, table: tableName)
     }
+}
+
+extension Notification.Name {
+    static let languageChanged = Notification.Name("languageChanged")
 }

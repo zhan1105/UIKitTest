@@ -17,49 +17,37 @@ class SwitchLanguageScreen: UIViewController {
         
         view.backgroundColor = .groupBg
         setupUI()
+        
+        // 添加觀察者以在語言更改時更新 UI
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: .languageChanged, object: nil)
     }
     
-    func switchLanguage(language: SwitchLanguage) {
+    func switchLanguage(language: String) {
         switch language {
-        case .chinese:
+        case "zh-Hant":
             LanguageManager.shared.setLanguage("zh-Hant")
-        case .english:
+        case "en":
             LanguageManager.shared.setLanguage("en")
+        default:
+            break
         }
-        
-        // 更新當前畫面
-        updateUI()
-        
-        // 或者選擇返回上一頁更新界面
-        // self.popView()
     }
     
-    private func setAppLanguage(to languageCode: String) {
-        // 假設你有一個方法來設置應用的語言
-        // LocalizationManager.shared.setLanguage(languageCode)
-        // 然後重新加載應用的所有文本
+    @objc private func updateUI() {
+        clearToMainView("TableTestSB")
     }
-    
-    private func updateUI() {
-        subScreen.languageLabel.text = NSLocalizedString("Hello", comment: "")
-        // 這裡可以更新其他需要本地化的界面元素
-    }
-}
-
-extension SwitchLanguageScreen {
     
     private func setupUI() {
-        
-        myTitleBar.titleLabel.text = "語系切換"
+        myTitleBar.titleLabel.text = NSLocalizedString("SwitchLanguage", comment: "")
         myTitleBar.backButtonAction = { [weak self] in
             self?.popView()
         }
         
         subScreen.chineseButtonAction = { [weak self] in
-            self?.switchLanguage(language: .chinese)
+            self?.switchLanguage(language: "zh-Hant")
         }
         subScreen.englishButtonAction = { [weak self] in
-            self?.switchLanguage(language: .english)
+            self?.switchLanguage(language: "en")
         }
         
         let appScreen = UIStackView(arrangedSubviews: [myTitleBar, subScreen])
@@ -78,5 +66,10 @@ extension SwitchLanguageScreen {
             myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
             subScreen.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9)
         ])
+    }
+    
+    deinit {
+        // 移除觀察者
+        NotificationCenter.default.removeObserver(self)
     }
 }

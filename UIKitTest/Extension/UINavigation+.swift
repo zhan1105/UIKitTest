@@ -37,4 +37,14 @@ extension UIViewController {
     func popView() {
         navigationController?.popViewController(animated: true)
     }
+    
+    //MARK: - 清空返回首頁
+    func clearToMainView(_ storyboardId : String){
+        if let vc = storyboard?.instantiateViewController(withIdentifier: storyboardId) {
+            var viewControllers = navigationController?.viewControllers
+            viewControllers?.removeLast()
+            viewControllers?.append(vc)
+            navigationController?.setViewControllers(viewControllers!, animated: true)
+        }
+    }
 }

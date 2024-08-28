@@ -9,11 +9,6 @@ import UIKit
 
 class SwitchLanguageUI: UIView {
     
-    enum Language {
-        case chinese
-        case english
-    }
-    
     var languageLabel = UILabel()
     var chineseButton = UIButton(type: .system)
     var englishButton = UIButton(type: .system)
@@ -32,8 +27,8 @@ class SwitchLanguageUI: UIView {
     
     private func setupUI() {
         
-        languageLabel.text = "選擇語言"
-        languageLabel.font = UIFont.boldTitle2
+        languageLabel.text = NSLocalizedString("Hello", comment: "")
+        languageLabel.font = UIFont.boldTitle1
         languageLabel.textColor = .black
         languageLabel.textAlignment = .center
         languageLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -75,7 +70,7 @@ class SwitchLanguageUI: UIView {
     
     @objc private func buttonTapped(_ sender: UIButton) {
         
-        let selectedLanguage: Language = (sender == chineseButton) ? .chinese : .english
+        let selectedLanguage: SwitchLanguage = (sender == chineseButton) ? .chinese : .english
         switch selectedLanguage {
         case .chinese:
             chineseButtonAction?()
