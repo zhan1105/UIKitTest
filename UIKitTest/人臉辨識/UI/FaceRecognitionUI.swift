@@ -34,7 +34,6 @@ class FaceRecognitionUI: UIView {
         
         addSubview(subScreen)
         
-//        subScreen.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             subScreen.topAnchor.constraint(equalTo: topAnchor),
             subScreen.bottomAnchor.constraint(equalTo: bottomAnchor),
@@ -42,16 +41,8 @@ class FaceRecognitionUI: UIView {
             subScreen.trailingAnchor.constraint(equalTo: trailingAnchor),
 
             messageLabel.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.1),
-            messageLabel.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor),
-            messageLabel.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor),
-            
             verifyButton.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.1),
-            verifyButton.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor),
-            verifyButton.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor),
-            
             spacer.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.8),
-            spacer.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor),
-            spacer.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor),
         ])
     }
 }

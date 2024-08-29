@@ -91,7 +91,7 @@ extension FaceRecognitionScreen {
             appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             
             myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
-            faceRecognitionUI.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9  )
+            faceRecognitionUI.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9)
         ])
     }
 }

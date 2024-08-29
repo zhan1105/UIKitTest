@@ -18,16 +18,10 @@ class MyStack: UIStackView {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.addArrangedSubviews(arrangedSubviews)
-        setupUI()
     }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
-    }
-    
-    private func setupUI() {
-        // 任何額外的設置都可以在這裡進行
-        // 例如設定背景顏色、邊框等
     }
     
     func addArrangedSubviews(_ views: [UIView]) {
