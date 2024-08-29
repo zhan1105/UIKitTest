@@ -5,6 +5,7 @@
 //  Created by 紹郁 on 2024/8/14.
 //
 
+import UIKit
 import Foundation
 
 enum SFSymbol: String {
@@ -13,3 +14,10 @@ enum SFSymbol: String {
     case bell_not           = "bell"
     case bell               = "bell.badge"
 }
+
+extension UIImage {
+    convenience init?(systemSymbol: SFSymbol) {
+        self.init(systemName: systemSymbol.rawValue)
+    }
+}
+

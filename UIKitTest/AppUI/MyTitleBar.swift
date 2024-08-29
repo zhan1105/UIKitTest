@@ -2,13 +2,14 @@
 //  MyTitleBar.swift
 //  UIKitTest
 //
-//  Created by 紹郁 on 2024/8/26.
+//  Created by 紹郁 on 2024/8/29.
 //
+
 import UIKit
 
 class MyTitleBar: UIView {
     
-    var titleLabel = UILabel()
+    var titleLabel = MyLabel().newLabel
     var backButton = UIButton(type: .system)
     var spacer = UIView()
     
@@ -25,14 +26,8 @@ class MyTitleBar: UIView {
     }
     
     private func setupViews() {
-        titleLabel.text = "標題"
-        titleLabel.font = UIFont.systemFont(ofSize: UIFont.title2.pointSize, weight: .bold)
-        titleLabel.textColor = .black
-        titleLabel.textAlignment = .center
-        titleLabel.backgroundColor = .clear
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        backButton.setImage(UIImage(systemName: SFSymbol.arrow_left.rawValue), for: .normal)
+        backButton.setImage(UIImage(systemSymbol: SFSymbol.arrow_left), for: .normal)
         backButton.tintColor = .black
         
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
@@ -68,3 +63,4 @@ class MyTitleBar: UIView {
         backButtonAction?()
     }
 }
+
