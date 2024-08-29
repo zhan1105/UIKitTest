@@ -29,7 +29,7 @@ class FaceRecognitionUI: UIView {
         
         let spacer = mySpacer()
         
-        let subScreen = MyStack(arrangedSubviews: [messageLabel, verifyButton, spacer]).newStack
+        let subScreen = MyStack(arrangedSubviews: [messageLabel, verifyButton, spacer])
         subScreen.spacing = 15
         
         addSubview(subScreen)

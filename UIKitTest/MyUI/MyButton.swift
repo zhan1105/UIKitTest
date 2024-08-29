@@ -22,7 +22,7 @@ class MyButton: UIButton {
     
     private func setupUI() {
         self.setTitle("Button", for: .normal)
-        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17) // 替換 UIFont.boldTitle2 為系統的 bold 字體
+        self.titleLabel?.font = UIFont.boldTitle2
         self.tintColor = .white
         self.layer.cornerRadius = 10
         self.backgroundColor = UIColor.systemBlue // 替換自定義顏色為系統藍色
