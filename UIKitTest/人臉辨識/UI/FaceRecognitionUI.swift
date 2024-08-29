@@ -9,9 +9,8 @@ import UIKit
 
 class FaceRecognitionUI: UIView {
     
-    var messageLabel = MyLabel().newLabel
-    var verifyButton = MyButton().newButton
-    var verifyButtonAction: (() -> Void)?
+    var messageLabel = MyLabel()
+    var verifyButton = MyButton()
             
     init() {
         super.init(frame: .zero)
@@ -27,7 +26,6 @@ class FaceRecognitionUI: UIView {
         messageLabel.text = "FaceID"
         
         verifyButton.setTitle("驗證", for: .normal)
-        verifyButton.addTarget(self, action: #selector(verifyButtonTapped), for: .touchUpInside)
         
         let spacer = mySpacer()
         
@@ -55,9 +53,5 @@ class FaceRecognitionUI: UIView {
             spacer.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor),
             spacer.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor),
         ])
-    }
-    
-    @objc private func verifyButtonTapped() {
-        verifyButtonAction?()
     }
 }

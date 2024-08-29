@@ -9,7 +9,7 @@ import UIKit
 
 class MyTitleBar: UIView {
     
-    var titleLabel = MyLabel().newLabel
+    var titleLabel = MyLabel()
     var backButton = UIButton(type: .system)
     
     var backButtonAction: (() -> Void)?

@@ -77,7 +77,7 @@ extension FaceRecognitionScreen {
         myTitleBar.titleLabel.text = "FaceID驗證"
         myTitleBar.backButtonAction = { [weak self] in self?.popView() }
         
-        faceRecognitionUI.verifyButtonAction = { [weak self] in self?.authenticateWithFaceID() }
+        faceRecognitionUI.verifyButton.buttonAction = { [weak self] in self?.authenticateWithFaceID() }
         
         let appScreen = MyStack(arrangedSubviews: [myTitleBar, faceRecognitionUI])
         
