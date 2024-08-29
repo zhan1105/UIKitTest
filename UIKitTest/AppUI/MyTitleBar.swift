@@ -26,14 +26,16 @@ class MyTitleBar: UIView {
     
     private func setupViews() {
         
-        backButton.setImage(UIImage(systemSymbol: .arrow_left), for: .normal)
+        backButton.setImage(UIImage(systemSymbol: SFSymbol.arrow_left), for: .normal)
         backButton.tintColor = .black
         
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         backButton.backgroundColor = .clear
         backButton.translatesAutoresizingMaskIntoConstraints = false
         
         let spacer = mySpacer()
         
+        // 設置 UIStackView
         let titleBarStack = UIStackView(arrangedSubviews: [backButton, titleLabel, spacer])
         titleBarStack.axis = .horizontal
         titleBarStack.distribution = .fill
@@ -52,6 +54,10 @@ class MyTitleBar: UIView {
             titleLabel.widthAnchor.constraint(equalTo: titleBarStack.widthAnchor, multiplier: 0.7),
             spacer.widthAnchor.constraint(equalTo: titleBarStack.widthAnchor, multiplier: 0.15)
         ])
+    }
+    
+    @objc private func backButtonTapped() {
+        backButtonAction?()
     }
 }
 

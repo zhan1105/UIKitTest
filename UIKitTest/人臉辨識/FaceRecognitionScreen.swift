@@ -10,8 +10,9 @@ import LocalAuthentication
 
 class FaceRecognitionScreen: UIViewController {
         
+    let myTitleBar = MyTitleBar()
     let faceRecognitionUI = FaceRecognitionUI()
-    var message = FaceRecognitionUI().message
+    var message = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,8 @@ class FaceRecognitionScreen: UIViewController {
                         // 認證成功，獲取回傳ID，轉換為 String
                         if let policyDomainState = context.evaluatedPolicyDomainState {
                             let policyDomainStateString = policyDomainState.base64EncodedString()
-                            print("Face ID 認證成功，回傳ID: \(policyDomainStateString)")
                                                 
-                            // 在這裡可以使用回傳ID進行額外的處理
+                            message = "Face ID 認證成功，回傳ID: \(policyDomainStateString)"
                         }
                     } else {
                         // 認證失敗，顯示錯誤信息
@@ -57,6 +57,7 @@ class FaceRecognitionScreen: UIViewController {
                             }
                         }
                     }
+                    faceRecognitionUI.messageLabel.text = message
                 }
             }
         } else {
@@ -73,16 +74,24 @@ extension FaceRecognitionScreen {
     
     private func setupUI() {
         
-        faceRecognitionUI.backButtonAction = { [weak self] in self?.popView() }
-        faceRecognitionUI.verifyButtonAction = { [weak self] in self?.authenticateWithFaceID() }
-        faceRecognitionUI.translatesAutoresizingMaskIntoConstraints = false
+        myTitleBar.titleLabel.text = "FaceID驗證"
+        myTitleBar.backButtonAction = { [weak self] in self?.popView() }
         
-        self.view.addSubview(faceRecognitionUI)
+        faceRecognitionUI.verifyButtonAction = { [weak self] in self?.authenticateWithFaceID() }
+        
+        let appScreen = MyStack(arrangedSubviews: [myTitleBar, faceRecognitionUI])
+        
+        self.view.addSubview(appScreen)
+        
+        appScreen.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            faceRecognitionUI.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            faceRecognitionUI.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
-            faceRecognitionUI.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            faceRecognitionUI.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            appScreen.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            appScreen.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+            appScreen.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            
+            myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
+            faceRecognitionUI.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9  )
         ])
     }
 }

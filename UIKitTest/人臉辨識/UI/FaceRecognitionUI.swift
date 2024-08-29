@@ -9,11 +9,10 @@ import UIKit
 
 class FaceRecognitionUI: UIView {
     
-    var backButtonAction: (() -> Void)?
+    var messageLabel = MyLabel().newLabel
+    var verifyButton = MyButton().newButton
     var verifyButtonAction: (() -> Void)?
-    
-    var message: String?
-    
+            
     init() {
         super.init(frame: .zero)
         setupUI()
@@ -25,14 +24,8 @@ class FaceRecognitionUI: UIView {
     
     private func setupUI(){
         
-        let myTitleBar = MyTitleBar()
-        myTitleBar.titleLabel.text = "FaceID練習"
-        myTitleBar.backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        messageLabel.text = "FaceID"
         
-        let messageLabel = MyLabel().newLabel
-        messageLabel.text = message ?? "FaceID"
-        
-        let verifyButton = MyButton().newButton
         verifyButton.setTitle("驗證", for: .normal)
         verifyButton.addTarget(self, action: #selector(verifyButtonTapped), for: .touchUpInside)
         
@@ -41,23 +34,15 @@ class FaceRecognitionUI: UIView {
         let subScreen = MyStack(arrangedSubviews: [messageLabel, verifyButton, spacer]).newStack
         subScreen.spacing = 15
         
-        let appScreen = MyStack(arrangedSubviews: [myTitleBar, subScreen]).newStack
+        addSubview(subScreen)
         
-        addSubview(appScreen)
+//        subScreen.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            appScreen.topAnchor.constraint(equalTo: topAnchor),
-            appScreen.bottomAnchor.constraint(equalTo: bottomAnchor),
-            appScreen.leadingAnchor.constraint(equalTo: leadingAnchor),
-            appScreen.trailingAnchor.constraint(equalTo: trailingAnchor),
-            
-            myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
-            myTitleBar.leadingAnchor.constraint(equalTo: appScreen.leadingAnchor),
-            myTitleBar.trailingAnchor.constraint(equalTo: appScreen.trailingAnchor),
-            
-            subScreen.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9),
-            subScreen.leadingAnchor.constraint(equalTo: appScreen.leadingAnchor),
-            subScreen.trailingAnchor.constraint(equalTo: appScreen.trailingAnchor),
-            
+            subScreen.topAnchor.constraint(equalTo: topAnchor),
+            subScreen.bottomAnchor.constraint(equalTo: bottomAnchor),
+            subScreen.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subScreen.trailingAnchor.constraint(equalTo: trailingAnchor),
+
             messageLabel.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.1),
             messageLabel.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor),
             messageLabel.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor),
@@ -70,10 +55,6 @@ class FaceRecognitionUI: UIView {
             spacer.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor),
             spacer.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor),
         ])
-    }
-    
-    @objc private func backButtonTapped() {
-        backButtonAction?()
     }
     
     @objc private func verifyButtonTapped() {

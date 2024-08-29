@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUa-55-KBY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="5"/>
+            <point key="canvasLocation" x="1058" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fgh-kG-n5p">
@@ -39,21 +39,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efN-QG-yUW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137" y="-724"/>
-        </scene>
-        <!--Layout Constraint Screen-->
-        <scene sceneID="lXc-QX-hoF">
-            <objects>
-                <viewController storyboardIdentifier="LayoutSB" id="LNR-uN-TUN" customClass="LayoutConstraintScreen" customModule="UIKitTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="s3C-Pa-qlv" customClass="NS">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JNC-37-rNV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FYx-Ne-ApK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1060" y="5"/>
         </scene>
         <!--Switch Language Screen-->
         <scene sceneID="gvD-07-mFK">
