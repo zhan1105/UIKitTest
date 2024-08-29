@@ -11,7 +11,6 @@ class MyTitleBar: UIView {
     
     var titleLabel = MyLabel().newLabel
     var backButton = UIButton(type: .system)
-    var spacer = UIView()
     
     var backButtonAction: (() -> Void)?
     
@@ -34,11 +33,8 @@ class MyTitleBar: UIView {
         backButton.backgroundColor = .clear
         backButton.translatesAutoresizingMaskIntoConstraints = false
         
-        // 設置 spacer
-        spacer.backgroundColor = .clear
-        spacer.translatesAutoresizingMaskIntoConstraints = false
+        let spacer = mySpacer()
         
-        // 設置 UIStackView
         let titleBarStack = UIStackView(arrangedSubviews: [backButton, titleLabel, spacer])
         titleBarStack.axis = .horizontal
         titleBarStack.distribution = .fill
