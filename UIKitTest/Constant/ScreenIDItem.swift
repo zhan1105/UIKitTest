@@ -23,5 +23,6 @@ struct ScreenIDItem {
                                     ("GoogleMap練習", "GoogleMapSB"),
                                     ("OTP自動填入", "OTPSB"),
                                     ("文字判斷", "TextSettingSB"),
-                                    ("XibExample", "XibSB")]
+                                    ("XibExample", "XibSB"),
+                                    ("FaceID", "FaceRecognitionSB")]
 }

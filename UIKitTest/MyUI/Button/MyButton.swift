@@ -10,7 +10,6 @@ import UIKit
 class MyButton: UIView {
     
     var newButton = UIButton()
-    var buttonAction: (() -> Void)?
     
     init(newButton: UIButton = UIButton()) {
         self.newButton = newButton
@@ -30,7 +29,6 @@ class MyButton: UIView {
         newButton.tintColor = .white
         newButton.layer.cornerRadius = 10
         newButton.backgroundColor = UIColor.color0080FF
-        newButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
 
         addSubview(newButton)
         
@@ -41,9 +39,5 @@ class MyButton: UIView {
             newButton.leadingAnchor.constraint(equalTo: leadingAnchor),
             newButton.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
-    }
-    
-    @objc private func backButtonTapped() {
-        buttonAction?()
     }
 }
