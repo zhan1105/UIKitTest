@@ -36,7 +36,7 @@ class SwitchLanguageScreen: MyViewController {
     }
     
     @objc private func updateUI() {
-        clearToViewController(TableTestScreen(), animation: .cubic)
+        clearToViewController(TableTestScreen())
     }
     
     private func setupUI() {

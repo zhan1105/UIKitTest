@@ -11,7 +11,6 @@
 		7F2D19932C816B5500C12968 /* OTPCodeUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19922C816B5500C12968 /* OTPCodeUI.swift */; };
 		7F2D19952C81739C00C12968 /* MySpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19942C81739C00C12968 /* MySpacer.swift */; };
 		7F2D19972C81A63B00C12968 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19962C81A63B00C12968 /* MyViewController.swift */; };
-		7F2D19C52C81BB0900C12968 /* ViewAnimation+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19C42C81BB0900C12968 /* ViewAnimation+.swift */; };
 		7F2F47A62C80169A00D5BB10 /* FaceRecognitionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F47A52C80169A00D5BB10 /* FaceRecognitionScreen.swift */; };
 		7F2F47AA2C80170E00D5BB10 /* FaceRecognitionUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F47A82C80170E00D5BB10 /* FaceRecognitionUI.swift */; };
 		7F2F47B82C802E4800D5BB10 /* MyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F47B62C802E4800D5BB10 /* MyImage.swift */; };
@@ -57,7 +56,6 @@
 		7F2D19922C816B5500C12968 /* OTPCodeUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeUI.swift; sourceTree = "<group>"; };
 		7F2D19942C81739C00C12968 /* MySpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpacer.swift; sourceTree = "<group>"; };
 		7F2D19962C81A63B00C12968 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
-		7F2D19C42C81BB0900C12968 /* ViewAnimation+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewAnimation+.swift"; sourceTree = "<group>"; };
 		7F2F47A52C80169A00D5BB10 /* FaceRecognitionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionScreen.swift; sourceTree = "<group>"; };
 		7F2F47A82C80170E00D5BB10 /* FaceRecognitionUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionUI.swift; sourceTree = "<group>"; };
 		7F2F47B62C802E4800D5BB10 /* MyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImage.swift; sourceTree = "<group>"; };
@@ -306,7 +304,6 @@
 				7F3BB9492C78596F00CBF06E /* UIColor+.swift */,
 				7F3BB94A2C78596F00CBF06E /* UIFont+.swift */,
 				7F3BB94C2C78596F00CBF06E /* View+.swift */,
-				7F2D19C42C81BB0900C12968 /* ViewAnimation+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -516,7 +513,6 @@
 				7F3BB9502C78596F00CBF06E /* SFSymbol.swift in Sources */,
 				7F2F47C32C803F0200D5BB10 /* MySymbol.swift in Sources */,
 				7F3BB9432C78575F00CBF06E /* TableCell.swift in Sources */,
-				7F2D19C52C81BB0900C12968 /* ViewAnimation+.swift in Sources */,
 				7F3BB93C2C78575F00CBF06E /* MapScreen.swift in Sources */,
 				7F9C687B2C7DA72400D96974 /* SwitchLanguageUI.swift in Sources */,
 				7F2F47D02C804A9800D5BB10 /* MyButton.swift in Sources */,

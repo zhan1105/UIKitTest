@@ -43,14 +43,14 @@ extension UIViewController {
     }
     
     // MARK: - 清空返回首頁
-    func clearToViewController(_ mainViewController: UIViewController, animation: TransitionAnimation) {
+    func clearToViewController(_ mainViewController: UIViewController) {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let window = windowScene.windows.first else {
             return
         }
         
         window.rootViewController = mainViewController
-        UIView.transition(with: window, duration: 0.5, options: animation.transitionOptions, animations: nil, completion: nil)
+        UIView.transition(with: window, duration: 0.5, options: UIView.AnimationOptions.allowAnimatedContent, animations: nil, completion: nil)
     }
 }
 
