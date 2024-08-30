@@ -42,6 +42,8 @@
 		7F3BB9522C78596F00CBF06E /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB94A2C78596F00CBF06E /* UIFont+.swift */; };
 		7F3BB9542C78596F00CBF06E /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB94C2C78596F00CBF06E /* View+.swift */; };
 		7F54CCD22C7C5F5C00539929 /* TextSettingUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */; };
+		7F7860932C820ED100BFA5A5 /* SymbolScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7860922C820ED100BFA5A5 /* SymbolScreen.swift */; };
+		7F7860962C820F1000BFA5A5 /* SymbolUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7860952C820F1000BFA5A5 /* SymbolUI.swift */; };
 		7F9C687B2C7DA72400D96974 /* SwitchLanguageUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C687A2C7DA72400D96974 /* SwitchLanguageUI.swift */; };
 		7F9C68822C7DC5FB00D96974 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F9C68802C7DC5FB00D96974 /* Localizable.strings */; };
 		7F9C68852C7DC76800D96974 /* SwitchLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C68842C7DC76800D96974 /* SwitchLanguage.swift */; };
@@ -89,6 +91,8 @@
 		7F3BB94A2C78596F00CBF06E /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		7F3BB94C2C78596F00CBF06E /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSettingUI.swift; sourceTree = "<group>"; };
+		7F7860922C820ED100BFA5A5 /* SymbolScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolScreen.swift; sourceTree = "<group>"; };
+		7F7860952C820F1000BFA5A5 /* SymbolUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolUI.swift; sourceTree = "<group>"; };
 		7F8623F12C7EB1B7002E8839 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		7F8623F22C7EB1B7002E8839 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7F8623F32C7EB1B7002E8839 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				7F3BB9182C78575E00CBF06E /* 文字格式辨識 */,
 				7F2F47A42C80154600D5BB10 /* 人臉辨識 */,
 				7F3BB9342C78575F00CBF06E /* TabelView練習 */,
+				7F7860912C820E9900BFA5A5 /* SFSymbol應用 */,
 				7F3BB9052C7856AD00CBF06E /* Main.storyboard */,
 				7F3BB90B2C7856AE00CBF06E /* Assets.xcassets */,
 				7F3BB90D2C7856AE00CBF06E /* LaunchScreen.storyboard */,
@@ -326,6 +331,23 @@
 			isa = PBXGroup;
 			children = (
 				7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7F7860912C820E9900BFA5A5 /* SFSymbol應用 */ = {
+			isa = PBXGroup;
+			children = (
+				7F7860942C820EFA00BFA5A5 /* UI */,
+				7F7860922C820ED100BFA5A5 /* SymbolScreen.swift */,
+			);
+			path = "SFSymbol應用";
+			sourceTree = "<group>";
+		};
+		7F7860942C820EFA00BFA5A5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F7860952C820F1000BFA5A5 /* SymbolUI.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -525,6 +547,7 @@
 				7F3BB90A2C7856AD00CBF06E /* UIKitTest.xcdatamodeld in Sources */,
 				7F3BB9042C7856AD00CBF06E /* ViewController.swift in Sources */,
 				7F2F47AA2C80170E00D5BB10 /* FaceRecognitionUI.swift in Sources */,
+				7F7860932C820ED100BFA5A5 /* SymbolScreen.swift in Sources */,
 				7F2D19972C81A63B00C12968 /* MyViewController.swift in Sources */,
 				7F2F47CB2C8049BD00D5BB10 /* MyTitleBar.swift in Sources */,
 				7FD1C8722C80B65500E42008 /* MyTextField.swift in Sources */,
@@ -542,6 +565,7 @@
 				7FD1C86D2C8092A400E42008 /* MyLabel.swift in Sources */,
 				7F3BB9022C7856AD00CBF06E /* SceneDelegate.swift in Sources */,
 				7F9C68892C7DCF4100D96974 /* LanguageManager.swift in Sources */,
+				7F7860962C820F1000BFA5A5 /* SymbolUI.swift in Sources */,
 				7F2F47A62C80169A00D5BB10 /* FaceRecognitionScreen.swift in Sources */,
 				7F2D19952C81739C00C12968 /* MySpacer.swift in Sources */,
 				7F3BB94E2C78596F00CBF06E /* ImageNameItem.swift in Sources */,

@@ -19,7 +19,7 @@ class MySymbol: UIImageView {
     }
 
     private func setupUI(symbol: SFSymbol) {
-        let paletteConfiguration = UIImage.SymbolConfiguration(paletteColors: [UIColor.black, UIColor.orange])
+        let paletteConfiguration = UIImage.SymbolConfiguration(paletteColors: [UIColor.orange, UIColor.black])
         self.image = UIImage(systemSymbol: symbol)?.withConfiguration(paletteConfiguration)
         self.contentMode = .scaleAspectFit
         self.translatesAutoresizingMaskIntoConstraints = false

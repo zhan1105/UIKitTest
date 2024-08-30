@@ -20,6 +20,7 @@ struct ScreenIDItem {
                                     ("GoogleMap練習", MapScreen()),
                                     ("OTP自動填入", OTPScreen()),
                                     ("文字判斷", TextSettingScreen()),
-                                    ("FaceID", FaceRecognitionScreen())
+                                    ("FaceID", FaceRecognitionScreen()),
+                                    ("Symbol應用", SymbolScreen())
     ]
 }
