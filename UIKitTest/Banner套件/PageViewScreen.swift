@@ -8,7 +8,7 @@
 import UIKit
 import FSPagerView
 
-class PageViewScreen: UIViewController {
+class PageViewScreen: MyViewController {
     
     var imageNameItem = ImageNameItem().imageData
     
@@ -24,13 +24,21 @@ class PageViewScreen: UIViewController {
         pagerView.delegate = self
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
         
-        let titleBar = titleBar
-        titleBar.backgroundColor = .clear
-        
         setPagerView()
         setPageControl()
-
-        let bannerView = UIStackView(arrangedSubviews: [titleBar ,pagerView, pageControl])
+        
+        setupUI()
+    }
+}
+//MARK: - SubView
+extension PageViewScreen {
+   
+    private func setupUI(){
+        
+        let myTitleBar = MyTitleBar(text: "Banner套件練習")
+        myTitleBar.backButtonAction = { [weak self] in self?.popViewController()}
+        
+        let bannerView = UIStackView(arrangedSubviews: [myTitleBar ,pagerView, pageControl])
         bannerView.axis = .vertical
         bannerView.distribution = .fill
         
@@ -41,48 +49,20 @@ class PageViewScreen: UIViewController {
             bannerView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             bannerView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             bannerView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-            bannerView.heightAnchor.constraint(equalToConstant: 350)
+            bannerView.heightAnchor.constraint(equalToConstant: 350),
+            
+            myTitleBar.heightAnchor.constraint(equalTo: bannerView.heightAnchor, multiplier: 0.15),
+            pagerView.heightAnchor.constraint(equalTo: bannerView.heightAnchor, multiplier: 0.75),
+            pageControl.heightAnchor.constraint(equalTo: bannerView.heightAnchor, multiplier: 0.1),
         ])
-        
-        titleBar.heightAnchor.constraint(equalTo: bannerView.heightAnchor, multiplier: 0.15).isActive = true
-        pagerView.heightAnchor.constraint(equalTo: bannerView.heightAnchor, multiplier: 0.75).isActive = true
-        pageControl.heightAnchor.constraint(equalTo: bannerView.heightAnchor, multiplier: 0.1).isActive = true
     }
-}
-//MARK: - SubView
-extension PageViewScreen {
-    var titleBar: UIView {
-        
-        let titleLabel = mainLabelView(labelText: "Banner套件練習", font: .title1, isBold: true, _textColor: .black, aligment: .center, background: .clear)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        let backButton = mainArrowButtonView(symbol: .arrow_left, target: self, action: #selector(back))
-        backButton.tintColor = .black
-        backButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        let view = UIView()
-        view.backgroundColor = .clear
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        let titleBarStack = UIStackView(arrangedSubviews: [backButton, titleLabel, view])
-        titleBarStack.axis = .horizontal
-        titleBarStack.distribution = .fill
-        titleBarStack.translatesAutoresizingMaskIntoConstraints = false
-        
-        backButton.widthAnchor.constraint(equalTo: titleBarStack.widthAnchor, multiplier: 0.15).isActive = true
-        titleLabel.widthAnchor.constraint(equalTo: titleBarStack.widthAnchor, multiplier: 0.7).isActive = true
-        view.widthAnchor.constraint(equalTo: titleBarStack.widthAnchor, multiplier: 0.15).isActive = true
-        
-        return titleBarStack
-    }
-
 }
 
 //MARK: - Function
 extension PageViewScreen {
     
     @objc func back() {
-        popView()
+        popViewController()
     }
 }
 
@@ -97,11 +77,7 @@ extension PageViewScreen {
         pagerView.interitemSpacing = 0                         //設定item間距
         pagerView.translatesAutoresizingMaskIntoConstraints = false
         
-        setPagerTransformer(.cubic)
-    }
-    
-    func setPagerTransformer(_ TransformerType: FSPagerViewTransformerType) {
-        pagerView.transformer = FSPagerViewTransformer(type: TransformerType)
+        pagerView.transformer = FSPagerViewTransformer(type: .cubic)
 
         //.crossFading          淡入淡出
         //.zoomOut              縮小

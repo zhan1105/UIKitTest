@@ -45,7 +45,7 @@ class SwitchLanguageUI: UIView {
         let buttonStack = createButtonStack(chineseButton, englishButton)
         let buttonStack2 = createButtonStack(vietnameseButton, indonesianButton)
         
-        let spacer = mySpacer()
+        let spacer = MySpacer()
         
         let subScreen = UIStackView(arrangedSubviews: [languageLabel, buttonStack, buttonStack2, spacer])
         subScreen.axis = .vertical

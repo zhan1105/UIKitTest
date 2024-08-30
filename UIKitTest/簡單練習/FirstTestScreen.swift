@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstTestScreen: UIViewController {
+class FirstTestScreen: MyViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,6 @@ class FirstTestScreen: UIViewController {
     }
     
     @objc private func buttonTapped(_ sender: UIButton) {
-        popView()
+        popViewController()
     }
 }

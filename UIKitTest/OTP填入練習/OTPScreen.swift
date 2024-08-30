@@ -7,7 +7,9 @@
 
 import UIKit
 
-class OTPScreen: UIViewController {
+class OTPScreen: MyViewController {
+    
+    let subScreen = OTPCodeUI()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +22,13 @@ extension OTPScreen {
     
     private func setupUI() {
         
-        let titleBar = mainTitleBar(title: "OTP自動填入")
-        let subScreen = subScreen
+        let myTitleBar = MyTitleBar(text: "OTP自動填入")
+        myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
         
-        let appScreen = UIStackView(arrangedSubviews: [titleBar, subScreen])
-        appScreen.axis = .vertical
-        appScreen.distribution = .fill
+        subScreen.textFieldDelegate = self
         
+        let appScreen = MyStack(arrangedSubviews: [myTitleBar, subScreen])
+
         self.view.backgroundColor = .groupBg
         self.view.addSubview(appScreen)
         
@@ -37,50 +39,9 @@ extension OTPScreen {
             appScreen.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             
-            titleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
+            myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
             subScreen.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9)
         ])
-    }
-    
-    var otpTextField: UITextField {
-        
-        let newTextField = UITextField()
-        newTextField.borderStyle = .line
-        newTextField.placeholder = "請輸入驗證碼"
-        newTextField.textColor = .black
-        newTextField.font = UIFont.title2
-        newTextField.backgroundColor = .white
-        
-//        newTextField.keyboardType = .default
-        newTextField.textContentType = .oneTimeCode
-        newTextField.delegate = self
-        newTextField.translatesAutoresizingMaskIntoConstraints = false
-        
-        return newTextField
-    }
-    
-    var subScreen: UIStackView {
-        
-        let otpTextField = otpTextField
-        let spacerView = mainSpacer()
-        
-        let subScreen = UIStackView(arrangedSubviews: [otpTextField, spacerView])
-        subScreen.axis = .vertical
-        subScreen.distribution = .fill
-        subScreen.alignment = .center
-        
-        subScreen.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            otpTextField.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.1),
-            spacerView.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.9),
-            
-            otpTextField.topAnchor.constraint(equalTo: subScreen.topAnchor, constant: 5),
-            otpTextField.bottomAnchor.constraint(equalTo: spacerView.topAnchor, constant: -5),
-            otpTextField.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor, constant: 5),
-            otpTextField.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor, constant: -5)
-        ])
-        
-        return subScreen
     }
 }
 

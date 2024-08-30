@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SwitchLanguageScreen: UIViewController {
+class SwitchLanguageScreen: MyViewController {
     
     let myTitleBar = MyTitleBar()
     let subScreen = SwitchLanguageUI()
@@ -36,13 +36,13 @@ class SwitchLanguageScreen: UIViewController {
     }
     
     @objc private func updateUI() {
-        clearToMainView("TableTestSB")
+        clearToViewController(TableTestScreen(), animation: .cubic)
     }
     
     private func setupUI() {
         myTitleBar.titleLabel.text = NSLocalizedString("SwitchLanguage", comment: "")
         myTitleBar.backButtonAction = { [weak self] in
-            self?.popView()
+            self?.popViewController()
         }
         
         subScreen.chineseButtonAction = { [weak self] in

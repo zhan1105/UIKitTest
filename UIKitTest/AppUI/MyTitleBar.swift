@@ -15,16 +15,18 @@ class MyTitleBar: UIView {
     var backButtonAction: (() -> Void)?
     
     // 初始化
-    init() {
+    init(text: String = "標題") {
         super.init(frame: .zero)
-        setupViews()
+        setupViews(text: text)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViews() {
+    private func setupViews(text: String) {
+        
+        titleLabel.text = text
         
         backButton.setImage(UIImage(systemSymbol: SFSymbol.arrow_left), for: .normal)
         backButton.tintColor = .black
@@ -33,7 +35,7 @@ class MyTitleBar: UIView {
         backButton.backgroundColor = .clear
         backButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let spacer = mySpacer()
+        let spacer = MySpacer()
         
         // 設置 UIStackView
         let titleBarStack = UIStackView(arrangedSubviews: [backButton, titleLabel, spacer])

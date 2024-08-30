@@ -9,11 +9,11 @@ import UIKit
 
 class MyStack: UIStackView {
 
-    init(arrangedSubviews: [UIView] = [], axis: NSLayoutConstraint.Axis = .vertical, distribution: UIStackView.Distribution = .fill, spacing: CGFloat = 0) {
+    init(arrangedSubviews: [UIView] = []) {
         super.init(frame: .zero)
-        self.axis = axis
-        self.distribution = distribution
-        self.spacing = spacing
+        self.axis = .vertical
+        self.distribution = .fill
+        self.spacing = 0
         self.backgroundColor = .clear
         self.translatesAutoresizingMaskIntoConstraints = false
         

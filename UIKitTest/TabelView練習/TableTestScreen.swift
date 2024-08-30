@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableTestScreen: UIViewController {
+class TableTestScreen: MyViewController {
     
     var screenIDItem = ScreenIDItem().screenItem
 
@@ -59,6 +59,6 @@ extension TableTestScreen: UITableViewDelegate, UITableViewDataSource {
         let index = indexPath.row
         let data = screenIDItem[index]
         
-        pushView(data.itemID)
+        pushViewController(data.itemID)
     }
 }

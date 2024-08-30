@@ -24,10 +24,9 @@ class FaceRecognitionUI: UIView {
     private func setupUI(){
         
         messageLabel.text = "FaceID"
-        
         verifyButton.setTitle("驗證", for: .normal)
         
-        let spacer = mySpacer()
+        let spacer = MySpacer()
         
         let subScreen = MyStack(arrangedSubviews: [messageLabel, verifyButton, spacer])
         subScreen.spacing = 15
@@ -43,6 +42,9 @@ class FaceRecognitionUI: UIView {
             messageLabel.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.1),
             verifyButton.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.1),
             spacer.heightAnchor.constraint(equalTo: subScreen.heightAnchor, multiplier: 0.8),
+            
+            verifyButton.leadingAnchor.constraint(equalTo: subScreen.leadingAnchor, constant: 15),
+            verifyButton.trailingAnchor.constraint(equalTo: subScreen.trailingAnchor, constant: -15),
         ])
     }
 }

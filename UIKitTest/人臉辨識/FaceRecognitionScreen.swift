@@ -8,7 +8,7 @@
 import UIKit
 import LocalAuthentication
 
-class FaceRecognitionScreen: UIViewController {
+class FaceRecognitionScreen: MyViewController {
         
     let myTitleBar = MyTitleBar()
     let faceRecognitionUI = FaceRecognitionUI()
@@ -75,7 +75,7 @@ extension FaceRecognitionScreen {
     private func setupUI() {
         
         myTitleBar.titleLabel.text = "FaceID驗證"
-        myTitleBar.backButtonAction = { [weak self] in self?.popView() }
+        myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
         
         faceRecognitionUI.verifyButton.buttonAction = { [weak self] in self?.authenticateWithFaceID() }
         

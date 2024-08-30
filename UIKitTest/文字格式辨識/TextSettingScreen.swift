@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TextSettingScreen: UIViewController {
+class TextSettingScreen: MyViewController {
     
-    let myTitleBar = MyTitleBar()
+    let myTitleBar = MyTitleBar(text: "文字辨識")
     let subScreen = TextSettingUI()
     
     override func viewDidLoad() {
@@ -104,8 +104,7 @@ extension TextSettingScreen {
     
     private func setupUI(){
         
-        myTitleBar.titleLabel.text = "文字辨識"
-        myTitleBar.backButtonAction = { self.popView() }
+        myTitleBar.backButtonAction = { self.popViewController() }
         
         subScreen.firstTextField.delegate = self
         subScreen.secondTextField.delegate = self

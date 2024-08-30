@@ -9,7 +9,7 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 
-class MapScreen: UIViewController {
+class MapScreen: MyViewController {
     
     var mapView: GMSMapView!
     let myLocationMgr = CLLocationManager()
@@ -30,11 +30,12 @@ extension MapScreen {
     
     private func setupUI() {
         
-        let titleBar = mainTitleBar(title: "GoogleMap練習")
+        let myTitleBar = MyTitleBar(text: "GoogleMap練習")
+        myTitleBar.backButtonAction = { [weak self] in self?.popViewController()}
 
         mapView = GMSMapView() // 初始化 mapView
 
-        let appScreen = UIStackView(arrangedSubviews: [titleBar, mapView])
+        let appScreen = UIStackView(arrangedSubviews: [myTitleBar, mapView])
         appScreen.axis = .vertical
         appScreen.distribution = .fill
         
@@ -47,7 +48,7 @@ extension MapScreen {
             appScreen.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             
-            titleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
+            myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
             mapView.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9)
         ])
         
