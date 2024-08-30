@@ -32,10 +32,10 @@ extension UIViewController {
         if animated {
             // 自訂翻頁動畫
             let transition = CATransition()
-            transition.duration = 0.5 // 動畫持續時間
-            transition.type = .push // 動畫類型
-            transition.subtype = .fromLeft // 動畫方向，從右邊翻頁
-            transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut) // 動畫的時間曲線
+            transition.duration = 0.5
+            transition.type = .push
+            transition.subtype = .fromLeft
+            transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
             view.window?.layer.add(transition, forKey: kCATransition)
         }
         
