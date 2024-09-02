@@ -85,5 +85,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: - AppAPI
     
     static let googleApiKey = "AIzaSyBqLyG841vcfzLF9DV8zU_qcDdX74JTuiw"
+    static let CatApiKey = "live_7xlzXcjcXUoTO889liiO6qijBzIRLgZBUiTNyasuw65KgDH1NIFAIzfCkZA6LAgK"
 }
 
