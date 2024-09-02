@@ -8,6 +8,14 @@
 import UIKit
 
 class SymbolUI: UIView {
+        
+    private var mySymbol = MySymbol(symbol: .bell)
+
+    private var firstColorWell: UIColorWell?
+    private var secondColorWell: UIColorWell?
+    
+    var selectedFirstColor = UIColor.black
+    var selectedSecondColor = UIColor.black
     
     init(){
         super.init(frame: .zero)
@@ -19,12 +27,10 @@ class SymbolUI: UIView {
     }
     
     private func setupUI(){
-        
-        let mySymbol = MySymbol(symbol: .bell)
-        
+                
         let firstColor = creatColorStack(color: .black, text: "第一色")
         let secondColor = creatColorStack(color: .black, text: "第二色")
-
+        
         let spacer = MySpacer()
         
         let subScreen = MyStack(arrangedSubviews: [mySymbol, firstColor, secondColor, spacer])
@@ -56,18 +62,40 @@ class SymbolUI: UIView {
         let newColorWell = UIColorWell()
         newColorWell.selectedColor = color
         newColorWell.translatesAutoresizingMaskIntoConstraints = false
-        newColorWell.widthAnchor.constraint(equalToConstant: 50).isActive = true // 直接給定固定寬度
-        
+        newColorWell.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        newColorWell.addTarget(self, action: #selector(colorChanged(_:)), for: .valueChanged)
+
         let newLabel = MyLabel(text: text)
         newLabel.translatesAutoresizingMaskIntoConstraints = false
-
+        
         let newSpacer = MySpacer()
         newSpacer.widthAnchor.constraint(equalToConstant: 50).isActive = true
         
         let newColor = MyStack(arrangedSubviews: [newColorWell, newLabel, newSpacer])
         newColor.axis = .horizontal
-        newColor.spacing = 8 // 給子視圖之間設置間距
-
+        newColor.spacing = 8
+        
+        if text == "第一色" {
+            firstColorWell = newColorWell
+        } else if text == "第二色" {
+            secondColorWell = newColorWell
+        }
+        
         return newColor
+    }
+    
+    @objc private func colorChanged(_ sender: UIColorWell) {
+        if sender == firstColorWell {
+            selectedFirstColor = sender.selectedColor!
+        } else if sender == secondColorWell {
+            selectedSecondColor = sender.selectedColor!
+        }
+        
+        let paletteConfiguration = UIImage.SymbolConfiguration(paletteColors: [selectedFirstColor, selectedSecondColor])
+        // 更新符號圖像的配置
+        if let symbolImage = mySymbol.image {
+            let updatedImage = symbolImage.withConfiguration(paletteConfiguration)
+            mySymbol.image = updatedImage
+        }
     }
 }
