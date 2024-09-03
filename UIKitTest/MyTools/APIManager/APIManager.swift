@@ -40,7 +40,7 @@ extension APIManager {
         return data
     }
     
-    func postForm(url: APIUrl, bodyData: [String: String]?) async throws -> Data {
+    func postForm(url: APIUrl, body: [String: String]?) async throws -> Data {
         guard let url = URL(string: url.rawValue) else {
             throw URLSession.APIError.invalidURL
         }
@@ -50,9 +50,9 @@ extension APIManager {
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.timeoutInterval = 30
         
-        if let bodyData = bodyData {
-            let formBodyString = bodyData.map { "\($0.key)=\($0.value)" }.joined(separator: "&")
-            request.httpBody = formBodyString.data(using: .utf8)
+        if let body = body {
+            let bodyData = body.map { "\($0.key)=\($0.value)" }.joined(separator: "&")
+            request.httpBody = bodyData.data(using: .utf8)
         }
         
         // 使用 URLSession 的擴展來發送請求

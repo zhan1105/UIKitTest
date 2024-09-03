@@ -27,7 +27,7 @@ extension APITestScreen {
         let subScreen = APITestUI()
         subScreen.checkButton.buttonAction = { [weak self] in
             Task {
-                //                await self?.getImage()
+//                await self?.getImage()
                 await self?.testLogin()
             }
         }
@@ -58,7 +58,7 @@ extension APITestScreen {
         
         do {
             let image = try await sut.getImage()
-            print(image[0].id)
+            print(image[0].url)
         } catch {
             print("Error fetching image: \(error)")
         }

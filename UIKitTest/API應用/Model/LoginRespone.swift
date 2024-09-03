@@ -8,7 +8,8 @@
 import Foundation
 
 struct LoginRespone: Codable {
-    let code, msg: String
+    let code: String
+    let msg: String
     let data: DataClass
     
     // MARK: - DataClass
@@ -16,9 +17,9 @@ struct LoginRespone: Codable {
         let token:          String
         let arcNo:          String
         let name:           String
-        let birthDate:      Date?
+        let birthDate:      String
         let countryCode:    String
-        let arcExpiryDate:  Date?
+        let arcExpiryDate:  String?
         let passportNo:     String
         let phone:          String
         
