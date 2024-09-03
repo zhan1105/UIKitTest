@@ -61,7 +61,7 @@ extension APIManager {
         return data
     }
     
-    func postJson(url: APIUrl, bodyData: [String: Any]?) async throws -> Data {
+    func postJson(url: APIUrl, body: [String: Any]?) async throws -> Data {
         guard let url = URL(string: url.rawValue) else {
             throw URLSession.APIError.invalidURL
         }
@@ -71,15 +71,15 @@ extension APIManager {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.timeoutInterval = 30
         
-        if let bodyData = bodyData {
+        if let body = body {
             
-            let test = try JSONSerialization.data(withJSONObject: bodyData, options: [])
-            if let jsonString = String(data: test, encoding: .utf8) {
-                print(jsonString)
+            let test = try JSONSerialization.data(withJSONObject: body, options: [])
+            if let dataString = String(data: test, encoding: .utf8) {
+                print(dataString)
             } else {
                 print("無法將 Data 轉換為 String")
             }
-            request.httpBody = try JSONSerialization.data(withJSONObject: bodyData, options: [])
+            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
         }
         
         // 使用先前擴展的 URLSession 的 data 方法

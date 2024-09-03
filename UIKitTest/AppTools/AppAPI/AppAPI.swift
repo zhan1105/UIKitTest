@@ -17,8 +17,8 @@ extension APIManager {
     func getLogin(body: [String: String]?) async throws -> String? {
         
         let data = try await postForm(url: .getLogin, bodyData: body)
-        let jsonString = String(data: data, encoding: .utf8)
+        let dataString = String(data: data, encoding: .utf8)
         
-        return jsonString
+        return dataString
     }
 }
