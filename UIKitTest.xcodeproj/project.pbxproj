@@ -447,19 +447,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7FDAC5DE2C85979F00A1FB29 /* AppAPI */ = {
-			isa = PBXGroup;
-			children = (
-				7FDAC5DF2C8597B500A1FB29 /* AppAPI.swift */,
-			);
-			path = AppAPI;
-			sourceTree = "<group>";
-		};
 		7FDAC5E12C8597F800A1FB29 /* AppTools */ = {
 			isa = PBXGroup;
 			children = (
+				7FDAC5DF2C8597B500A1FB29 /* AppAPI.swift */,
 				7F2F47C62C80494000D5BB10 /* AppUI */,
-				7FDAC5DE2C85979F00A1FB29 /* AppAPI */,
 				7F3BB9482C78596F00CBF06E /* AppConstant */,
 			);
 			path = AppTools;
