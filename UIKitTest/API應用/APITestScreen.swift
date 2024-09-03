@@ -12,27 +12,48 @@ class APITestScreen: MyViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let testButton = MyButton(text: "測試")
-        testButton.buttonAction = { [weak self] in
+        setupUI()
+    }
+    
+    
+}
+//MARK: - subView
+extension APITestScreen {
+    
+    private func setupUI(){
+        
+        let myTitleBar = MyTitleBar(text: "API應用")
+        
+        let subScreen = APITestUI()
+        subScreen.checkButton.buttonAction = { [weak self] in
             Task {
-//                await self?.getImage()
+                //                await self?.getImage()
                 await self?.testLogin()
             }
         }
         
+        let appScreen = MyStack(arrangedSubviews: [myTitleBar, subScreen])
+        
         // 添加按鈕到視圖中
-        view.addSubview(testButton)
+        view.addSubview(appScreen)
         // 設置按鈕的布局 (假設你有 Auto Layout 的約束)
-        testButton.translatesAutoresizingMaskIntoConstraints = false
+        appScreen.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            testButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            testButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            testButton.widthAnchor.constraint(equalToConstant: 100),
-            testButton.heightAnchor.constraint(equalToConstant: 50)
+            appScreen.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            appScreen.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+            appScreen.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            
+            myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
+            subScreen.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9),
         ])
     }
+}
+
+//MARK: - API
+extension APITestScreen {
     
-    func getImage() async {
+    private func getImage() async {
         let sut = APIManager.shared
         
         do {
@@ -43,7 +64,7 @@ class APITestScreen: MyViewController {
         }
     }
     
-    func testLogin() async {
+    private func testLogin() async {
         let sut = APIManager.shared
         
         do {
