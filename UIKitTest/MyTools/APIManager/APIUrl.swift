@@ -10,5 +10,6 @@ import Foundation
 enum APIUrl: String {
     //取得隨機10張
     case getCatData = "https://api.thecatapi.com/v1/images/search?limit=10"
+    case getFavourites = "https://api.thecatapi.com/v1/favourites"
     case getLogin = "https://app.mgtt.com.tw/api/login"
 }

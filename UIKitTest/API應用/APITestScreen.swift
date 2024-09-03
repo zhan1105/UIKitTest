@@ -15,7 +15,8 @@ class APITestScreen: MyViewController {
         let testButton = MyButton(text: "測試")
         testButton.buttonAction = { [weak self] in
             Task {
-                await self?.test()
+                await self?.getImage()
+                //await self?.testLogin()
             }
         }
         
@@ -31,15 +32,38 @@ class APITestScreen: MyViewController {
         ])
     }
     
-    func test() async {
+    func getImage() async {
         let sut = APIManager.shared
         
         do {
             let image = try await sut.getImage()
-            print(image[1].url)
+            print(image[0].id)
         } catch {
             print("Error fetching image: \(error)")
         }
+    }
+    
+    func testLogin() async {
+        let sut = APIManager.shared
         
+        do {
+            // 假設你有一些登入所需的參數
+            let body: [String: Any] = [
+                "arc_no": "NA80012021",
+                "password": 12345678,
+                "no": "caaBb7r8S8OITb7N-17lDi:APA91bH7CDlPbeOXHUXfW9WStMdq2Ok70OqBNZwmw7PcJXpxBIo0pRVAa4TBiehQl9rDMX2rRLTdAyhKjws-jad6T_QQk-3jK7Lh2k10w3-XnN8CzlO0G3SrSAltcP31ZNda3KSNeA9Z"
+            ]
+            
+            // 使用 postLogin 進行 POST 請求
+            let loginResponse = try await sut.getLogin(body: body)
+            
+            // 成功獲得回應
+            print("Login successful!")
+            print(loginResponse.data.arcNo)
+            
+        } catch {
+            // 處理錯誤
+            print("Failed to log in: \(error.localizedDescription)")
+        }
     }
 }

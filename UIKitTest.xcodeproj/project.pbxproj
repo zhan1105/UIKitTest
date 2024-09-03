@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B6D7D72FBF3B2D61D9CBA03 /* Pods_UIKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54553CAF9BC0B08DCC70436A /* Pods_UIKitTest.framework */; };
+		7F12362A2C86AA1700549E27 /* FavoritrCreationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1236292C86AA1700549E27 /* FavoritrCreationResponse.swift */; };
 		7F2D19932C816B5500C12968 /* OTPCodeUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19922C816B5500C12968 /* OTPCodeUI.swift */; };
 		7F2D19952C81739C00C12968 /* MySpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19942C81739C00C12968 /* MySpacer.swift */; };
 		7F2D19972C81A63B00C12968 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19962C81A63B00C12968 /* MyViewController.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		54553CAF9BC0B08DCC70436A /* Pods_UIKitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1236292C86AA1700549E27 /* FavoritrCreationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritrCreationResponse.swift; sourceTree = "<group>"; };
 		7F2D19922C816B5500C12968 /* OTPCodeUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeUI.swift; sourceTree = "<group>"; };
 		7F2D19942C81739C00C12968 /* MySpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpacer.swift; sourceTree = "<group>"; };
 		7F2D19962C81A63B00C12968 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 			children = (
 				7FDAC5D82C856A4D00A1FB29 /* ImageRespone.swift */,
 				7FDAC5E22C85A5AD00A1FB29 /* LoginRespone.swift */,
+				7F1236292C86AA1700549E27 /* FavoritrCreationResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				7F54CCD22C7C5F5C00539929 /* TextSettingUI.swift in Sources */,
 				7F3BB9362C78575F00CBF06E /* WebViewScreen.swift in Sources */,
 				7F3BB93D2C78575F00CBF06E /* FirstTestScreen.swift in Sources */,
+				7F12362A2C86AA1700549E27 /* FavoritrCreationResponse.swift in Sources */,
 				7FDAC5D62C8565E400A1FB29 /* APIUrl.swift in Sources */,
 				7FDAC5D92C856A4D00A1FB29 /* ImageRespone.swift in Sources */,
 				7FDAC5E02C8597B500A1FB29 /* AppAPI.swift in Sources */,

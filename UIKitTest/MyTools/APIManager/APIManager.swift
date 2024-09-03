@@ -39,4 +39,32 @@ extension APIManager {
         
         return data
     }
+    
+    func postJson(url: APIUrl, bodyData: [String: Any]?) async throws -> Data {
+        guard let url = URL(string: url.rawValue) else {
+            throw URLSession.APIError.invalidURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 30
+        
+        if let bodyData = bodyData {
+            // 將 parameters 轉換為 JSON
+            
+            let test = try JSONSerialization.data(withJSONObject: bodyData, options: [])
+            if let jsonString = String(data: test, encoding: .utf8) {
+                print(jsonString)
+            } else {
+                print("無法將 Data 轉換為 String")
+            }
+            request.httpBody = try JSONSerialization.data(withJSONObject: bodyData, options: [])
+        }
+        
+        // 使用先前擴展的 URLSession 的 data 方法
+        let data = try await session.data(for: request)
+        
+        return data
+    }
 }
