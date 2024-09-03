@@ -40,6 +40,27 @@ extension APIManager {
         return data
     }
     
+    func postForm(url: APIUrl, bodyData: [String: String]?) async throws -> Data {
+        guard let url = URL(string: url.rawValue) else {
+            throw URLSession.APIError.invalidURL
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 30
+        
+        if let bodyData = bodyData {
+            let formBodyString = bodyData.map { "\($0.key)=\($0.value)" }.joined(separator: "&")
+            request.httpBody = formBodyString.data(using: .utf8)
+        }
+        
+        // 使用 URLSession 的擴展來發送請求
+        let data = try await session.data(for: request)
+        
+        return data
+    }
+    
     func postJson(url: APIUrl, bodyData: [String: Any]?) async throws -> Data {
         guard let url = URL(string: url.rawValue) else {
             throw URLSession.APIError.invalidURL
@@ -51,7 +72,6 @@ extension APIManager {
         request.timeoutInterval = 30
         
         if let bodyData = bodyData {
-            // 將 parameters 轉換為 JSON
             
             let test = try JSONSerialization.data(withJSONObject: bodyData, options: [])
             if let jsonString = String(data: test, encoding: .utf8) {

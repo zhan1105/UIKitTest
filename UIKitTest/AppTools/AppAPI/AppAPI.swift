@@ -14,15 +14,11 @@ extension APIManager {
         return try JSONDecoder().decode([ImageRespone].self, from: data)
     }
     
-    func getLogin(body: [String: Any]?) async throws -> LoginRespone {
+    func getLogin(body: [String: String]?) async throws -> String? {
         
-        let data = try await postJson(url: .getLogin, bodyData: body)
+        let data = try await postForm(url: .getLogin, bodyData: body)
+        let jsonString = String(data: data, encoding: .utf8)
         
-        // 輸出 JSON 資料以便於調試
-        if let jsonString = String(data: data, encoding: .utf8) {
-            print("Received JSON: \(jsonString)")
-        }
-        
-        return try JSONDecoder().decode(LoginRespone.self, from: data)
+        return jsonString
     }
 }
