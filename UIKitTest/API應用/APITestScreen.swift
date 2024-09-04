@@ -23,6 +23,7 @@ extension APITestScreen {
     private func setupUI(){
         
         let myTitleBar = MyTitleBar(text: "API應用")
+        myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
         
         let subScreen = APITestUI()
         subScreen.checkButton.buttonAction = { [weak self] in

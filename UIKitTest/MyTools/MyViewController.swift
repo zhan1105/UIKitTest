@@ -9,6 +9,8 @@ import UIKit
 
 class MyViewController: UIViewController {
     
+    private var loadingView: MyLoading?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .groupBg
@@ -37,4 +39,29 @@ class MyViewController: UIViewController {
         textField.layer.borderWidth = 0
     }
     
+    func fetchData() {
+        // 顯示 Loading 畫面
+        showLoading()
+        
+        // 模擬資料載入過程
+        DispatchQueue.global().async {
+            sleep(2) // 模擬網絡請求
+            
+            DispatchQueue.main.async {
+                // 隱藏 Loading 畫面
+                self.hideLoading()
+            }
+        }
+    }
+    
+    private func showLoading() {
+        if loadingView == nil {
+            loadingView = MyLoading()
+        }
+        loadingView?.show(in: self.view)
+    }
+    
+    private func hideLoading() {
+        loadingView?.hide()
+    }
 }

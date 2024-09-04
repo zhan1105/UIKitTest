@@ -23,6 +23,7 @@ struct ScreenIDItem {
                                     ("FaceID", FaceRecognitionScreen()),
                                     ("Symbol應用", SymbolScreen()),
                                     ("API應用", APITestScreen()),
-                                    ("網路圖片應用", ImageUrlScreen())
+                                    ("網路圖片應用", ImageUrlScreen()),
+                                    ("Loading動畫", LoadingAnimationScreen())
     ]
 }

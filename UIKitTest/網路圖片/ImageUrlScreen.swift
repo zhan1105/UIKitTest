@@ -22,6 +22,7 @@ extension ImageUrlScreen {
     
     private func setupUI(){
         let myTitleBar = MyTitleBar(text: "網路圖片應用")
+        myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
         
         let image = MyImageUrl(imageURL: "https://cdn2.thecatapi.com/images/1a6.gif", shouldCache: true)
         

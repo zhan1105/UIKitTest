@@ -13,6 +13,8 @@
 		7F1236302C86E0C700549E27 /* MyImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12362F2C86E0C700549E27 /* MyImageUrl.swift */; };
 		7F1236332C86E2F400549E27 /* ImageUrlScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1236322C86E2F400549E27 /* ImageUrlScreen.swift */; };
 		7F1236362C86F6AA00549E27 /* ApiRespone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1236352C86F6AA00549E27 /* ApiRespone.swift */; };
+		7F263D442C87E91500624922 /* LoadingAnimationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F263D432C87E91500624922 /* LoadingAnimationScreen.swift */; };
+		7F263D462C87F4AD00624922 /* MyLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F263D452C87F4AD00624922 /* MyLoading.swift */; };
 		7F2D19932C816B5500C12968 /* OTPCodeUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19922C816B5500C12968 /* OTPCodeUI.swift */; };
 		7F2D19952C81739C00C12968 /* MySpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19942C81739C00C12968 /* MySpacer.swift */; };
 		7F2D19972C81A63B00C12968 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D19962C81A63B00C12968 /* MyViewController.swift */; };
@@ -73,6 +75,8 @@
 		7F12362F2C86E0C700549E27 /* MyImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageUrl.swift; sourceTree = "<group>"; };
 		7F1236322C86E2F400549E27 /* ImageUrlScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrlScreen.swift; sourceTree = "<group>"; };
 		7F1236352C86F6AA00549E27 /* ApiRespone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRespone.swift; sourceTree = "<group>"; };
+		7F263D432C87E91500624922 /* LoadingAnimationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationScreen.swift; sourceTree = "<group>"; };
+		7F263D452C87F4AD00624922 /* MyLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoading.swift; sourceTree = "<group>"; };
 		7F2D19922C816B5500C12968 /* OTPCodeUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeUI.swift; sourceTree = "<group>"; };
 		7F2D19942C81739C00C12968 /* MySpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpacer.swift; sourceTree = "<group>"; };
 		7F2D19962C81A63B00C12968 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +188,21 @@
 			path = AppAPI;
 			sourceTree = "<group>";
 		};
+		7F263D402C87E49700624922 /* 側選單 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "側選單";
+			sourceTree = "<group>";
+		};
+		7F263D422C87E4AA00624922 /* Loading 動畫 */ = {
+			isa = PBXGroup;
+			children = (
+				7F263D432C87E91500624922 /* LoadingAnimationScreen.swift */,
+			);
+			path = "Loading 動畫";
+			sourceTree = "<group>";
+		};
 		7F2D19912C816A8000C12968 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +278,8 @@
 				7F7860912C820E9900BFA5A5 /* SFSymbol應用 */,
 				7FDAC5D42C8564AB00A1FB29 /* API應用 */,
 				7F1236312C86E2C300549E27 /* 網路圖片 */,
+				7F263D402C87E49700624922 /* 側選單 */,
+				7F263D422C87E4AA00624922 /* Loading 動畫 */,
 				7F3BB90B2C7856AE00CBF06E /* Assets.xcassets */,
 				7F3BB90D2C7856AE00CBF06E /* LaunchScreen.storyboard */,
 				7F3BB9082C7856AD00CBF06E /* UIKitTest.xcdatamodeld */,
@@ -378,6 +399,7 @@
 				7F2F47DC2C8054DC00D5BB10 /* MyStack.swift */,
 				7FD1C8712C80B65500E42008 /* MyTextField.swift */,
 				7F2D19942C81739C00C12968 /* MySpacer.swift */,
+				7F263D452C87F4AD00624922 /* MyLoading.swift */,
 			);
 			path = MyUI;
 			sourceTree = "<group>";
@@ -627,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F263D462C87F4AD00624922 /* MyLoading.swift in Sources */,
 				7F3BB9502C78596F00CBF06E /* SFSymbol.swift in Sources */,
 				7F2F47C32C803F0200D5BB10 /* MySymbol.swift in Sources */,
 				7F3BB9432C78575F00CBF06E /* TableCell.swift in Sources */,
@@ -643,6 +666,7 @@
 				7F1236302C86E0C700549E27 /* MyImageUrl.swift in Sources */,
 				7F3BB90A2C7856AD00CBF06E /* UIKitTest.xcdatamodeld in Sources */,
 				7F3BB9042C7856AD00CBF06E /* ViewController.swift in Sources */,
+				7F263D442C87E91500624922 /* LoadingAnimationScreen.swift in Sources */,
 				7F2F47AA2C80170E00D5BB10 /* FaceRecognitionUI.swift in Sources */,
 				7F7860932C820ED100BFA5A5 /* SymbolScreen.swift in Sources */,
 				7F2D19972C81A63B00C12968 /* MyViewController.swift in Sources */,
