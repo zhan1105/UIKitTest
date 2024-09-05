@@ -101,7 +101,12 @@ class CameraOverlayScreen: MyViewController, AVCapturePhotoCaptureDelegate {
         guard let currentInput = captureSession.inputs.first as? AVCaptureDeviceInput else { return }
         captureSession.removeInput(currentInput)
         
-        guard let newCamera = AVCaptureDevice.devices(for: .video).first(where: { $0.position == position }) else { return }
+        let discoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera],
+                                                                mediaType: .video,
+                                                                position: .unspecified)
+        
+        let devices = discoverySession.devices
+        guard let newCamera = devices.first(where: { $0.position == position }) else { return }
         
         do {
             let newInput = try AVCaptureDeviceInput(device: newCamera)
