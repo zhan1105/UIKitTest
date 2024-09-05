@@ -8,16 +8,25 @@
 import UIKit
 import AVFoundation
 
-class CameraOverlayScreen: MyViewController {
+class CameraOverlayScreen: MyViewController, AVCapturePhotoCaptureDelegate {
     
     var subScreen = CameraOverlayUI()
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    var photoOutput: AVCapturePhotoOutput!
+    var currentCameraPosition: AVCaptureDevice.Position = .back
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         checkCameraPermission()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // 更新 previewLayer 的框架
+        previewLayer.frame = subScreen.targetView.layer.bounds
     }
     
     func checkCameraPermission() {
@@ -75,15 +84,44 @@ class CameraOverlayScreen: MyViewController {
             return
         }
         
+        configureCamera(for: .back) // 初始設置為後鏡頭
+        
         // 設定相機預覽
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = .resizeAspectFill
-        //        previewLayer.frame = view.layer.bounds
+        // 確保在 layoutSubviews 中設置框架
         previewLayer.frame = subScreen.targetView.layer.bounds
-        view.layer.addSublayer(previewLayer)
+        subScreen.targetView.layer.addSublayer(previewLayer) // 改為將預覽層添加到 targetView
         
         // 開始相機 session
         captureSession.startRunning()
+    }
+    
+    func configureCamera(for position: AVCaptureDevice.Position) {
+        guard let currentInput = captureSession.inputs.first as? AVCaptureDeviceInput else { return }
+        captureSession.removeInput(currentInput)
+        
+        guard let newCamera = AVCaptureDevice.devices(for: .video).first(where: { $0.position == position }) else { return }
+        
+        do {
+            let newInput = try AVCaptureDeviceInput(device: newCamera)
+            if captureSession.canAddInput(newInput) {
+                captureSession.addInput(newInput)
+                currentCameraPosition = position
+            }
+        } catch {
+            print("無法設定相機輸入: \(error)")
+        }
+    }
+    
+    func switchCamera() {
+        let newPosition: AVCaptureDevice.Position = (currentCameraPosition == .back) ? .front : .back
+        configureCamera(for: newPosition)
+    }
+    
+    func Photograph() {
+        let photoSettings = AVCapturePhotoSettings()
+        photoOutput.capturePhoto(with: photoSettings, delegate: self)
     }
 }
 //MARK: - subView
@@ -93,6 +131,9 @@ extension CameraOverlayScreen {
         
         let myTitleBar = MyTitleBar(text: "相機遮罩")
         myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
+        
+        subScreen.cameraButton.buttonAction = { [weak self] in self?.Photograph() }
+        subScreen.switchButton.buttonAction = { [weak self] in self?.switchCamera() }
         
         let appScreen = MyStack(arrangedSubviews: [myTitleBar, subScreen])
         appScreen.translatesAutoresizingMaskIntoConstraints = false

@@ -10,6 +10,8 @@ import UIKit
 class CameraOverlayUI: UIView {
 
     var targetView = UIView()
+    var cameraButton = MyButton()
+    var switchButton = MyButton()
     
     init(){
         super.init(frame: .zero)
@@ -25,14 +27,13 @@ class CameraOverlayUI: UIView {
         targetView.layer.borderWidth = 2
         targetView.layer.borderColor = UIColor.red.cgColor
         targetView.translatesAutoresizingMaskIntoConstraints = false
-        
+        targetView.isUserInteractionEnabled = false // 不影響相機操作
+
         let spacer = MySpacer()
         
-        let cameraButton = MyButton()
         cameraButton.setSymbolConfiguration(.camera, size: 50, for: .normal)
         cameraButton.backgroundColor = .clear
         
-        let switchButton = MyButton()
         switchButton.setSymbolConfiguration(.arrow_camera, size: 24, for: .normal)
         switchButton.backgroundColor = .clear
 
@@ -46,7 +47,6 @@ class CameraOverlayUI: UIView {
         let overlayView = MyStack(arrangedSubviews: [targetView, spacer, bottomStack])
         overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.6) // 半透明黑色
         overlayView.alignment = .center
-        overlayView.isUserInteractionEnabled = false // 不影響相機操作
         
         addSubview(overlayView)
         
