@@ -18,7 +18,6 @@ class CameraOverlayScreen: MyViewController {
         super.viewDidLoad()
         
         checkCameraPermission()
-        setupUI()
     }
     
     func checkCameraPermission() {
@@ -43,7 +42,7 @@ class CameraOverlayScreen: MyViewController {
             setupCamera()
             
             // 設定疊加視圖
-            setupOverlay()
+            setupUI()
         case .restricted, .denied:
             // 使用者拒絕或無權限使用相機
             showPermissionDeniedAlert()
@@ -79,27 +78,12 @@ class CameraOverlayScreen: MyViewController {
         // 設定相機預覽
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = .resizeAspectFill
-        previewLayer.frame = view.layer.bounds
+        //        previewLayer.frame = view.layer.bounds
+        previewLayer.frame = subScreen.targetView.layer.bounds
         view.layer.addSublayer(previewLayer)
         
         // 開始相機 session
         captureSession.startRunning()
-    }
-    
-    func setupOverlay() {
-        // 自訂疊加視圖
-        let overlayView = UIView(frame: view.bounds)
-        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.3) // 半透明黑色
-        overlayView.isUserInteractionEnabled = false // 不影響相機操作
-        
-        // 在上面加其他 UI 元素，例如一個瞄準框
-        let targetView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        targetView.center = view.center
-        targetView.layer.borderWidth = 2
-        targetView.layer.borderColor = UIColor.red.cgColor
-        
-        overlayView.addSubview(targetView)
-        view.addSubview(overlayView) // 疊加在相機預覽上
     }
 }
 //MARK: - subView
@@ -110,6 +94,18 @@ extension CameraOverlayScreen {
         let myTitleBar = MyTitleBar(text: "相機遮罩")
         myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
         
-        let subScreen = CameraOverlayUI()
+        let appScreen = MyStack(arrangedSubviews: [myTitleBar, subScreen])
+        appScreen.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(appScreen)
+        NSLayoutConstraint.activate([
+            appScreen.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            appScreen.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+            appScreen.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            
+            myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
+            subScreen.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9)
+        ])
     }
 }
