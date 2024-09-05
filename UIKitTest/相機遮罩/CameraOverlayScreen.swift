@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class CameraOverlayScreen: MyViewController, AVCapturePhotoCaptureDelegate {
+class CameraOverlayScreen: MyViewController {
     
     var subScreen = CameraOverlayUI()
     var captureSession: AVCaptureSession!
@@ -86,6 +86,16 @@ class CameraOverlayScreen: MyViewController, AVCapturePhotoCaptureDelegate {
         
         configureCamera(for: .back) // 初始設置為後鏡頭
         
+        photoOutput = AVCapturePhotoOutput()
+        
+        // 確保添加輸出到會話中
+        if captureSession.canAddOutput(photoOutput) {
+            captureSession.addOutput(photoOutput)
+        } else {
+            print("無法添加 Photo Output 到 Capture Session")
+            return
+        }
+        
         // 設定相機預覽
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = .resizeAspectFill
@@ -95,6 +105,13 @@ class CameraOverlayScreen: MyViewController, AVCapturePhotoCaptureDelegate {
         
         // 開始相機 session
         captureSession.startRunning()
+        
+        // 確認 AVCaptureConnection 是否有效
+        if let connection = photoOutput.connection(with: .video), connection.isEnabled {
+            print("有效的相機連接已建立")
+        } else {
+            print("無法建立相機連接")
+        }
     }
     
     func configureCamera(for position: AVCaptureDevice.Position) {
@@ -126,6 +143,11 @@ class CameraOverlayScreen: MyViewController, AVCapturePhotoCaptureDelegate {
     
     func Photograph() {
         let photoSettings = AVCapturePhotoSettings()
+        
+        if let connection = photoOutput.connection(with: .video) {
+            connection.videoOrientation = .landscapeRight // 設置為設備的方向
+        }
+        
         photoOutput.capturePhoto(with: photoSettings, delegate: self)
     }
 }
@@ -155,3 +177,51 @@ extension CameraOverlayScreen {
         ])
     }
 }
+
+// MARK: - AVCapturePhotoCaptureDelegate
+extension CameraOverlayScreen: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let error = error {
+            print("拍照錯誤: \(error)")
+            return
+        }
+        
+        guard let photoData = photo.fileDataRepresentation(),
+              let fullImage = UIImage(data: photoData) else {
+            return
+        }
+        
+        // 獲取 targetView 的範圍
+        let targetFrame = subScreen.targetView.frame
+        
+        // 計算預覽層的比例（如果預覽層和實際捕捉的畫面大小不一致）
+        let previewLayerSize = previewLayer.bounds.size
+        let fullImageSize = fullImage.size
+        
+        // 計算比例因子
+        let scaleX = fullImageSize.width / previewLayerSize.width
+        let scaleY = fullImageSize.height / previewLayerSize.height
+        
+        // 計算裁剪區域（轉換 targetView 的 frame 到圖片上的區域）
+        let cropRect = CGRect(x: targetFrame.origin.x * scaleX,
+                              y: targetFrame.origin.y * scaleY,
+                              width: targetFrame.width * scaleX,
+                              height: targetFrame.height * scaleY)
+        
+        // 裁剪圖片
+        if let croppedImage = cropImage(fullImage, toRect: cropRect) {
+            // 將裁剪後的圖片顯示在 imageView 中
+            subScreen.showImageView.image = croppedImage
+        }
+    }
+    
+    // 裁剪圖片的輔助函數
+    func cropImage(_ image: UIImage, toRect rect: CGRect) -> UIImage? {
+        guard let cgImage = image.cgImage?.cropping(to: rect) else {
+            print("無法裁剪圖片")
+            return nil
+        }
+        return UIImage(cgImage: cgImage)
+    }
+}
+

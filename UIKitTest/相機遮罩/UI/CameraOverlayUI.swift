@@ -12,6 +12,7 @@ class CameraOverlayUI: UIView {
     var targetView = UIView()
     var cameraButton = MyButton()
     var switchButton = MyButton()
+    var showImageView = MyImage()
     
     init(){
         super.init(frame: .zero)
@@ -28,8 +29,6 @@ class CameraOverlayUI: UIView {
         targetView.layer.borderColor = UIColor.red.cgColor
         targetView.translatesAutoresizingMaskIntoConstraints = false
         targetView.isUserInteractionEnabled = false // 不影響相機操作
-
-        let spacer = MySpacer()
         
         cameraButton.setSymbolConfiguration(.camera, size: 50, for: .normal)
         cameraButton.backgroundColor = .clear
@@ -37,14 +36,14 @@ class CameraOverlayUI: UIView {
         switchButton.setSymbolConfiguration(.arrow_camera, size: 24, for: .normal)
         switchButton.backgroundColor = .clear
 
-        let spacerButton = MySpacer()
+        let spacer = MySpacer()
         
-        let bottomStack = MyStack(arrangedSubviews: [spacerButton, cameraButton, switchButton])
+        let bottomStack = MyStack(arrangedSubviews: [spacer, cameraButton, switchButton])
         bottomStack.axis = .horizontal
         bottomStack.backgroundColor = .black.withAlphaComponent(0.9)
         bottomStack.translatesAutoresizingMaskIntoConstraints = false
         
-        let overlayView = MyStack(arrangedSubviews: [targetView, spacer, bottomStack])
+        let overlayView = MyStack(arrangedSubviews: [targetView, showImageView, bottomStack])
         overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.6) // 半透明黑色
         overlayView.alignment = .center
         
@@ -59,16 +58,17 @@ class CameraOverlayUI: UIView {
             
             targetView.heightAnchor.constraint(equalTo: overlayView.heightAnchor, multiplier: 0.4),
             targetView.topAnchor.constraint(equalTo: overlayView.topAnchor, constant: 10),
-            targetView.bottomAnchor.constraint(equalTo: spacer.topAnchor, constant: -10),
+            targetView.bottomAnchor.constraint(equalTo: showImageView.topAnchor, constant: -10),
             targetView.leadingAnchor.constraint(equalTo: overlayView.leadingAnchor, constant: 10),
             targetView.trailingAnchor.constraint(equalTo: overlayView.trailingAnchor, constant: -10),
             
-            spacer.heightAnchor.constraint(equalTo: overlayView.heightAnchor, multiplier: 0.4),
-            bottomStack.heightAnchor.constraint(equalTo: overlayView.heightAnchor, multiplier: 0.2),
+            showImageView.heightAnchor.constraint(equalTo: overlayView.heightAnchor, multiplier: 0.4),
+            
+            bottomStack.heightAnchor.constraint(equalTo: overlayView.heightAnchor, multiplier: 0.15),
             bottomStack.leadingAnchor.constraint(equalTo: overlayView.leadingAnchor),
             bottomStack.trailingAnchor.constraint(equalTo: overlayView.trailingAnchor),
             
-            spacerButton.widthAnchor.constraint(equalTo: bottomStack.widthAnchor, multiplier: 0.3),
+            spacer.widthAnchor.constraint(equalTo: bottomStack.widthAnchor, multiplier: 0.3),
             cameraButton.widthAnchor.constraint(equalTo: bottomStack.widthAnchor, multiplier: 0.4),
             switchButton.widthAnchor.constraint(equalTo: bottomStack.widthAnchor, multiplier: 0.3)
         ])
