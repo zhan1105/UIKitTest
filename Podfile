@@ -6,7 +6,6 @@ target 'UIKitTest' do
   use_frameworks!
 
   # Pods for UIKitTest
-    pod 'iOSDropDown'
     pod 'FSPagerView'
     pod 'QRCodeReader.swift', '~> 10.1.0'
     pod 'GoogleMaps'

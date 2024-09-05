@@ -6,14 +6,12 @@ PODS:
   - GoogleMaps/Maps (8.4.0):
     - GoogleMaps/Base
   - GooglePlaces (8.5.0)
-  - iOSDropDown (0.4.0)
   - QRCodeReader.swift (10.1.0)
 
 DEPENDENCIES:
   - FSPagerView
   - GoogleMaps
   - GooglePlaces
-  - iOSDropDown
   - QRCodeReader.swift (~> 10.1.0)
 
 SPEC REPOS:
@@ -21,16 +19,14 @@ SPEC REPOS:
     - FSPagerView
     - GoogleMaps
     - GooglePlaces
-    - iOSDropDown
     - QRCodeReader.swift
 
 SPEC CHECKSUMS:
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   GoogleMaps: 8939898920281c649150e0af74aa291c60f2e77d
   GooglePlaces: 426efb69051e7b460e16300ba63598687d10fa1a
-  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
 
-PODFILE CHECKSUM: 455233fa3f16ba1a2e3afd8964826d593352ff88
+PODFILE CHECKSUM: 2ad73d0abe88af5257f99931a07be9b752115bca
 
 COCOAPODS: 1.15.2

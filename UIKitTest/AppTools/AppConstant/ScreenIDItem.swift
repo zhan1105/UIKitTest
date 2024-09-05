@@ -24,6 +24,7 @@ struct ScreenIDItem {
                                     ("Symbol應用", SymbolScreen()),
                                     ("API應用", APITestScreen()),
                                     ("網路圖片應用", ImageUrlScreen()),
-                                    ("Loading動畫", LoadingAnimationScreen())
+                                    ("Loading動畫", LoadingAnimationScreen()),
+                                    ("相機遮罩", CameraOverlayScreen())
     ]
 }
