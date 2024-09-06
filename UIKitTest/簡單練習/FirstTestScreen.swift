@@ -22,16 +22,9 @@ extension FirstTestScreen {
         let myTitleBar = MyTitleBar(text: "簡單排版")
         myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
         
-        let editView = MyField(placeholder: "測試", error: "錯誤")
-        editView.shouldShowError = true
-        editView.translatesAutoresizingMaskIntoConstraints = false // 確保自動佈局工作
-
-        let edit = UIView()
-        edit.backgroundColor = .green
-        edit.addSubview(editView)
-        edit.translatesAutoresizingMaskIntoConstraints = false
+        let spacer = MySpacer()
         
-        let appScreen = MyStack(arrangedSubviews: [myTitleBar, edit])
+        let appScreen = MyStack(arrangedSubviews: [myTitleBar, spacer])
         appScreen.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(appScreen)
@@ -42,12 +35,8 @@ extension FirstTestScreen {
             appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             
             myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
-            edit.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9),
+            spacer.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9),
             
-            editView.centerXAnchor.constraint(equalTo: edit.centerXAnchor),
-            editView.centerYAnchor.constraint(equalTo: edit.centerYAnchor),
-            editView.widthAnchor.constraint(equalToConstant: 150),
-            editView.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
 }

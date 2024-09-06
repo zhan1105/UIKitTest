@@ -26,6 +26,7 @@ struct ScreenIDItem {
                                     ("網路圖片應用", ImageUrlScreen()),
                                     ("側選單應用", SideMenuScreen()),
                                     ("Loading動畫", LoadingAnimationScreen()),
-                                    ("相機遮罩", CameraOverlayScreen())
+                                    ("相機遮罩", CameraOverlayScreen()),
+                                    ("自定義輸入框", MyTextFieldScreen())
     ]
 }

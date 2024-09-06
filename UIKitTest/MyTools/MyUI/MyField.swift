@@ -15,8 +15,21 @@ class MyField: UIView {
         }
     }
     
+    var textCount: Int = 0 {
+        didSet {
+            updateCountLabel()
+        }
+    }
+    
+    var textTotalCount: Int = 0 {
+        didSet {
+            updateCountLabel()
+        }
+    }
+    
     private let newTextField = MyTextField()
     private let errorLabel = MyLabel()
+    private let countLabel = MyLabel()
     
     init(placeholder: String = "", error: String = ""){
         super.init(frame: .zero)
@@ -34,6 +47,13 @@ class MyField: UIView {
         newTextField.font = UIFont.callout
         newTextField.textAlignment = .left
         newTextField.textPadding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+        countLabel.textColor = .gray
+        countLabel.font = UIFont.callout
+        updateCountLabel()
+        
+        newTextField.rightView = countLabel
+        newTextField.rightViewMode = .always
         
         errorLabel.text = error
         errorLabel.textColor = .red
@@ -69,4 +89,8 @@ class MyField: UIView {
             errorLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
+    
+    private func updateCountLabel() {
+          countLabel.text = "\(textCount)/\(textTotalCount)"
+      }
 }
