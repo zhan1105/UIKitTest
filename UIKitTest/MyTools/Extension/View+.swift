@@ -1,57 +1,59 @@
 //
-//  UIView+.swift
+//  View+.swift
 //  UIKitTest
 //
-//  Created by 紹郁 on 2024/8/15.
+//  Created by 紹郁 on 2024/9/6.
 //
 
 import UIKit
 
-extension UIViewController {
-    
-    // MARK: - 切換畫面
-    func pushViewController(_ viewController: UIViewController, animated: Bool = true) {
-        viewController.modalPresentationStyle = .fullScreen
+extension UIView {
+    func padding(to padding: CGFloat = 0,
+                 top: CGFloat? = nil, bottom: CGFloat? = nil,
+                 left: CGFloat? = nil, right: CGFloat? = nil) {
         
-        if animated {
-            // 自訂翻頁動畫
-            let transition = CATransition()
-            transition.duration = 0.5 // 動畫持續時間
-            transition.type = .push // 動畫類型
-            transition.subtype = .fromRight // 動畫方向，從右邊翻頁
-            transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut) // 動畫的時間曲線
-            view.window?.layer.add(transition, forKey: kCATransition)
-        }
+        let topPadding      = top ?? padding
+        let bottomPadding   = bottom ?? padding
+        let leftPadding     = left ?? padding
+        let rightPadding    = right ?? padding
         
-        present(viewController, animated: false, completion: nil)
-    }
-    
-    // MARK: - 返回前一頁
-    func popViewController(animated: Bool = true) {
-        
-        if animated {
-            // 自訂翻頁動畫
-            let transition = CATransition()
-            transition.duration = 0.5
-            transition.type = .push
-            transition.subtype = .fromLeft
-            transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-            view.window?.layer.add(transition, forKey: kCATransition)
-        }
-        
-        dismiss(animated: false, completion: nil)
-    }
-    
-    // MARK: - 清空返回首頁
-    func clearToViewController(_ mainViewController: UIViewController) {
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let window = windowScene.windows.first else {
-            return
-        }
-        
-        window.rootViewController = mainViewController
-        UIView.transition(with: window, duration: 0.5, options: UIView.AnimationOptions.allowAnimatedContent, animations: nil, completion: nil)
+        self.layoutMargins = UIEdgeInsets(top: topPadding, left: leftPadding, bottom: bottomPadding, right: rightPadding)
     }
 }
 
+extension UIView {
+    func paddingAnchor(equalTo view: UIView, padding: CGFloat = 0,
+                       equalToTop topView: UIView? = nil,
+                       equalToBottom bottomView: UIView? = nil,
+                       equalToLeading leadingView: UIView? = nil,
+                       equalToTrailing trailingView: UIView? = nil) {
+        
+        var constraints: [NSLayoutConstraint] = []
+        
+        if let topView = topView {
+            constraints.append(self.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: padding))
+        } else {
+            constraints.append(self.topAnchor.constraint(equalTo: view.topAnchor, constant: padding))
+        }
 
+        if let bottomView = bottomView {
+            constraints.append(self.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -padding))
+        } else {
+            constraints.append(self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -padding))
+        }
+        
+        if let leadingView = leadingView {
+            constraints.append(self.leadingAnchor.constraint(equalTo: leadingView.trailingAnchor, constant: padding))
+        } else {
+            constraints.append(self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding))
+        }
+        
+        if let trailingView = trailingView {
+            constraints.append(self.trailingAnchor.constraint(equalTo: trailingView.leadingAnchor, constant: -padding))
+        } else {
+            constraints.append(self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding))
+        }
+
+        NSLayoutConstraint.activate(constraints)
+    }
+}
