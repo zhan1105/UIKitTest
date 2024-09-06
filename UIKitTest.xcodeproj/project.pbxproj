@@ -56,6 +56,7 @@
 		7F85AA192C89A6330042C6CF /* SideMenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85AA182C89A6330042C6CF /* SideMenuScreen.swift */; };
 		7F85AA1F2C89AB980042C6CF /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85AA1E2C89AB980042C6CF /* SideMenuView.swift */; };
 		7F96C37A2C8AAFAC00EB8B14 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96C3792C8AAFAC00EB8B14 /* View+.swift */; };
+		7F96C3962C8AE5FF00EB8B14 /* MyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96C3952C8AE5FF00EB8B14 /* MyField.swift */; };
 		7F9C687B2C7DA72400D96974 /* SwitchLanguageUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C687A2C7DA72400D96974 /* SwitchLanguageUI.swift */; };
 		7F9C68822C7DC5FB00D96974 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F9C68802C7DC5FB00D96974 /* Localizable.strings */; };
 		7F9C68852C7DC76800D96974 /* SwitchLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C68842C7DC76800D96974 /* SwitchLanguage.swift */; };
@@ -131,6 +132,7 @@
 		7F8623F52C7EB21E002E8839 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7F8623F62C7EB21E002E8839 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7F96C3792C8AAFAC00EB8B14 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		7F96C3952C8AE5FF00EB8B14 /* MyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyField.swift; sourceTree = "<group>"; };
 		7F9C687A2C7DA72400D96974 /* SwitchLanguageUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchLanguageUI.swift; sourceTree = "<group>"; };
 		7F9C687E2C7DC5E000D96974 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		7F9C687F2C7DC5E000D96974 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 				7FD1C8712C80B65500E42008 /* MyTextField.swift */,
 				7F2D19942C81739C00C12968 /* MySpacer.swift */,
 				7F263D452C87F4AD00624922 /* MyLoading.swift */,
+				7F96C3952C8AE5FF00EB8B14 /* MyField.swift */,
 			);
 			path = MyUI;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				7F2D19972C81A63B00C12968 /* MyViewController.swift in Sources */,
 				7F2F47CB2C8049BD00D5BB10 /* MyTitleBar.swift in Sources */,
 				7FD1C8722C80B65500E42008 /* MyTextField.swift in Sources */,
+				7F96C3962C8AE5FF00EB8B14 /* MyField.swift in Sources */,
 				7F1236362C86F6AA00549E27 /* ApiRespone.swift in Sources */,
 				7FD1C8702C80B62300E42008 /* DownMenuUI.swift in Sources */,
 				7F2D19932C816B5500C12968 /* OTPCodeUI.swift in Sources */,

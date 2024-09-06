@@ -12,27 +12,42 @@ class FirstTestScreen: MyViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let newButton = UIButton(type: .system)
-        newButton.setTitle("Button", for: .normal)
-        newButton.titleLabel?.font = UIFont.boldTitle2
-        newButton.tintColor = .white
-        newButton.setImage(UIImage(systemName: SFSymbol.arrow_left.rawValue), for: .normal)
-        newButton.backgroundColor = UIColor.color0080FF
-        newButton.layer.cornerRadius = 10
-        newButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-        
-        self.view.addSubview(newButton)
-        
-        newButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            newButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 325),
-            newButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -325),
-            newButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 125),
-            newButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -125)
-        ])
+        setupUI()
     }
-    
-    @objc private func buttonTapped(_ sender: UIButton) {
-        popViewController()
+}
+//MARK: - subView
+extension FirstTestScreen {
+    private func setupUI(){
+        
+        let myTitleBar = MyTitleBar(text: "簡單排版")
+        myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
+        
+        let editView = MyField(placeholder: "測試", error: "錯誤")
+        editView.shouldShowError = true
+        editView.translatesAutoresizingMaskIntoConstraints = false // 確保自動佈局工作
+
+        let edit = UIView()
+        edit.backgroundColor = .green
+        edit.addSubview(editView)
+        edit.translatesAutoresizingMaskIntoConstraints = false
+        
+        let appScreen = MyStack(arrangedSubviews: [myTitleBar, edit])
+        appScreen.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(appScreen)
+        NSLayoutConstraint.activate([
+            appScreen.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            appScreen.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+            appScreen.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            
+            myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
+            edit.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9),
+            
+            editView.centerXAnchor.constraint(equalTo: edit.centerXAnchor),
+            editView.centerYAnchor.constraint(equalTo: edit.centerYAnchor),
+            editView.widthAnchor.constraint(equalToConstant: 150),
+            editView.heightAnchor.constraint(equalToConstant: 80)
+        ])
     }
 }
