@@ -394,10 +394,10 @@
 			children = (
 				7F3BB9492C78596F00CBF06E /* Color+.swift */,
 				7F3BB94A2C78596F00CBF06E /* Font+.swift */,
-				7F3BB94C2C78596F00CBF06E /* ViewController+.swift */,
+				7F96C3792C8AAFAC00EB8B14 /* View+.swift */,
 				7FDAC5D12C85638800A1FB29 /* URL+.swift */,
 				7FDAC5DA2C856E7500A1FB29 /* URLSession+.swift */,
-				7F96C3792C8AAFAC00EB8B14 /* View+.swift */,
+				7F3BB94C2C78596F00CBF06E /* ViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";

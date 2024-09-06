@@ -48,9 +48,19 @@ extension UIViewController {
               let window = windowScene.windows.first else {
             return
         }
+
+        // 設定 transition
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = .push
+        transition.subtype = .fromLeft
+        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         
+        // 添加動畫到 window 的 layer
+        window.layer.add(transition, forKey: kCATransition)
+
+        // 設定新的 rootViewController
         window.rootViewController = mainViewController
-        UIView.transition(with: window, duration: 0.5, options: UIView.AnimationOptions.allowAnimatedContent, animations: nil, completion: nil)
     }
 }
 
