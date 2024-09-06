@@ -64,7 +64,8 @@ extension SideMenuScreen{
         let menuView = SideMenuView()
         self.sideMenuView = menuView
         
-        menuView.view.frame = CGRect(x: -menuView.view.frame.width, y: 0, width: self.view.frame.width - 100, height: self.view.frame.height)
+        let menuWidth = self.view.frame.width * 0.8
+        menuView.view.frame = CGRect(x: -menuView.view.frame.width, y: 0, width: menuWidth, height: self.view.frame.height)
         menuView.view.backgroundColor = .clear
         
         // 加入 menuView 並將它的 view 蓋在主畫面上
