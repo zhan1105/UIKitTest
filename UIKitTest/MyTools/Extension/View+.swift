@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    func padding(to padding: CGFloat = 0,
+    func padding(to padding: CGFloat,
                  top: CGFloat? = nil, bottom: CGFloat? = nil,
                  left: CGFloat? = nil, right: CGFloat? = nil) {
         

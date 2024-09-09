@@ -30,6 +30,7 @@ class MyField: UIView {
     private let newTextField = MyTextField()
     private let errorLabel = MyLabel()
     private let countLabel = MyLabel()
+    private let iconImage = MySymbol(symbol: .arrow_camera)
     
     init(placeholder: String = "", error: String = ""){
         super.init(frame: .zero)
@@ -42,18 +43,21 @@ class MyField: UIView {
     
     private func setupUI(placeholder: String, error: String){
         
-        // 設定 TextField
-        newTextField.placeholder = placeholder
-        newTextField.font = UIFont.callout
-        newTextField.textAlignment = .left
-        newTextField.textPadding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        iconImage.tintColor = .black
         
         countLabel.textColor = .gray
         countLabel.font = UIFont.callout
         updateCountLabel()
         
+        // 設定 TextField
+        newTextField.placeholder = placeholder
+        newTextField.font = UIFont.callout
+        newTextField.textAlignment = .left
+        newTextField.leftView = iconImage
+        newTextField.leftViewMode = .always
         newTextField.rightView = countLabel
         newTextField.rightViewMode = .always
+        newTextField.layoutSubviews()
         
         errorLabel.text = error
         errorLabel.textColor = .red
@@ -91,6 +95,6 @@ class MyField: UIView {
     }
     
     private func updateCountLabel() {
-          countLabel.text = "\(textCount)/\(textTotalCount)"
-      }
+        countLabel.text = "\(textCount)/\(textTotalCount)"
+    }
 }

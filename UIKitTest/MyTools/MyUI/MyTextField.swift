@@ -8,7 +8,7 @@
 import UIKit
 
 class MyTextField: UITextField {
-
+    
     init(){
         super.init(frame: .zero)
         setupUI()
@@ -23,14 +23,31 @@ class MyTextField: UITextField {
         self.textColor = .black
         self.placeholder = "TextField"
         self.borderStyle = .none
-        self.textPadding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         self.layer.cornerRadius = 10
         self.font = UIFont.boldTitle2
         self.textAlignment = .center
         self.backgroundColor = .white
+        self.layoutSubviews()
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     var textPadding: UIEdgeInsets = .zero
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updatePadding()
+    }
+    
+    private func updatePadding() {
+        let leftWidth = leftView?.frame.width ?? 0
+        let rightWidth = rightView?.frame.width ?? 0
+        
+        // Ensure padding is updated based on current leftView and rightView widths
+        self.textPadding = UIEdgeInsets(top: 0, left: leftWidth + 10, bottom: 0, right: rightWidth + 10)
+        
+        // Call super methods to adjust rects
+        self.setNeedsDisplay()
+    }
     
     // 控制非編輯狀態下的文字顯示範圍
     override func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -48,14 +65,14 @@ class MyTextField: UITextField {
     }
     
     // 控制 rightView 的顯示範圍
-        override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-            let width = rightView?.frame.width ?? 0
-            return CGRect(x: bounds.width - width - 5, y: 0, width: width, height: bounds.height)
-        }
-        
-        // 控制 leftView 的顯示範圍
-        override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
-            let width = leftView?.frame.width ?? 0
-            return CGRect(x: bounds.width - width + 5, y: 0, width: width, height: bounds.height)
-        }
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        let width = rightView?.frame.width ?? 0
+        return CGRect(x: bounds.width - width - 5, y: 0, width: width, height: bounds.height)
+    }
+    
+    // 控制 leftView 的顯示範圍
+    override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
+        let width = leftView?.frame.width ?? 0
+        return CGRect(x: 5, y: 0, width: width, height: bounds.height)
+    }
 }

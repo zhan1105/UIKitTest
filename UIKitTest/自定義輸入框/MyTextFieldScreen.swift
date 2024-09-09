@@ -14,7 +14,6 @@ class MyTextFieldScreen: MyViewController {
 
         setupUI()
     }
-
 }
 //MARK: - subView
 extension MyTextFieldScreen {
@@ -47,7 +46,7 @@ extension MyTextFieldScreen {
             
             editView.centerXAnchor.constraint(equalTo: edit.centerXAnchor),
             editView.centerYAnchor.constraint(equalTo: edit.centerYAnchor),
-            editView.widthAnchor.constraint(equalToConstant: 200),
+            editView.widthAnchor.constraint(equalTo: edit.widthAnchor, constant: -20),
             editView.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
