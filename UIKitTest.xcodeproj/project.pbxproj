@@ -411,12 +411,12 @@
 			isa = PBXGroup;
 			children = (
 				7FD1C86C2C8092A400E42008 /* MyLabel.swift */,
+				7FD1C8712C80B65500E42008 /* MyTextField.swift */,
 				7F2F47B62C802E4800D5BB10 /* MyImage.swift */,
 				7F12362F2C86E0C700549E27 /* MyImageUrl.swift */,
 				7F2F47C12C803F0200D5BB10 /* MySymbol.swift */,
 				7F2F47CE2C804A9800D5BB10 /* MyButton.swift */,
 				7F2F47DC2C8054DC00D5BB10 /* MyStack.swift */,
-				7FD1C8712C80B65500E42008 /* MyTextField.swift */,
 				7F2D19942C81739C00C12968 /* MySpacer.swift */,
 				7F263D452C87F4AD00624922 /* MyLoading.swift */,
 				7F96C3952C8AE5FF00EB8B14 /* MyField.swift */,
