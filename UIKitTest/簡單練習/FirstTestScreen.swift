@@ -22,11 +22,9 @@ extension FirstTestScreen {
         let myTitleBar = MyTitleBar(text: "簡單排版")
         myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
         
-        let newTextField = MyTextField()
-        newTextField.textAlignment = .left
-        newTextField.textPadding
+        let newView = MyImage(image: .page2)
         
-        let appScreen = MyStack(arrangedSubviews: [myTitleBar, newTextField])
+        let appScreen = MyStack(arrangedSubviews: [myTitleBar, newView])
         appScreen.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(appScreen)
@@ -37,7 +35,7 @@ extension FirstTestScreen {
             appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             
             myTitleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
-            newTextField.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9),
+            newView.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9),
         ])
     }
 }

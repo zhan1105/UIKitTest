@@ -69,7 +69,6 @@ class MyField: UIView {
         let editView = MyStack(arrangedSubviews: [newTextField, errorLabel])
         editView.backgroundColor = .clear
         editView.isLayoutMarginsRelativeArrangement = true
-        editView.padding(to: 10)
         
         addSubview(editView)
         

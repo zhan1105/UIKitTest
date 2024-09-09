@@ -8,20 +8,6 @@
 import UIKit
 
 extension UIView {
-    func padding(to padding: CGFloat,
-                 top: CGFloat? = nil, bottom: CGFloat? = nil,
-                 left: CGFloat? = nil, right: CGFloat? = nil) {
-        
-        let topPadding      = top ?? padding
-        let bottomPadding   = bottom ?? padding
-        let leftPadding     = left ?? padding
-        let rightPadding    = right ?? padding
-        
-        self.layoutMargins = UIEdgeInsets(top: topPadding, left: leftPadding, bottom: bottomPadding, right: rightPadding)
-    }
-}
-
-extension UIView {
     func paddingAnchor(equalTo view: UIView, padding: CGFloat = 0,
                        equalToTop topView: UIView? = nil,
                        equalToBottom bottomView: UIView? = nil,
