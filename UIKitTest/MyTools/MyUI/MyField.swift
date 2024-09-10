@@ -57,7 +57,7 @@ class MyField: UIView {
         newTextField.leftViewMode = .always
         newTextField.rightView = countLabel
         newTextField.rightViewMode = .always
-        newTextField.layoutSubviews()
+        newTextField.padding(left: 15)
         
         errorLabel.text = error
         errorLabel.textColor = .red
