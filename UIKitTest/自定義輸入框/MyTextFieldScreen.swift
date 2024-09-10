@@ -27,7 +27,6 @@ extension MyTextFieldScreen {
         editView.translatesAutoresizingMaskIntoConstraints = false // 確保自動佈局工作
 
         let edit = UIView()
-        edit.backgroundColor = .green
         edit.addSubview(editView)
         edit.translatesAutoresizingMaskIntoConstraints = false
         

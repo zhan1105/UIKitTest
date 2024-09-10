@@ -21,7 +21,6 @@ class MyTextField: UITextField {
         return rightView?.frame.width ?? 0
     }
 
-    // 初始化
     init(){
         super.init(frame: .zero)
         setupUI()
@@ -41,14 +40,12 @@ class MyTextField: UITextField {
         self.font = UIFont.boldTitle2
         self.textAlignment = .center
         self.backgroundColor = .white
-        self.padding()  // 預設填充
+        self.padding()
         self.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    // 定義 textPadding
     private var textPadding: UIEdgeInsets = .zero
     
-    // 設置 padding 方法，允許自定義邊距
     func padding(to padding: CGFloat = 10,
                  top: CGFloat? = nil, bottom: CGFloat? = nil,
                  left: CGFloat? = nil, right: CGFloat? = nil) {
@@ -58,7 +55,6 @@ class MyTextField: UITextField {
         leftPadding = left ?? padding
         rightPadding = right ?? padding
         
-        // 觸發重新佈局
         layoutSubviews()
     }
     

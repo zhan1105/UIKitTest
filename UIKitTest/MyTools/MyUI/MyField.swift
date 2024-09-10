@@ -27,7 +27,7 @@ class MyField: UIView {
         }
     }
     
-    private let newTextField = MyTextField()
+    var newTextField = MyTextField()
     private let errorLabel = MyLabel()
     private let countLabel = MyLabel()
     private let iconImage = MySymbol(symbol: .arrow_camera)
