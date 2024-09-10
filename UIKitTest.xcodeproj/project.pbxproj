@@ -49,6 +49,7 @@
 		7F3BB9522C78596F00CBF06E /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB94A2C78596F00CBF06E /* Font+.swift */; };
 		7F3BB9542C78596F00CBF06E /* ViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BB94C2C78596F00CBF06E /* ViewController+.swift */; };
 		7F4B8C822C8FD5B300E40496 /* DropdownScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B8C812C8FD5B300E40496 /* DropdownScreen.swift */; };
+		7F4B8C852C8FDFED00E40496 /* DropdownUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B8C842C8FDFED00E40496 /* DropdownUI.swift */; };
 		7F54CCD22C7C5F5C00539929 /* TextSettingUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */; };
 		7F7860932C820ED100BFA5A5 /* SymbolScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7860922C820ED100BFA5A5 /* SymbolScreen.swift */; };
 		7F7860962C820F1000BFA5A5 /* SymbolUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7860952C820F1000BFA5A5 /* SymbolUI.swift */; };
@@ -121,6 +122,7 @@
 		7F3BB94A2C78596F00CBF06E /* Font+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		7F3BB94C2C78596F00CBF06E /* ViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+.swift"; sourceTree = "<group>"; };
 		7F4B8C812C8FD5B300E40496 /* DropdownScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownScreen.swift; sourceTree = "<group>"; };
+		7F4B8C842C8FDFED00E40496 /* DropdownUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownUI.swift; sourceTree = "<group>"; };
 		7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSettingUI.swift; sourceTree = "<group>"; };
 		7F7860922C820ED100BFA5A5 /* SymbolScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolScreen.swift; sourceTree = "<group>"; };
 		7F7860952C820F1000BFA5A5 /* SymbolUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolUI.swift; sourceTree = "<group>"; };
@@ -413,9 +415,18 @@
 		7F4B8C802C8FD54F00E40496 /* 自定義下拉選單 */ = {
 			isa = PBXGroup;
 			children = (
+				7F4B8C832C8FDFDF00E40496 /* UI */,
 				7F4B8C812C8FD5B300E40496 /* DropdownScreen.swift */,
 			);
 			path = "自定義下拉選單";
+			sourceTree = "<group>";
+		};
+		7F4B8C832C8FDFDF00E40496 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F4B8C842C8FDFED00E40496 /* DropdownUI.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		7F54CCD02C7C5EE900539929 /* MyUI */ = {
@@ -745,6 +756,7 @@
 				7F2D19932C816B5500C12968 /* OTPCodeUI.swift in Sources */,
 				7F3BB93A2C78575F00CBF06E /* OTPScreen.swift in Sources */,
 				7F96C3992C8AFAAE00EB8B14 /* MyTextFieldScreen.swift in Sources */,
+				7F4B8C852C8FDFED00E40496 /* DropdownUI.swift in Sources */,
 				7F54CCD22C7C5F5C00539929 /* TextSettingUI.swift in Sources */,
 				7F3BB9362C78575F00CBF06E /* WebViewScreen.swift in Sources */,
 				7F3BB93D2C78575F00CBF06E /* FirstTestScreen.swift in Sources */,

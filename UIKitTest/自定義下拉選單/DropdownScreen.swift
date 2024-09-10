@@ -19,5 +19,9 @@ class DropdownScreen: MyViewController {
 extension DropdownScreen {
     private func setupUI(){
         
+        let myTitleBar = MyTitleBar(text: "自定義下拉式選單")
+        myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
+        
+        
     }
 }
