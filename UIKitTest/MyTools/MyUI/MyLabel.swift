@@ -30,7 +30,7 @@ class MyLabel: UILabel {
     private var textPadding: UIEdgeInsets = .zero
     
     // 添加 padding 方法
-    func padding(to padding: CGFloat = 0,
+    func padding(to padding: CGFloat = 5,
                  top: CGFloat? = nil, bottom: CGFloat? = nil,
                  left: CGFloat? = nil, right: CGFloat? = nil) {
         

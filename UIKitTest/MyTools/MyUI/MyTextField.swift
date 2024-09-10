@@ -9,6 +9,11 @@ import UIKit
 
 class MyTextField: UITextField {
     
+    private var topPadding: CGFloat = 0
+    private var bottomPadding: CGFloat = 0
+    private var leftPadding: CGFloat = 0
+    private var rightPadding: CGFloat = 0
+    
     init(){
         super.init(frame: .zero)
         setupUI()
@@ -27,11 +32,23 @@ class MyTextField: UITextField {
         self.font = UIFont.boldTitle2
         self.textAlignment = .center
         self.backgroundColor = .white
-        self.layoutSubviews()
+        self.padding()
         self.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    var textPadding: UIEdgeInsets = .zero
+    private var textPadding: UIEdgeInsets = .zero
+    
+    func padding(to padding: CGFloat = 10,
+                 top: CGFloat? = nil, bottom: CGFloat? = nil,
+                 left: CGFloat? = nil, right: CGFloat? = nil) {
+        
+        topPadding      = top ?? padding
+        bottomPadding   = bottom ?? padding
+        leftPadding     = left ?? padding
+        rightPadding    = right ?? padding
+        
+        layoutSubviews()
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -39,14 +56,12 @@ class MyTextField: UITextField {
     }
     
     private func updatePadding() {
+        
         let leftWidth = leftView?.frame.width ?? 0
         let rightWidth = rightView?.frame.width ?? 0
         
-        // Ensure padding is updated based on current leftView and rightView widths
-        self.textPadding = UIEdgeInsets(top: 0, left: leftWidth + 10, bottom: 0, right: rightWidth + 10)
+        textPadding = UIEdgeInsets(top: topPadding, left: leftWidth + leftPadding, bottom: bottomPadding, right: rightWidth + rightPadding)
         
-        // Call super methods to adjust rects
-        self.setNeedsDisplay()
     }
     
     // 控制非編輯狀態下的文字顯示範圍
