@@ -15,38 +15,26 @@ extension UIView {
                        equalToBottom bottomView: UIView? = nil,
                        equalToLeading leadingView: UIView? = nil,
                        equalToTrailing trailingView: UIView? = nil) {
-        
+
         let topPadding      = top ?? padding
         let bottomPadding   = bottom ?? padding
         let leftPadding     = left ?? padding
         let rightPadding    = right ?? padding
-        
+
         var constraints: [NSLayoutConstraint] = []
         
-        if let topView = topView {
-            constraints.append(self.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: topPadding))
-        } else {
-            constraints.append(self.topAnchor.constraint(equalTo: view.topAnchor, constant: topPadding))
-        }
-
-        if let bottomView = bottomView {
-            constraints.append(self.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -bottomPadding))
-        } else {
-            constraints.append(self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomPadding))
-        }
+        let topAnchorView = topView?.bottomAnchor ?? view.topAnchor
+        constraints.append(self.topAnchor.constraint(equalTo: topAnchorView, constant: topPadding))
         
-        if let leadingView = leadingView {
-            constraints.append(self.leadingAnchor.constraint(equalTo: leadingView.trailingAnchor, constant: leftPadding))
-        } else {
-            constraints.append(self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leftPadding))
-        }
+        let bottomAnchorView = bottomView?.topAnchor ?? view.bottomAnchor
+        constraints.append(self.bottomAnchor.constraint(equalTo: bottomAnchorView, constant: -bottomPadding))
         
-        if let trailingView = trailingView {
-            constraints.append(self.trailingAnchor.constraint(equalTo: trailingView.leadingAnchor, constant: -rightPadding))
-        } else {
-            constraints.append(self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -rightPadding))
-        }
-
+        let leadingAnchorView = leadingView?.trailingAnchor ?? view.leadingAnchor
+        constraints.append(self.leadingAnchor.constraint(equalTo: leadingAnchorView, constant: leftPadding))
+        
+        let trailingAnchorView = trailingView?.leadingAnchor ?? view.trailingAnchor
+        constraints.append(self.trailingAnchor.constraint(equalTo: trailingAnchorView, constant: -rightPadding))
+        
         NSLayoutConstraint.activate(constraints)
     }
 }
