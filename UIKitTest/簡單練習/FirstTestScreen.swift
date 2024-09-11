@@ -22,7 +22,9 @@ extension FirstTestScreen {
         let myTitleBar = MyTitleBar(text: "簡單排版")
         myTitleBar.backButtonAction = { [weak self] in self?.popViewController() }
         
-        let newView = MyImage(image: .page2)
+        let newImage = MyImage(image: .page2)
+        let newView = MyView(addSubview: newImage)
+        newImage.paddingAnchor(equalTo: newView, left: 25, right: 25)
         
         let appScreen = MyStack(arrangedSubviews: [myTitleBar, newView])
         appScreen.translatesAutoresizingMaskIntoConstraints = false
