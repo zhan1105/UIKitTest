@@ -51,6 +51,7 @@
 		7F4B8C822C8FD5B300E40496 /* DropdownScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B8C812C8FD5B300E40496 /* DropdownScreen.swift */; };
 		7F4B8C852C8FDFED00E40496 /* DropdownUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B8C842C8FDFED00E40496 /* DropdownUI.swift */; };
 		7F54CCD22C7C5F5C00539929 /* TextSettingUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */; };
+		7F6164AB2C91263F000934A8 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6164AA2C91263F000934A8 /* MyView.swift */; };
 		7F7860932C820ED100BFA5A5 /* SymbolScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7860922C820ED100BFA5A5 /* SymbolScreen.swift */; };
 		7F7860962C820F1000BFA5A5 /* SymbolUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7860952C820F1000BFA5A5 /* SymbolUI.swift */; };
 		7F85A9F32C8960260042C6CF /* CameraOverlayScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85A9F22C8960260042C6CF /* CameraOverlayScreen.swift */; };
@@ -124,6 +125,7 @@
 		7F4B8C812C8FD5B300E40496 /* DropdownScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownScreen.swift; sourceTree = "<group>"; };
 		7F4B8C842C8FDFED00E40496 /* DropdownUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownUI.swift; sourceTree = "<group>"; };
 		7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSettingUI.swift; sourceTree = "<group>"; };
+		7F6164AA2C91263F000934A8 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		7F7860922C820ED100BFA5A5 /* SymbolScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolScreen.swift; sourceTree = "<group>"; };
 		7F7860952C820F1000BFA5A5 /* SymbolUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolUI.swift; sourceTree = "<group>"; };
 		7F85A9F22C8960260042C6CF /* CameraOverlayScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOverlayScreen.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 		7F54CCD02C7C5EE900539929 /* MyUI */ = {
 			isa = PBXGroup;
 			children = (
+				7F6164AA2C91263F000934A8 /* MyView.swift */,
 				7FD1C86C2C8092A400E42008 /* MyLabel.swift */,
 				7FD1C8712C80B65500E42008 /* MyTextField.swift */,
 				7F2F47B62C802E4800D5BB10 /* MyImage.swift */,
@@ -732,6 +735,7 @@
 				7F9C687B2C7DA72400D96974 /* SwitchLanguageUI.swift in Sources */,
 				7F85AA192C89A6330042C6CF /* SideMenuScreen.swift in Sources */,
 				7F2F47D02C804A9800D5BB10 /* MyButton.swift in Sources */,
+				7F6164AB2C91263F000934A8 /* MyView.swift in Sources */,
 				7F3BB9542C78596F00CBF06E /* ViewController+.swift in Sources */,
 				7F3BB9352C78575F00CBF06E /* TextSettingScreen.swift in Sources */,
 				7F85A9F72C897ADB0042C6CF /* CameraOverlayUI.swift in Sources */,
