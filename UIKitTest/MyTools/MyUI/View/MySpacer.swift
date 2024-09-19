@@ -9,17 +9,17 @@ import UIKit
 
 class MySpacer: UIView {
     
-    init(){
+    init(_ backgroundColor: UIColor = .clear){
         super.init(frame: .zero)
-        setupUI()
+        setupUI(backgroundColor)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupUI(){
-        self.backgroundColor = .clear
+    private func setupUI(_ backgroundColor: UIColor){
+        self.backgroundColor = backgroundColor
         self.translatesAutoresizingMaskIntoConstraints = false
     }
 }

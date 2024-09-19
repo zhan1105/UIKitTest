@@ -20,8 +20,7 @@ class MyLabel: UILabel {
     
     private func setupUI(text: String) {
         self.text = text
-        self.font = UIFont.boldTitle2
-        self.textColor = .black
+        self.textColor = .charcoalBlack
         self.textAlignment = .center
         self.backgroundColor = .clear
         self.translatesAutoresizingMaskIntoConstraints = false

@@ -48,19 +48,62 @@ extension UIViewController {
               let window = windowScene.windows.first else {
             return
         }
-
+        
         // 設定 transition
         let transition = CATransition()
         transition.duration = 0.5
-        transition.type = .push
-        transition.subtype = .fromLeft
+        transition.type = .fade
+        transition.subtype = .none
         transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         
         // 添加動畫到 window 的 layer
         window.layer.add(transition, forKey: kCATransition)
-
+        
         // 設定新的 rootViewController
         window.rootViewController = mainViewController
+    }
+    
+    // MARK: - 蓋在原本的 ViewController 上，不會關閉原本的 ViewController
+    func overlayViewController(_ viewController: UIViewController, animated: Bool = true) {
+        // 設定 viewController 的 frame
+        viewController.view.frame = view.bounds
+        
+        // 添加子控制器
+        addChild(viewController)
+        view.addSubview(viewController.view)
+        
+        // 通知子控制器已經被添加
+        viewController.didMove(toParent: self)
+        
+        if animated {
+            // 動畫呈現
+            viewController.view.alpha = 0
+            UIView.animate(withDuration: 0.5, animations: {
+                viewController.view.alpha = 1
+            })
+        }
+    }
+    
+    // MARK: - 移除覆蓋的 ViewController
+    func dismissOverlay(animated: Bool = true) {
+        guard parent != nil else { return }  // 確保它是子控制器
+        
+        if animated {
+            // 動畫隱藏
+            UIView.animate(withDuration: 0.5, animations: {
+                self.view.alpha = 0
+            }, completion: { _ in
+                // 移除子控制器
+                self.willMove(toParent: nil)
+                self.view.removeFromSuperview()
+                self.removeFromParent()
+            })
+        } else {
+            // 直接移除子控制器
+            willMove(toParent: nil)
+            view.removeFromSuperview()
+            removeFromParent()
+        }
     }
 }
 

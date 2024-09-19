@@ -13,7 +13,6 @@ class MyStack: UIStackView {
         super.init(frame: .zero)
         self.axis = .vertical
         self.distribution = .fill
-        self.spacing = 0
         self.backgroundColor = .clear
         self.translatesAutoresizingMaskIntoConstraints = false
         

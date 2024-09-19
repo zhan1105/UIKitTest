@@ -2,14 +2,14 @@
 //  MyView.swift
 //  transfer
 //
-//  Created by 紹郁 on 2024/9/11.
+//  Created by 紹郁 on 2024/9/12.
 //
 
 import UIKit
 
 class MyView: UIView {
 
-    init(addSubview: UIView){
+    init(addSubview: UIView? = nil) {
         super.init(frame: .zero)
         setupUI(addSubview: addSubview)
     }
@@ -18,8 +18,10 @@ class MyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupUI(addSubview: UIView){
-        self.addSubview(addSubview)
+    private func setupUI(addSubview: UIView?) {
+        if let subview = addSubview {
+            self.addSubview(subview)
+        }
         self.backgroundColor = .clear
         self.translatesAutoresizingMaskIntoConstraints = false
     }

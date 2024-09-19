@@ -13,7 +13,7 @@ class MyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .groupBg
+        self.view.backgroundColor = .pureWhite
     }
     
     
@@ -49,19 +49,19 @@ class MyViewController: UIViewController {
             
             DispatchQueue.main.async {
                 // 隱藏 Loading 畫面
-                self.hideLoading()
+                self.dismissLoading()
             }
         }
     }
     
-    private func showLoading() {
+    func showLoading() {
         if loadingView == nil {
             loadingView = MyLoading()
         }
         loadingView?.show(in: self.view)
     }
     
-    private func hideLoading() {
+    func dismissLoading() {
         loadingView?.hide()
     }
 }

@@ -1,31 +1,30 @@
 //
-//  MyButton.swift
-//  UIKitTest
+//  MyViewButton.swift
+//  transfer
 //
-//  Created by 紹郁 on 2024/8/29.
+//  Created by 紹郁 on 2024/9/11.
 //
 
 import UIKit
 
-class MyButton: UIButton {
+class MyImageButton: UIButton {
     
     var buttonAction: (() -> Void)?
     
-    init(text: String = "") {
+    init(image: UIImage? = nil) {
         super.init(frame: .zero)
-        setupUI(text: text)
+        setupUI(image: image)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupUI(text: String) {
-        self.setTitle(text, for: .normal)
-        self.titleLabel?.font = UIFont.boldTitle2
-        self.tintColor = .white
-        self.layer.cornerRadius = 10
-        self.backgroundColor = UIColor.systemBlue // 替換自定義顏色為系統藍色
+    private func setupUI(image: UIImage?) {
+        self.setImage(image, for: .normal)
+        self.setTitle("", for: .normal)
+        self.tintColor = .clear
+        self.backgroundColor = .clear
         self.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         
         self.translatesAutoresizingMaskIntoConstraints = false
