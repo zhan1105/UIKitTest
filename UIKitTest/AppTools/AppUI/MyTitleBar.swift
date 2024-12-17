@@ -27,6 +27,7 @@ class MyTitleBar: UIView {
     private func setupViews(text: String) {
         
         titleLabel.text = text
+        titleLabel.font = .boldTitle1
         
         backButton.setImage(UIImage(systemSymbol: SFSymbol.arrow_left), for: .normal)
         backButton.tintColor = .black

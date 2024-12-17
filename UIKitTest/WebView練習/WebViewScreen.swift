@@ -29,6 +29,7 @@ extension WebViewScreen {
         
         // 初始化 WKWebView
         webView = WKWebView()
+        webView.backgroundColor = .coralRed
         webView.translatesAutoresizingMaskIntoConstraints = false
         
         let appScreen = MyStack(arrangedSubviews: [myTitleBar, webView])
@@ -46,7 +47,7 @@ extension WebViewScreen {
             webView.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.9),
         ])
         
-        setURL(url: "https://may-god.com/")
+        setURL(url: "https://testaml.mgtt.com.tw/site/familyNetSend/44800014/701AB4101D3097")
     }
 }
 

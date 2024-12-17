@@ -10,7 +10,7 @@ import Foundation
 extension APIManager {
     
     func getImage() async throws -> [ImageRespone] {
-        let data = try await get(url: .getCatData, parameters: nil)
+        let data = try await get(url: .getBanner, parameters: nil)
         return try JSONDecoder().decode([ImageRespone].self, from: data)
     }
     

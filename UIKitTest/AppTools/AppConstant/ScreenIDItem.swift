@@ -27,6 +27,11 @@ struct ScreenIDItem {
                                     ("側選單應用", SideMenuScreen()),
                                     ("Loading動畫", LoadingAnimationScreen()),
                                     ("相機遮罩", CameraOverlayScreen()),
-                                    ("自定義輸入框", MyTextFieldScreen())
+                                    ("自定義輸入框", MyTextFieldScreen()),
+                                    ("ScrollView練習", ScrollViewTestScreen()),
+                                    ("TabView", TabBarScreen()),
+                                    ("Switch練習", SwitchScreen()),
+                                    ("截圖試做功能", ScreenShotScreen()),
+                                    ("三段式條碼生成", BarcodeScreen()),
     ]
 }

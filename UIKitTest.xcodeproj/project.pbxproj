@@ -39,6 +39,8 @@
 		7F4B8C822C8FD5B300E40496 /* DropdownScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B8C812C8FD5B300E40496 /* DropdownScreen.swift */; };
 		7F4B8C852C8FDFED00E40496 /* DropdownUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B8C842C8FDFED00E40496 /* DropdownUI.swift */; };
 		7F54CCD22C7C5F5C00539929 /* TextSettingUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */; };
+		7F5842F62CFEE9A90070628C /* BarcodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5842F52CFEE9A90070628C /* BarcodeScreen.swift */; };
+		7F5842F82CFEE9FA0070628C /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5842F72CFEE9FA0070628C /* Image+.swift */; };
 		7F59ECB52C9BC205008CDF85 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F59EC902C9BC205008CDF85 /* APIManager.swift */; };
 		7F59ECB62C9BC205008CDF85 /* APIUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F59EC912C9BC205008CDF85 /* APIUrl.swift */; };
 		7F59ECB72C9BC205008CDF85 /* SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F59EC932C9BC205008CDF85 /* SFSymbol.swift */; };
@@ -73,6 +75,7 @@
 		7F85A9F72C897ADB0042C6CF /* CameraOverlayUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85A9F62C897ADB0042C6CF /* CameraOverlayUI.swift */; };
 		7F85AA192C89A6330042C6CF /* SideMenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85AA182C89A6330042C6CF /* SideMenuScreen.swift */; };
 		7F85AA1F2C89AB980042C6CF /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85AA1E2C89AB980042C6CF /* SideMenuView.swift */; };
+		7F94CDE12CC889E300B660C1 /* SwitchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F94CDE02CC889E300B660C1 /* SwitchScreen.swift */; };
 		7F96C3992C8AFAAE00EB8B14 /* MyTextFieldScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96C3982C8AFAAE00EB8B14 /* MyTextFieldScreen.swift */; };
 		7F9C687B2C7DA72400D96974 /* SwitchLanguageUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C687A2C7DA72400D96974 /* SwitchLanguageUI.swift */; };
 		7F9C68822C7DC5FB00D96974 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F9C68802C7DC5FB00D96974 /* Localizable.strings */; };
@@ -83,6 +86,9 @@
 		7FDAC5DD2C8587FE00A1FB29 /* APITestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAC5DC2C8587FE00A1FB29 /* APITestScreen.swift */; };
 		7FDAC5E02C8597B500A1FB29 /* AppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAC5DF2C8597B500A1FB29 /* AppAPI.swift */; };
 		7FDAC5E32C85A5AD00A1FB29 /* LoginRespone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAC5E22C85A5AD00A1FB29 /* LoginRespone.swift */; };
+		7FDC835E2CC0966C0055A121 /* TabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC835D2CC0966C0055A121 /* TabBarScreen.swift */; };
+		7FE0FCAF2CDD970500E683E7 /* ScreenShotScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0FCAE2CDD970500E683E7 /* ScreenShotScreen.swift */; };
+		7FFA676D2CA53CA2007666B2 /* ScrollViewTestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA676C2CA53CA2007666B2 /* ScrollViewTestScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +126,8 @@
 		7F4B8C812C8FD5B300E40496 /* DropdownScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownScreen.swift; sourceTree = "<group>"; };
 		7F4B8C842C8FDFED00E40496 /* DropdownUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownUI.swift; sourceTree = "<group>"; };
 		7F54CCD12C7C5F5C00539929 /* TextSettingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSettingUI.swift; sourceTree = "<group>"; };
+		7F5842F52CFEE9A90070628C /* BarcodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScreen.swift; sourceTree = "<group>"; };
+		7F5842F72CFEE9FA0070628C /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 		7F59EC902C9BC205008CDF85 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7F59EC912C9BC205008CDF85 /* APIUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUrl.swift; sourceTree = "<group>"; };
 		7F59EC932C9BC205008CDF85 /* SFSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 		7F8623F42C7EB21E002E8839 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Main.strings; sourceTree = "<group>"; };
 		7F8623F52C7EB21E002E8839 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7F8623F62C7EB21E002E8839 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F94CDE02CC889E300B660C1 /* SwitchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchScreen.swift; sourceTree = "<group>"; };
 		7F96C3982C8AFAAE00EB8B14 /* MyTextFieldScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextFieldScreen.swift; sourceTree = "<group>"; };
 		7F9C687A2C7DA72400D96974 /* SwitchLanguageUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchLanguageUI.swift; sourceTree = "<group>"; };
 		7F9C687E2C7DC5E000D96974 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -173,6 +182,9 @@
 		7FDAC5DC2C8587FE00A1FB29 /* APITestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestScreen.swift; sourceTree = "<group>"; };
 		7FDAC5DF2C8597B500A1FB29 /* AppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPI.swift; sourceTree = "<group>"; };
 		7FDAC5E22C85A5AD00A1FB29 /* LoginRespone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRespone.swift; sourceTree = "<group>"; };
+		7FDC835D2CC0966C0055A121 /* TabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarScreen.swift; sourceTree = "<group>"; };
+		7FE0FCAE2CDD970500E683E7 /* ScreenShotScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotScreen.swift; sourceTree = "<group>"; };
+		7FFA676C2CA53CA2007666B2 /* ScrollViewTestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTestScreen.swift; sourceTree = "<group>"; };
 		A9D66F102EC61B7AC514A4C0 /* Pods-UIKitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitTest.release.xcconfig"; path = "Target Support Files/Pods-UIKitTest/Pods-UIKitTest.release.xcconfig"; sourceTree = "<group>"; };
 		B3F88A0E8B553DA95E48ED67 /* Pods-UIKitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitTest.debug.xcconfig"; path = "Target Support Files/Pods-UIKitTest/Pods-UIKitTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,6 +331,11 @@
 				7F85A9F12C895FFD0042C6CF /* 相機遮罩 */,
 				7F96C3972C8AFA7500EB8B14 /* 自定義輸入框 */,
 				7F4B8C802C8FD54F00E40496 /* 自定義下拉選單 */,
+				7FFA676B2CA53C80007666B2 /* ScrollView練習 */,
+				7FDC835C2CC096420055A121 /* TabView練習 */,
+				7F94CDDF2CC889C400B660C1 /* Switch練習 */,
+				7FE0FCAD2CDD96BF00E683E7 /* 截圖試做功能 */,
+				7F5842F42CFEE9890070628C /* 三段式條碼生成 */,
 				7F3BB90B2C7856AE00CBF06E /* Assets.xcassets */,
 				7F3BB90D2C7856AE00CBF06E /* LaunchScreen.storyboard */,
 				7F3BB9082C7856AD00CBF06E /* UIKitTest.xcdatamodeld */,
@@ -440,6 +457,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		7F5842F42CFEE9890070628C /* 三段式條碼生成 */ = {
+			isa = PBXGroup;
+			children = (
+				7F5842F52CFEE9A90070628C /* BarcodeScreen.swift */,
+			);
+			path = "三段式條碼生成";
+			sourceTree = "<group>";
+		};
 		7F59EC922C9BC205008CDF85 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +494,7 @@
 				7F59EC9B2C9BC205008CDF85 /* URLSession+.swift */,
 				7F59EC9C2C9BC205008CDF85 /* View+.swift */,
 				7F59EC9D2C9BC205008CDF85 /* ViewController+.swift */,
+				7F5842F72CFEE9FA0070628C /* Image+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -581,6 +607,14 @@
 			path = subView;
 			sourceTree = "<group>";
 		};
+		7F94CDDF2CC889C400B660C1 /* Switch練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F94CDE02CC889E300B660C1 /* SwitchScreen.swift */,
+			);
+			path = "Switch練習";
+			sourceTree = "<group>";
+		};
 		7F96C3972C8AFA7500EB8B14 /* 自定義輸入框 */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +667,30 @@
 				7F1236342C86F34D00549E27 /* AppAPI */,
 			);
 			path = AppTools;
+			sourceTree = "<group>";
+		};
+		7FDC835C2CC096420055A121 /* TabView練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7FDC835D2CC0966C0055A121 /* TabBarScreen.swift */,
+			);
+			path = "TabView練習";
+			sourceTree = "<group>";
+		};
+		7FE0FCAD2CDD96BF00E683E7 /* 截圖試做功能 */ = {
+			isa = PBXGroup;
+			children = (
+				7FE0FCAE2CDD970500E683E7 /* ScreenShotScreen.swift */,
+			);
+			path = "截圖試做功能";
+			sourceTree = "<group>";
+		};
+		7FFA676B2CA53C80007666B2 /* ScrollView練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7FFA676C2CA53CA2007666B2 /* ScrollViewTestScreen.swift */,
+			);
+			path = "ScrollView練習";
 			sourceTree = "<group>";
 		};
 		855992885BEB3DD04DA25F03 /* Frameworks */ = {
@@ -788,6 +846,7 @@
 				7F59ECBF2C9BC205008CDF85 /* View+.swift in Sources */,
 				7F9C687B2C7DA72400D96974 /* SwitchLanguageUI.swift in Sources */,
 				7F85AA192C89A6330042C6CF /* SideMenuScreen.swift in Sources */,
+				7FE0FCAF2CDD970500E683E7 /* ScreenShotScreen.swift in Sources */,
 				7F59ECB52C9BC205008CDF85 /* APIManager.swift in Sources */,
 				7F3BB9352C78575F00CBF06E /* TextSettingScreen.swift in Sources */,
 				7F85A9F72C897ADB0042C6CF /* CameraOverlayUI.swift in Sources */,
@@ -809,7 +868,9 @@
 				7F59ECCB2C9BC205008CDF85 /* MyView.swift in Sources */,
 				7F2F47CB2C8049BD00D5BB10 /* MyTitleBar.swift in Sources */,
 				7F1236362C86F6AA00549E27 /* ApiRespone.swift in Sources */,
+				7F5842F62CFEE9A90070628C /* BarcodeScreen.swift in Sources */,
 				7FD1C8702C80B62300E42008 /* DownMenuUI.swift in Sources */,
+				7F5842F82CFEE9FA0070628C /* Image+.swift in Sources */,
 				7F2D19932C816B5500C12968 /* OTPCodeUI.swift in Sources */,
 				7F3BB93A2C78575F00CBF06E /* OTPScreen.swift in Sources */,
 				7F59ECBD2C9BC205008CDF85 /* URLCache+.swift in Sources */,
@@ -819,6 +880,7 @@
 				7F59ECC82C9BC205008CDF85 /* MyPackageButton.swift in Sources */,
 				7F3BB9362C78575F00CBF06E /* WebViewScreen.swift in Sources */,
 				7F3BB93D2C78575F00CBF06E /* FirstTestScreen.swift in Sources */,
+				7FFA676D2CA53CA2007666B2 /* ScrollViewTestScreen.swift in Sources */,
 				7F59ECCE2C9BC205008CDF85 /* MyStack.swift in Sources */,
 				7F59ECC22C9BC205008CDF85 /* MyImageButton.swift in Sources */,
 				7F12362A2C86AA1700549E27 /* FavoritrCreationResponse.swift in Sources */,
@@ -826,6 +888,7 @@
 				7F4B8C822C8FD5B300E40496 /* DropdownScreen.swift in Sources */,
 				7FDAC5D92C856A4D00A1FB29 /* ImageRespone.swift in Sources */,
 				7F59ECC32C9BC205008CDF85 /* MyImage.swift in Sources */,
+				7FDC835E2CC0966C0055A121 /* TabBarScreen.swift in Sources */,
 				7FDAC5E02C8597B500A1FB29 /* AppAPI.swift in Sources */,
 				7F3BB94F2C78596F00CBF06E /* ScreenIDItem.swift in Sources */,
 				7F3BB9002C7856AD00CBF06E /* AppDelegate.swift in Sources */,
@@ -833,6 +896,7 @@
 				7FDAC5E32C85A5AD00A1FB29 /* LoginRespone.swift in Sources */,
 				7F3BB9372C78575F00CBF06E /* PageViewScreen.swift in Sources */,
 				7F12362D2C86BE3D00549E27 /* APITestUI.swift in Sources */,
+				7F94CDE12CC889E300B660C1 /* SwitchScreen.swift in Sources */,
 				7F59ECC12C9BC205008CDF85 /* MyButton.swift in Sources */,
 				7F59ECB62C9BC205008CDF85 /* APIUrl.swift in Sources */,
 				7F59ECD02C9BC205008CDF85 /* MyViewController.swift in Sources */,
@@ -1027,6 +1091,8 @@
 				INFOPLIST_FILE = UIKitTest/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要通過此權限來訪問您的相機權限，以用於線上客服使用";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "請允許此權限，已用於定位";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "請允許此權限，已用於定位";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "需要通過此權限來寫入相簿權限，以用於線上客服使用";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要通過此權限來訪問您的相簿權限，以用於線上客服使用";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1067,6 +1133,8 @@
 				INFOPLIST_FILE = UIKitTest/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要通過此權限來訪問您的相機權限，以用於線上客服使用";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "請允許此權限，已用於定位";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "請允許此權限，已用於定位";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "需要通過此權限來寫入相簿權限，以用於線上客服使用";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要通過此權限來訪問您的相簿權限，以用於線上客服使用";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
