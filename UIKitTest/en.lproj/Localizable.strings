@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  UIKitTest
+
+  Created by 紹郁 on 2024/8/27.
+  
+*/
+"Hello" = "Hello";
+"SwitchLanguage" = "SwitchLanguage";
+"Chinese" = "Chinese";
+"English" = "English";
+"Vietnamese" = "Vietnamese";
+"Indonesian" = "Indonesian";
