@@ -20,15 +20,16 @@ class MyViewController: UIViewController {
         setupKeyboardObservers()        // 設置鍵盤監聽
         setupDismissKeyboardGesture()   // 設置點擊空白區域收起鍵盤
         
-        NotificationCenter.default.addObserver(self, selector: #selector(userDidTakeScreenshot), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(userDidTakeScreenshot), name: UIApplication.userDidTakeScreenshotNotification, object: nil)  // 截圖監聽
+
         
     }
     
     //MARK: - 截圖警示
     @objc func userDidTakeScreenshot() {
         
-        let remindText: String = .localizedString(for: .shared(.Remind))
-        let Screenshot_Reminder: String = .localizedString(for: .shared(.Screenshot_Reminder))
+        let remindText: String = "提醒"
+        let Screenshot_Reminder: String = "此畫面請自行保留，切勿分享。"
         
         let alert = UIAlertController(title: remindText, message: Screenshot_Reminder, preferredStyle: .alert)
         self.present(alert, animated: true) {

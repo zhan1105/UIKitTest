@@ -8,15 +8,34 @@
 import UIKit
 
 class MyTitleBar: UIView {
-    
-    private var titleLabel = MyLabel()
-    private var backButton = UIButton(type: .system)
+        
+    private let titleLabel = MyLabel()
+    private let backButton = UIButton(type: .system)
+    private let optionsButton = MyPackageButton()
     
     var backButtonAction: (() -> Void)?
-    
+
     var setTitle: String? = nil {
         didSet {
             titleLabel.text = setTitle
+        }
+    }
+    
+    var optionsButtonText: String? = nil {
+        didSet {
+            optionsButton.buttonText = optionsButtonText
+        }
+    }
+    
+    var isShowOptionsButton: Bool = false {
+        didSet {
+            optionsButton.buttonHidden = !isShowOptionsButton
+        }
+    }
+    
+    var optionsButtonAction: (() -> Void)? {
+        didSet {
+            optionsButton.buttonAction = optionsButtonAction
         }
     }
     
@@ -42,9 +61,15 @@ class MyTitleBar: UIView {
         backButton.backgroundColor = .clear
         backButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let spacer = MySpacer()
+        isShowOptionsButton = false
         
-        let subScreen = MyStack(arrangedSubviews: [backButton, titleLabel, spacer])
+        optionsButton.textFont = .boldSubheadline
+        optionsButton.textColor = .oceanBlue
+        optionsButton.buttonBackground = .softGray
+        optionsButton.viewPadding(to: 12.5, top: 20, bottom: 20)
+        
+        
+        let subScreen = MyStack(arrangedSubviews: [backButton, titleLabel, optionsButton])
         subScreen.axis = .horizontal
         subScreen.translatesAutoresizingMaskIntoConstraints = false
         
@@ -55,9 +80,9 @@ class MyTitleBar: UIView {
             subScreen.leadingAnchor.constraint(equalTo: leadingAnchor),
             subScreen.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            backButton.widthAnchor.constraint(equalTo: subScreen.widthAnchor, multiplier: 0.15),
-            titleLabel.widthAnchor.constraint(equalTo: subScreen.widthAnchor, multiplier: 0.7),
-            spacer.widthAnchor.constraint(equalTo: subScreen.widthAnchor, multiplier: 0.15)
+            backButton.widthAnchor.constraint(equalTo: subScreen.widthAnchor, multiplier: 0.25),
+            titleLabel.widthAnchor.constraint(equalTo: subScreen.widthAnchor, multiplier: 0.5),
+            optionsButton.widthAnchor.constraint(equalTo: subScreen.widthAnchor, multiplier: 0.25)
         ])
     }
     

@@ -8,14 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		1871B19EB54BA439C3FF7E76 /* Pods_UIKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825407B304317DFDBED8116 /* Pods_UIKitTest.framework */; };
+		7F19D5F72D5AE1B800C72F03 /* NetworkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D5F62D5AE1B800C72F03 /* NetworkScreen.swift */; };
+		7F19D5FD2D5AF70600C72F03 /* NetworkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D5FC2D5AF70600C72F03 /* NetworkItem.swift */; };
+		7F19D6002D5AF7D200C72F03 /* NetworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D5FF2D5AF7D200C72F03 /* NetworkCell.swift */; };
+		7F19D60C2D5B2B9C00C72F03 /* CameraButtonUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D60B2D5B2B9C00C72F03 /* CameraButtonUI.swift */; };
+		7F19D60D2D5B2B9C00C72F03 /* CameraViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D60A2D5B2B9C00C72F03 /* CameraViewUI.swift */; };
+		7F19D60F2D5B2DFA00C72F03 /* CameraBackUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D60E2D5B2DFA00C72F03 /* CameraBackUI.swift */; };
+		7F19D6122D5B2EF100C72F03 /* CameraButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D6112D5B2EF100C72F03 /* CameraButtonType.swift */; };
+		7F19D6142D5B328100C72F03 /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D6132D5B328100C72F03 /* CameraScreen.swift */; };
+		7F19D6192D5B401A00C72F03 /* TabBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D6182D5B401A00C72F03 /* TabBarScreen.swift */; };
 		7F5B7D3E2D54B710009FA60B /* OTPScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B7D3D2D54B710009FA60B /* OTPScreen.swift */; };
 		7F5B7D412D54CAD7009FA60B /* OTPViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B7D402D54CAD7009FA60B /* OTPViewUI.swift */; };
+		7F61871C2D5C309D0008A16D /* ScreenShotScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F61871B2D5C309D0008A16D /* ScreenShotScreen.swift */; };
 		7F97BC202D5986BF00D91B69 /* ApiRespone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC1F2D5986BF00D91B69 /* ApiRespone.swift */; };
 		7F97BC232D59DDC700D91B69 /* MySelectorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC222D59DDC700D91B69 /* MySelectorScreen.swift */; };
 		7F97BC262D59E8B500D91B69 /* FaceRecognitionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC252D59E8B500D91B69 /* FaceRecognitionScreen.swift */; };
 		7F97BC292D59E8CE00D91B69 /* FaceRecognitionUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC272D59E8CE00D91B69 /* FaceRecognitionUI.swift */; };
 		7F97BC2C2D59E95C00D91B69 /* SymbolScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC2B2D59E95C00D91B69 /* SymbolScreen.swift */; };
 		7F97BC2F2D59E96900D91B69 /* SymbolUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC2D2D59E96900D91B69 /* SymbolUI.swift */; };
+		7F97BC322D59F75500D91B69 /* LoadingAnimationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC312D59F75500D91B69 /* LoadingAnimationScreen.swift */; };
+		7F97BC352D59FC6200D91B69 /* SideMenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC342D59FC6200D91B69 /* SideMenuScreen.swift */; };
+		7F97BC382D59FC6C00D91B69 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC362D59FC6C00D91B69 /* SideMenuView.swift */; };
 		7FF5580D2D54511A00EF9E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF558022D54511A00EF9E6F /* Assets.xcassets */; };
 		7FF5580F2D54511A00EF9E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF558052D54511A00EF9E6F /* LaunchScreen.storyboard */; };
 		7FF558102D54511A00EF9E6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF558072D54511A00EF9E6F /* Main.storyboard */; };
@@ -95,14 +108,27 @@
 /* Begin PBXFileReference section */
 		36C30282896407073F46236A /* Pods-UIKitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitTest.debug.xcconfig"; path = "Target Support Files/Pods-UIKitTest/Pods-UIKitTest.debug.xcconfig"; sourceTree = "<group>"; };
 		6825407B304317DFDBED8116 /* Pods_UIKitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F19D5F62D5AE1B800C72F03 /* NetworkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScreen.swift; sourceTree = "<group>"; };
+		7F19D5FC2D5AF70600C72F03 /* NetworkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkItem.swift; sourceTree = "<group>"; };
+		7F19D5FF2D5AF7D200C72F03 /* NetworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCell.swift; sourceTree = "<group>"; };
+		7F19D60A2D5B2B9C00C72F03 /* CameraViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewUI.swift; sourceTree = "<group>"; };
+		7F19D60B2D5B2B9C00C72F03 /* CameraButtonUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonUI.swift; sourceTree = "<group>"; };
+		7F19D60E2D5B2DFA00C72F03 /* CameraBackUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBackUI.swift; sourceTree = "<group>"; };
+		7F19D6112D5B2EF100C72F03 /* CameraButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonType.swift; sourceTree = "<group>"; };
+		7F19D6132D5B328100C72F03 /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
+		7F19D6182D5B401A00C72F03 /* TabBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarScreen.swift; sourceTree = "<group>"; };
 		7F5B7D3D2D54B710009FA60B /* OTPScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPScreen.swift; sourceTree = "<group>"; };
 		7F5B7D402D54CAD7009FA60B /* OTPViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewUI.swift; sourceTree = "<group>"; };
+		7F61871B2D5C309D0008A16D /* ScreenShotScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotScreen.swift; sourceTree = "<group>"; };
 		7F97BC1F2D5986BF00D91B69 /* ApiRespone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRespone.swift; sourceTree = "<group>"; };
 		7F97BC222D59DDC700D91B69 /* MySelectorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelectorScreen.swift; sourceTree = "<group>"; };
 		7F97BC252D59E8B500D91B69 /* FaceRecognitionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionScreen.swift; sourceTree = "<group>"; };
 		7F97BC272D59E8CE00D91B69 /* FaceRecognitionUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionUI.swift; sourceTree = "<group>"; };
 		7F97BC2B2D59E95C00D91B69 /* SymbolScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolScreen.swift; sourceTree = "<group>"; };
 		7F97BC2D2D59E96900D91B69 /* SymbolUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolUI.swift; sourceTree = "<group>"; };
+		7F97BC312D59F75500D91B69 /* LoadingAnimationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationScreen.swift; sourceTree = "<group>"; };
+		7F97BC342D59FC6200D91B69 /* SideMenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuScreen.swift; sourceTree = "<group>"; };
+		7F97BC362D59FC6C00D91B69 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		7FF557E62D54511300EF9E6F /* UIKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF558012D54511A00EF9E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF558022D54511A00EF9E6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -220,6 +246,75 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7F19D5F52D5ADF3F00C72F03 /* API圖片應用 */ = {
+			isa = PBXGroup;
+			children = (
+				7F19D5FB2D5AF6F300C72F03 /* Model */,
+				7F19D5FE2D5AF7B000C72F03 /* UI */,
+				7F19D5F62D5AE1B800C72F03 /* NetworkScreen.swift */,
+			);
+			path = "API圖片應用";
+			sourceTree = "<group>";
+		};
+		7F19D5F82D5AE94B00C72F03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F19D5FB2D5AF6F300C72F03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F19D5FC2D5AF70600C72F03 /* NetworkItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F19D5FE2D5AF7B000C72F03 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F19D5FF2D5AF7D200C72F03 /* NetworkCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7F19D6032D5B1E8C00C72F03 /* 相機遮罩 */ = {
+			isa = PBXGroup;
+			children = (
+				7F19D6102D5B2EE000C72F03 /* Model */,
+				7F19D6082D5B1F2700C72F03 /* UI */,
+				7F19D6132D5B328100C72F03 /* CameraScreen.swift */,
+			);
+			path = "相機遮罩";
+			sourceTree = "<group>";
+		};
+		7F19D6082D5B1F2700C72F03 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F19D60E2D5B2DFA00C72F03 /* CameraBackUI.swift */,
+				7F19D60A2D5B2B9C00C72F03 /* CameraViewUI.swift */,
+				7F19D60B2D5B2B9C00C72F03 /* CameraButtonUI.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7F19D6102D5B2EE000C72F03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F19D6112D5B2EF100C72F03 /* CameraButtonType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F19D6152D5B3F3800C72F03 /* TabView練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7F19D6182D5B401A00C72F03 /* TabBarScreen.swift */,
+			);
+			path = "TabView練習";
+			sourceTree = "<group>";
+		};
 		7F5B7D3C2D54B6F5009FA60B /* OTP自動帶入 */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +330,14 @@
 				7F5B7D402D54CAD7009FA60B /* OTPViewUI.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		7F61871A2D5C306C0008A16D /* 截圖警示 */ = {
+			isa = PBXGroup;
+			children = (
+				7F61871B2D5C309D0008A16D /* ScreenShotScreen.swift */,
+			);
+			path = "截圖警示";
 			sourceTree = "<group>";
 		};
 		7F97BC212D59DDA100D91B69 /* 自定義選擇器 */ = {
@@ -279,6 +382,31 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		7F97BC302D59F73300D91B69 /* Loading動畫 */ = {
+			isa = PBXGroup;
+			children = (
+				7F97BC312D59F75500D91B69 /* LoadingAnimationScreen.swift */,
+			);
+			path = "Loading動畫";
+			sourceTree = "<group>";
+		};
+		7F97BC332D59FC4800D91B69 /* 側選單 */ = {
+			isa = PBXGroup;
+			children = (
+				7F97BC372D59FC6C00D91B69 /* subView */,
+				7F97BC342D59FC6200D91B69 /* SideMenuScreen.swift */,
+			);
+			path = "側選單";
+			sourceTree = "<group>";
+		};
+		7F97BC372D59FC6C00D91B69 /* subView */ = {
+			isa = PBXGroup;
+			children = (
+				7F97BC362D59FC6C00D91B69 /* SideMenuView.swift */,
+			);
+			path = subView;
+			sourceTree = "<group>";
+		};
 		7FF557DD2D54511300EF9E6F = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +440,7 @@
 				7FF5589E2D5469E400EF9E6F /* 語系切換練習 */,
 				7FF558AD2D546F5200EF9E6F /* WebView練習 */,
 				7FF558B32D548BC500EF9E6F /* 下拉式選單 */,
+				7F97BC302D59F73300D91B69 /* Loading動畫 */,
 				7FF558BC2D54911A00EF9E6F /* GoogleMap練習 */,
 				7FF558BF2D5495CE00EF9E6F /* 自定義輸入匡 */,
 				7F97BC212D59DDA100D91B69 /* 自定義選擇器 */,
@@ -319,6 +448,11 @@
 				7FF558B02D54714200EF9E6F /* Banner套件 */,
 				7F97BC242D59E89E00D91B69 /* FaceID驗證 */,
 				7F97BC2A2D59E94F00D91B69 /* Symbol應用 */,
+				7F97BC332D59FC4800D91B69 /* 側選單 */,
+				7F19D5F52D5ADF3F00C72F03 /* API圖片應用 */,
+				7F19D6032D5B1E8C00C72F03 /* 相機遮罩 */,
+				7F19D6152D5B3F3800C72F03 /* TabView練習 */,
+				7F61871A2D5C306C0008A16D /* 截圖警示 */,
 				7FF558022D54511A00EF9E6F /* Assets.xcassets */,
 				7FF558032D54511A00EF9E6F /* Info.plist */,
 				7FF558052D54511A00EF9E6F /* LaunchScreen.storyboard */,
@@ -566,6 +700,7 @@
 		7FF558982D54617800EF9E6F /* Shared UI */ = {
 			isa = PBXGroup;
 			children = (
+				7F19D5F82D5AE94B00C72F03 /* Model */,
 				7FF558992D54618400EF9E6F /* MyTitleBar.swift */,
 			);
 			path = "Shared UI";
@@ -809,7 +944,10 @@
 				7FF5585C2D54536100EF9E6F /* UserDefaultsKey.swift in Sources */,
 				7FF5585D2D54536100EF9E6F /* ImageNameItem.swift in Sources */,
 				7FF5585E2D54536100EF9E6F /* AppDateSelector.swift in Sources */,
+				7F19D60C2D5B2B9C00C72F03 /* CameraButtonUI.swift in Sources */,
+				7F19D60D2D5B2B9C00C72F03 /* CameraViewUI.swift in Sources */,
 				7FF5585F2D54536100EF9E6F /* View+.swift in Sources */,
+				7F19D60F2D5B2DFA00C72F03 /* CameraBackUI.swift in Sources */,
 				7FF558602D54536100EF9E6F /* AppPassword.swift in Sources */,
 				7FF558612D54536100EF9E6F /* LocalizedStringKey.swift in Sources */,
 				7FF558622D54536100EF9E6F /* MyButton.swift in Sources */,
@@ -822,9 +960,12 @@
 				7F97BC232D59DDC700D91B69 /* MySelectorScreen.swift in Sources */,
 				7FF558672D54536100EF9E6F /* MyTextField.swift in Sources */,
 				7FF558AF2D546F7300EF9E6F /* WebViewScreen.swift in Sources */,
+				7F97BC322D59F75500D91B69 /* LoadingAnimationScreen.swift in Sources */,
+				7F19D6002D5AF7D200C72F03 /* NetworkCell.swift in Sources */,
 				7FF558682D54536100EF9E6F /* ViewController+.swift in Sources */,
 				7FF558BB2D548DF500EF9E6F /* DownMenuItem.swift in Sources */,
 				7FF558692D54536100EF9E6F /* Image+.swift in Sources */,
+				7F97BC352D59FC6200D91B69 /* SideMenuScreen.swift in Sources */,
 				7FF5586A2D54536100EF9E6F /* MyPackageImage.swift in Sources */,
 				7FF5586B2D54536100EF9E6F /* MySymbol.swift in Sources */,
 				7FF5586C2D54536100EF9E6F /* SignatureView.swift in Sources */,
@@ -841,6 +982,7 @@
 				7FF5588F2D5453FB00EF9E6F /* HomeScreen.swift in Sources */,
 				7F5B7D3E2D54B710009FA60B /* OTPScreen.swift in Sources */,
 				7FF558742D54536100EF9E6F /* MyMessage.swift in Sources */,
+				7F97BC382D59FC6C00D91B69 /* SideMenuView.swift in Sources */,
 				7FF558752D54536100EF9E6F /* PackageButton.swift in Sources */,
 				7F5B7D412D54CAD7009FA60B /* OTPViewUI.swift in Sources */,
 				7FF558762D54536100EF9E6F /* MyMessageDelegate.swift in Sources */,
@@ -848,10 +990,13 @@
 				7FF558782D54536100EF9E6F /* MyPackageSwitch.swift in Sources */,
 				7FF558792D54536100EF9E6F /* SFSymbol.swift in Sources */,
 				7FF5587A2D54536100EF9E6F /* MyToast.swift in Sources */,
+				7F19D5F72D5AE1B800C72F03 /* NetworkScreen.swift in Sources */,
 				7FF5587B2D54536100EF9E6F /* MyView.swift in Sources */,
 				7FF5587C2D54536100EF9E6F /* AppField.swift in Sources */,
+				7F19D6192D5B401A00C72F03 /* TabBarScreen.swift in Sources */,
 				7FF5587D2D54536100EF9E6F /* URLSession+.swift in Sources */,
 				7FF5587E2D54536100EF9E6F /* MyImage.swift in Sources */,
+				7F61871C2D5C309D0008A16D /* ScreenShotScreen.swift in Sources */,
 				7FF558C12D5495DF00EF9E6F /* MyTextFieldScreen.swift in Sources */,
 				7FF5587F2D54536100EF9E6F /* TextField+.swift in Sources */,
 				7FF558802D54536100EF9E6F /* Font+.swift in Sources */,
@@ -871,13 +1016,16 @@
 				7FF558892D54536100EF9E6F /* MyLinkLabel.swift in Sources */,
 				7FF5588A2D54536100EF9E6F /* MyPackageControl.swift in Sources */,
 				7FF558C72D54AD9400EF9E6F /* TextFieldType.swift in Sources */,
+				7F19D6122D5B2EF100C72F03 /* CameraButtonType.swift in Sources */,
 				7FF5588B2D54536100EF9E6F /* Color+.swift in Sources */,
+				7F19D5FD2D5AF70600C72F03 /* NetworkItem.swift in Sources */,
 				7F97BC262D59E8B500D91B69 /* FaceRecognitionScreen.swift in Sources */,
 				7FF5588C2D54536100EF9E6F /* URL+.swift in Sources */,
 				7FF558B52D548BE100EF9E6F /* DownMenuScreen.swift in Sources */,
 				7F97BC292D59E8CE00D91B69 /* FaceRecognitionUI.swift in Sources */,
 				7FF558122D54511A00EF9E6F /* SceneDelegate.swift in Sources */,
 				7FF558132D54511A00EF9E6F /* UIKitTest.xcdatamodeld in Sources */,
+				7F19D6142D5B328100C72F03 /* CameraScreen.swift in Sources */,
 				7FF558142D54511A00EF9E6F /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

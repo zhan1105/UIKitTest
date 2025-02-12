@@ -9,6 +9,9 @@ import UIKit
 import Foundation
 
 enum SFSymbol: String {
+    case home               = "house"
+    case list               = "list.bullet"
+    case gearshape          = "gearshape.fill"
     case arrow_left         = "arrowtriangle.left.fill"
     case arrow_right        = "arrowtriangle.right.fill"
     case bell_not           = "bell"

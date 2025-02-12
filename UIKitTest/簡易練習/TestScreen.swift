@@ -65,10 +65,10 @@ extension TestScreen {
             appScreen.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             appScreen.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
             
-            titleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.075),
+            titleBar.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.1),
             pictureImage.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.45),
             changeButton.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.15),
-            spacer.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.325),
+            spacer.heightAnchor.constraint(equalTo: appScreen.heightAnchor, multiplier: 0.3),
         ])
     }
 }

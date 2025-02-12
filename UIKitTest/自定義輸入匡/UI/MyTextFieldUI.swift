@@ -100,10 +100,10 @@ class MyTextFieldUI: UIView {
         
         let spacer = MySpacer()
         
-        confirmButton.buttonText = "confirm"
+        confirmButton.buttonText = "確認"
         confirmButton.viewPadding(to: width * 0.05, top: width * 0.075, bottom: width * 0.025)
         
-        clearButton.buttonText = "Clear"
+        clearButton.buttonText = "清除"
         clearButton.buttonBackground = .coralRed
         clearButton.viewPadding(to: width * 0.05, top: width * 0.025, bottom: width * 0.075)
         clearButton.buttonAction = { [weak self] in self?.clearTextField() }
