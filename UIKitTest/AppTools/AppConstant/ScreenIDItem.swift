@@ -29,6 +29,6 @@ struct ScreenIDItem {
                                     ("網路圖片應用", NetworkScreen()),
                                     ("相機遮罩", CameraScreen()),
                                     ("截圖試做功能", ScreenShotScreen()),
-//                                    ("三段式條碼生成", BarcodeScreen()),
+                                    ("三段式條碼生成", BarcodeScreen()),
     ]
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1871B19EB54BA439C3FF7E76 /* Pods_UIKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825407B304317DFDBED8116 /* Pods_UIKitTest.framework */; };
+		7F1651682D5DBD8400F5F8D1 /* BarcodeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1651672D5DBD8400F5F8D1 /* BarcodeAlert.swift */; };
 		7F19D5F72D5AE1B800C72F03 /* NetworkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D5F62D5AE1B800C72F03 /* NetworkScreen.swift */; };
 		7F19D5FD2D5AF70600C72F03 /* NetworkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D5FC2D5AF70600C72F03 /* NetworkItem.swift */; };
 		7F19D6002D5AF7D200C72F03 /* NetworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19D5FF2D5AF7D200C72F03 /* NetworkCell.swift */; };
@@ -20,6 +21,8 @@
 		7F5B7D3E2D54B710009FA60B /* OTPScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B7D3D2D54B710009FA60B /* OTPScreen.swift */; };
 		7F5B7D412D54CAD7009FA60B /* OTPViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B7D402D54CAD7009FA60B /* OTPViewUI.swift */; };
 		7F61871C2D5C309D0008A16D /* ScreenShotScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F61871B2D5C309D0008A16D /* ScreenShotScreen.swift */; };
+		7F61871F2D5C533D0008A16D /* BarcodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F61871E2D5C533D0008A16D /* BarcodeScreen.swift */; };
+		7F6187222D5C78A80008A16D /* BarcodeUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6187212D5C78A80008A16D /* BarcodeUI.swift */; };
 		7F97BC202D5986BF00D91B69 /* ApiRespone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC1F2D5986BF00D91B69 /* ApiRespone.swift */; };
 		7F97BC232D59DDC700D91B69 /* MySelectorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC222D59DDC700D91B69 /* MySelectorScreen.swift */; };
 		7F97BC262D59E8B500D91B69 /* FaceRecognitionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC252D59E8B500D91B69 /* FaceRecognitionScreen.swift */; };
@@ -108,6 +111,7 @@
 /* Begin PBXFileReference section */
 		36C30282896407073F46236A /* Pods-UIKitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitTest.debug.xcconfig"; path = "Target Support Files/Pods-UIKitTest/Pods-UIKitTest.debug.xcconfig"; sourceTree = "<group>"; };
 		6825407B304317DFDBED8116 /* Pods_UIKitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIKitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1651672D5DBD8400F5F8D1 /* BarcodeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeAlert.swift; sourceTree = "<group>"; };
 		7F19D5F62D5AE1B800C72F03 /* NetworkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScreen.swift; sourceTree = "<group>"; };
 		7F19D5FC2D5AF70600C72F03 /* NetworkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkItem.swift; sourceTree = "<group>"; };
 		7F19D5FF2D5AF7D200C72F03 /* NetworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCell.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 		7F5B7D3D2D54B710009FA60B /* OTPScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPScreen.swift; sourceTree = "<group>"; };
 		7F5B7D402D54CAD7009FA60B /* OTPViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewUI.swift; sourceTree = "<group>"; };
 		7F61871B2D5C309D0008A16D /* ScreenShotScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotScreen.swift; sourceTree = "<group>"; };
+		7F61871E2D5C533D0008A16D /* BarcodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScreen.swift; sourceTree = "<group>"; };
+		7F6187212D5C78A80008A16D /* BarcodeUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeUI.swift; sourceTree = "<group>"; };
 		7F97BC1F2D5986BF00D91B69 /* ApiRespone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRespone.swift; sourceTree = "<group>"; };
 		7F97BC222D59DDC700D91B69 /* MySelectorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySelectorScreen.swift; sourceTree = "<group>"; };
 		7F97BC252D59E8B500D91B69 /* FaceRecognitionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionScreen.swift; sourceTree = "<group>"; };
@@ -340,6 +346,24 @@
 			path = "截圖警示";
 			sourceTree = "<group>";
 		};
+		7F61871D2D5C53230008A16D /* 條碼生成 */ = {
+			isa = PBXGroup;
+			children = (
+				7F6187202D5C78980008A16D /* UI */,
+				7F61871E2D5C533D0008A16D /* BarcodeScreen.swift */,
+			);
+			path = "條碼生成";
+			sourceTree = "<group>";
+		};
+		7F6187202D5C78980008A16D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F6187212D5C78A80008A16D /* BarcodeUI.swift */,
+				7F1651672D5DBD8400F5F8D1 /* BarcodeAlert.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		7F97BC212D59DDA100D91B69 /* 自定義選擇器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +477,7 @@
 				7F19D6032D5B1E8C00C72F03 /* 相機遮罩 */,
 				7F19D6152D5B3F3800C72F03 /* TabView練習 */,
 				7F61871A2D5C306C0008A16D /* 截圖警示 */,
+				7F61871D2D5C53230008A16D /* 條碼生成 */,
 				7FF558022D54511A00EF9E6F /* Assets.xcassets */,
 				7FF558032D54511A00EF9E6F /* Info.plist */,
 				7FF558052D54511A00EF9E6F /* LaunchScreen.storyboard */,
@@ -942,6 +967,7 @@
 				7FF558112D54511A00EF9E6F /* AppDelegate.swift in Sources */,
 				7FF5585B2D54536100EF9E6F /* APIUrl.swift in Sources */,
 				7FF5585C2D54536100EF9E6F /* UserDefaultsKey.swift in Sources */,
+				7F61871F2D5C533D0008A16D /* BarcodeScreen.swift in Sources */,
 				7FF5585D2D54536100EF9E6F /* ImageNameItem.swift in Sources */,
 				7FF5585E2D54536100EF9E6F /* AppDateSelector.swift in Sources */,
 				7F19D60C2D5B2B9C00C72F03 /* CameraButtonUI.swift in Sources */,
@@ -950,6 +976,7 @@
 				7F19D60F2D5B2DFA00C72F03 /* CameraBackUI.swift in Sources */,
 				7FF558602D54536100EF9E6F /* AppPassword.swift in Sources */,
 				7FF558612D54536100EF9E6F /* LocalizedStringKey.swift in Sources */,
+				7F1651682D5DBD8400F5F8D1 /* BarcodeAlert.swift in Sources */,
 				7FF558622D54536100EF9E6F /* MyButton.swift in Sources */,
 				7FF558632D54536100EF9E6F /* NationalItem.swift in Sources */,
 				7FF558642D54536100EF9E6F /* MyImageButton.swift in Sources */,
@@ -998,6 +1025,7 @@
 				7FF5587E2D54536100EF9E6F /* MyImage.swift in Sources */,
 				7F61871C2D5C309D0008A16D /* ScreenShotScreen.swift in Sources */,
 				7FF558C12D5495DF00EF9E6F /* MyTextFieldScreen.swift in Sources */,
+				7F6187222D5C78A80008A16D /* BarcodeUI.swift in Sources */,
 				7FF5587F2D54536100EF9E6F /* TextField+.swift in Sources */,
 				7FF558802D54536100EF9E6F /* Font+.swift in Sources */,
 				7FF558812D54536100EF9E6F /* LanguageManager.swift in Sources */,

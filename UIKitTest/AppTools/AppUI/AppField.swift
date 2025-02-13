@@ -73,6 +73,13 @@ class AppField: UIView {
         }
     }
     
+    var showFieldIcon: Bool = false {
+        didSet {
+            newTextField.leftViewMode = showFieldIcon ? .always : .never
+            newTextField.padding(left: 25)
+        }
+    }
+    
     var textCount: Int = 0 {
         didSet {
             updateCountLabel()

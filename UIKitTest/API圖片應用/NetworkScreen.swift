@@ -108,9 +108,6 @@ extension NetworkScreen {
             let data = try await APIManager.shared.get(url: APIUrl.getCatAPI, parameters: parameters)
             let dataResponse = try JSONDecoder().decode([NetworkItem].self, from: data)
             
-            MyPrint(dataResponse.count)
-            MyPrint(dataResponse)
-            
             DispatchQueue.main.async {
                 self.networkItem.append(contentsOf: dataResponse)
                 self.imageTable.reloadData()
