@@ -48,8 +48,8 @@ class TabBarScreen: MyViewController {
         firstVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
         secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
         thirdVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 2)
-     
-        
+    
+        self.setMyBackgroundColor(bottomColor: .lightGrayWhite)
         setupUI()
     }
 }

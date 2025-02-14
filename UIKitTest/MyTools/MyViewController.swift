@@ -41,7 +41,7 @@ class MyViewController: UIViewController {
     
     
     //MARK: - 設定背景
-    func setMyBackgroundColor(_ color: UIColor? = nil, backgroundColor: UIColor = .pureWhite, bottomColor: UIColor = .lightGrayWhite){
+    func setMyBackgroundColor(_ color: UIColor? = nil, backgroundColor: UIColor = .pureWhite, bottomColor: UIColor = .pureWhite){
         
         view.backgroundColor = color ?? backgroundColor
         

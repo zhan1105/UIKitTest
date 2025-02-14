@@ -20,7 +20,6 @@ class HomeScreen: MyViewController {
         exerciseTable.delegate = self
         exerciseTable.dataSource = self
         
-        self.setMyBackgroundColor(.pureWhite)
         setupUI()
     }
 }

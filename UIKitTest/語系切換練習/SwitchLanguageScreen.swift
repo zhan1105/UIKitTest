@@ -15,7 +15,6 @@ class SwitchLanguageScreen: MyViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .groupBg
         setupUI()
         
         // 添加觀察者以在語言更改時更新 UI

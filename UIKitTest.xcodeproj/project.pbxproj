@@ -32,6 +32,9 @@
 		7F97BC322D59F75500D91B69 /* LoadingAnimationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC312D59F75500D91B69 /* LoadingAnimationScreen.swift */; };
 		7F97BC352D59FC6200D91B69 /* SideMenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC342D59FC6200D91B69 /* SideMenuScreen.swift */; };
 		7F97BC382D59FC6C00D91B69 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F97BC362D59FC6C00D91B69 /* SideMenuView.swift */; };
+		7FB36CEF2D5ED4FB00038887 /* CollectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB36CEE2D5ED4FB00038887 /* CollectionScreen.swift */; };
+		7FB36CF22D5EDC0100038887 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB36CF12D5EDC0100038887 /* CollectionCell.swift */; };
+		7FB36CF52D5F10E200038887 /* SkillsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB36CF42D5F10E200038887 /* SkillsItem.swift */; };
 		7FF5580D2D54511A00EF9E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF558022D54511A00EF9E6F /* Assets.xcassets */; };
 		7FF5580F2D54511A00EF9E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF558052D54511A00EF9E6F /* LaunchScreen.storyboard */; };
 		7FF558102D54511A00EF9E6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF558072D54511A00EF9E6F /* Main.storyboard */; };
@@ -135,6 +138,9 @@
 		7F97BC312D59F75500D91B69 /* LoadingAnimationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationScreen.swift; sourceTree = "<group>"; };
 		7F97BC342D59FC6200D91B69 /* SideMenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuScreen.swift; sourceTree = "<group>"; };
 		7F97BC362D59FC6C00D91B69 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		7FB36CEE2D5ED4FB00038887 /* CollectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionScreen.swift; sourceTree = "<group>"; };
+		7FB36CF12D5EDC0100038887 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		7FB36CF42D5F10E200038887 /* SkillsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsItem.swift; sourceTree = "<group>"; };
 		7FF557E62D54511300EF9E6F /* UIKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF558012D54511A00EF9E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF558022D54511A00EF9E6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -431,6 +437,32 @@
 			path = subView;
 			sourceTree = "<group>";
 		};
+		7FB36CED2D5ED3AF00038887 /* CollectionView練習 */ = {
+			isa = PBXGroup;
+			children = (
+				7FB36CF32D5F105400038887 /* Model */,
+				7FB36CF02D5EDBE800038887 /* UI */,
+				7FB36CEE2D5ED4FB00038887 /* CollectionScreen.swift */,
+			);
+			path = "CollectionView練習";
+			sourceTree = "<group>";
+		};
+		7FB36CF02D5EDBE800038887 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7FB36CF12D5EDC0100038887 /* CollectionCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7FB36CF32D5F105400038887 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FB36CF42D5F10E200038887 /* SkillsItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7FF557DD2D54511300EF9E6F = {
 			isa = PBXGroup;
 			children = (
@@ -463,21 +495,22 @@
 				7FF558902D54576800EF9E6F /* 簡易練習 */,
 				7FF5589E2D5469E400EF9E6F /* 語系切換練習 */,
 				7FF558AD2D546F5200EF9E6F /* WebView練習 */,
-				7FF558B32D548BC500EF9E6F /* 下拉式選單 */,
-				7F97BC302D59F73300D91B69 /* Loading動畫 */,
+				7F19D6152D5B3F3800C72F03 /* TabView練習 */,
 				7FF558BC2D54911A00EF9E6F /* GoogleMap練習 */,
+				7F97BC302D59F73300D91B69 /* Loading動畫 */,
+				7FF558B32D548BC500EF9E6F /* 下拉式選單 */,
 				7FF558BF2D5495CE00EF9E6F /* 自定義輸入匡 */,
-				7F97BC212D59DDA100D91B69 /* 自定義選擇器 */,
 				7F5B7D3C2D54B6F5009FA60B /* OTP自動帶入 */,
+				7F97BC212D59DDA100D91B69 /* 自定義選擇器 */,
 				7FF558B02D54714200EF9E6F /* Banner套件 */,
 				7F97BC242D59E89E00D91B69 /* FaceID驗證 */,
 				7F97BC2A2D59E94F00D91B69 /* Symbol應用 */,
 				7F97BC332D59FC4800D91B69 /* 側選單 */,
 				7F19D5F52D5ADF3F00C72F03 /* API圖片應用 */,
 				7F19D6032D5B1E8C00C72F03 /* 相機遮罩 */,
-				7F19D6152D5B3F3800C72F03 /* TabView練習 */,
 				7F61871A2D5C306C0008A16D /* 截圖警示 */,
 				7F61871D2D5C53230008A16D /* 條碼生成 */,
+				7FB36CED2D5ED3AF00038887 /* CollectionView練習 */,
 				7FF558022D54511A00EF9E6F /* Assets.xcassets */,
 				7FF558032D54511A00EF9E6F /* Info.plist */,
 				7FF558052D54511A00EF9E6F /* LaunchScreen.storyboard */,
@@ -983,10 +1016,12 @@
 				7FF558BE2D54913F00EF9E6F /* MapScreen.swift in Sources */,
 				7FF558652D54536100EF9E6F /* APIManager.swift in Sources */,
 				7FF5589A2D54618400EF9E6F /* MyTitleBar.swift in Sources */,
+				7FB36CEF2D5ED4FB00038887 /* CollectionScreen.swift in Sources */,
 				7FF558662D54536100EF9E6F /* SwitchLanguage.swift in Sources */,
 				7F97BC232D59DDC700D91B69 /* MySelectorScreen.swift in Sources */,
 				7FF558672D54536100EF9E6F /* MyTextField.swift in Sources */,
 				7FF558AF2D546F7300EF9E6F /* WebViewScreen.swift in Sources */,
+				7FB36CF52D5F10E200038887 /* SkillsItem.swift in Sources */,
 				7F97BC322D59F75500D91B69 /* LoadingAnimationScreen.swift in Sources */,
 				7F19D6002D5AF7D200C72F03 /* NetworkCell.swift in Sources */,
 				7FF558682D54536100EF9E6F /* ViewController+.swift in Sources */,
@@ -1019,6 +1054,7 @@
 				7FF5587A2D54536100EF9E6F /* MyToast.swift in Sources */,
 				7F19D5F72D5AE1B800C72F03 /* NetworkScreen.swift in Sources */,
 				7FF5587B2D54536100EF9E6F /* MyView.swift in Sources */,
+				7FB36CF22D5EDC0100038887 /* CollectionCell.swift in Sources */,
 				7FF5587C2D54536100EF9E6F /* AppField.swift in Sources */,
 				7F19D6192D5B401A00C72F03 /* TabBarScreen.swift in Sources */,
 				7FF5587D2D54536100EF9E6F /* URLSession+.swift in Sources */,

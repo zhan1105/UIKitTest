@@ -43,10 +43,9 @@ extension DownMenuScreen {
         })
         
         let appScreen = MyStack(arrangedSubviews: [titleBar, subScreen])
-        
-        self.view.addSubview(appScreen)
-        
         appScreen.translatesAutoresizingMaskIntoConstraints = false
+
+        self.view.addSubview(appScreen)
         NSLayoutConstraint.activate([
             appScreen.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             appScreen.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),

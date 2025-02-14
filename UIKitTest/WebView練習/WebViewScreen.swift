@@ -15,6 +15,7 @@ class WebViewScreen: MyViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
     }
 }
