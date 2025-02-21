@@ -14,6 +14,12 @@ class MyMessage: UIView {
     
     weak var delegate: MyMessageDelegate?
 
+    var setMessage: String = "" {
+        didSet {
+            self.messageLabel.text = setMessage
+        }
+    }
+    
     init(text: String = "") {
         super.init(frame: .zero)
         setupUI(text: text)

@@ -24,6 +24,12 @@ class AppPassword: UIView {
             newTextField.text = newValue
         }
     }
+    
+    var fieldFont: UIFont = .body {
+        didSet {
+            newTextField.font = fieldFont
+        }
+    }
         
     var isSelect: Bool = false {
         didSet {
@@ -33,7 +39,26 @@ class AppPassword: UIView {
         }
     }
     
-    var borderColor: CGColor? = UIColor.skyGray.cgColor
+    private var borderColor: CGColor? = UIColor.skyGray.cgColor
+    
+    var setFieldBorderColor: CGColor? = UIColor.skyGray.cgColor {
+        didSet {
+            borderColor = setFieldBorderColor
+            newTextField.layer.borderColor = borderColor
+        }
+    }
+    
+    var setCornerRadius: CGFloat = 0 {
+        didSet {
+            newTextField.layer.cornerRadius = setCornerRadius
+        }
+    }
+    
+    var setBorderWidth: CGFloat = 0 {
+        didSet {
+            newTextField.layer.borderWidth = setBorderWidth
+        }
+    }
     
     var errorText: String? = nil {
         didSet {

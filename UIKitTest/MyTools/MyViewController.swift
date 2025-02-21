@@ -101,9 +101,11 @@ class MyViewController: UIViewController {
     //MARK: - 訊息視窗
     func showMessage(_ text: String = "") {
         if messageView == nil {
-            messageView = MyMessage(text: text)
+            messageView = MyMessage()
             messageView?.delegate = setMessageDelegate
         }
+        
+        messageView?.setMessage = text
         messageView?.show(in: self.view)
     }
     

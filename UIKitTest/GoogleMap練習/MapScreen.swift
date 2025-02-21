@@ -16,15 +16,19 @@ class MapScreen: MyViewController {
     private var mapView: GMSMapView!
     private let myLocationMgr = CLLocationManager()
     
+    private var latitude = String()
+    private var longitude = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupUI()
         
         myLocationMgr.distanceFilter = kCLLocationAccuracyNearestTenMeters
         myLocationMgr.desiredAccuracy = kCLLocationAccuracyBest
         myLocationMgr.delegate = self
-        checkLocationAuthorization()
+        
+        DispatchQueue.main.async {
+            self.checkLocationAuthorization() // 確保在主線程檢查授權
+        }
     }
 }
 
@@ -60,6 +64,23 @@ extension MapScreen {
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
         
+        if let location = myLocationMgr.location {
+            latitude = String(describing: location.coordinate.latitude)
+            longitude = String(describing: location.coordinate.longitude)
+            
+            updateMapToUserLocation(location)
+        } else {
+            print("zhan: location is nil")
+        }
+    }
+    
+    private func updateMapToUserLocation(_ location: CLLocation) {
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15)
+        mapView.animate(to: camera)
+    }
+    
+    private func setMarker(title: String, lat: String, lng: String) {
+        
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(24.147934, 120.684509)
         marker.map = mapView
@@ -94,13 +115,19 @@ extension MapScreen: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
-            let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15)
-            mapView.animate(to: camera)
+            setupUI()
+
+            updateMapToUserLocation(location)
+            myLocationMgr.stopUpdatingLocation() // 停止更新，避免不必要的呼叫
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("定位失敗: \(error.localizedDescription)")
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuthorization()
     }
 }
 //MARK: - GoogleMap

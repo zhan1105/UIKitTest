@@ -63,7 +63,26 @@ class AppField: UIView {
         }
     }
     
-    var borderColor: CGColor? = UIColor.skyGray.cgColor
+    private var borderColor: CGColor? = UIColor.skyGray.cgColor
+    
+    var setFieldBorderColor: CGColor? = UIColor.skyGray.cgColor {
+        didSet {
+            borderColor = setFieldBorderColor
+            newTextField.layer.borderColor = borderColor
+        }
+    }
+    
+    var setCornerRadius: CGFloat = 0 {
+        didSet {
+            newTextField.layer.cornerRadius = setCornerRadius
+        }
+    }
+    
+    var setBorderWidth: CGFloat = 0 {
+        didSet {
+            newTextField.layer.borderWidth = setBorderWidth
+        }
+    }
     
     var setIcon: UIImage? = .idCard {
         didSet {
